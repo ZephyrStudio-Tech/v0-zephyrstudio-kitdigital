@@ -4,53 +4,53 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: 3 3 5; /* #030305 Obsidian */
+  --background: 3 3 5;
   --foreground: 255 255 255;
-  --card: 15 15 20 / 0.4; /* Glassmorphism rgba(15, 15, 20, 0.4) */
+  --card: 15 15 20 / 0.4;
   --card-foreground: 255 255 255;
   --popover: 3 3 5;
   --popover-foreground: 255 255 255;
-  --primary: 0 24 216; /* #0018d8 Zephyr Blue */
+  --primary: 0 24 216;
   --primary-foreground: 255 255 255;
-  --secondary: 67 56 202; /* #4338ca Deep Indigo */
+  --secondary: 67 56 202;
   --secondary-foreground: 255 255 255;
-  --muted: 255 255 255 / 0.1;
-  --muted-foreground: 203 213 225; /* slate-300 */
-  --accent: 0 229 255; /* #00e5ff Neon Cyan */
+  --muted: 255 255 255 / 0.06;
+  --muted-foreground: 148 163 184;
+  --accent: 0 229 255;
   --accent-foreground: 3 3 5;
   --destructive: 239 68 68;
   --destructive-foreground: 255 255 255;
-  --border: 255 255 255 / 0.08; /* border-white/10 equivalent */
+  --border: 255 255 255 / 0.08;
   --input: 255 255 255 / 0.08;
   --ring: 0 229 255;
   --radius: 1rem;
 }
 
 .dark {
-  --background: 3 3 5; /* #030305 Obsidian */
+  --background: 3 3 5;
   --foreground: 255 255 255;
-  --card: 15 15 20 / 0.4; /* Glassmorphism rgba(15, 15, 20, 0.4) */
+  --card: 15 15 20 / 0.4;
   --card-foreground: 255 255 255;
   --popover: 3 3 5;
   --popover-foreground: 255 255 255;
-  --primary: 0 24 216; /* #0018d8 Zephyr Blue */
+  --primary: 0 24 216;
   --primary-foreground: 255 255 255;
-  --secondary: 67 56 202; /* #4338ca Deep Indigo */
+  --secondary: 67 56 202;
   --secondary-foreground: 255 255 255;
-  --muted: 255 255 255 / 0.1;
-  --muted-foreground: 203 213 225; /* slate-300 */
-  --accent: 0 229 255; /* #00e5ff Neon Cyan */
+  --muted: 255 255 255 / 0.06;
+  --muted-foreground: 148 163 184;
+  --accent: 0 229 255;
   --accent-foreground: 3 3 5;
   --destructive: 239 68 68;
   --destructive-foreground: 255 255 255;
-  --border: 255 255 255 / 0.08; /* border-white/10 equivalent */
+  --border: 255 255 255 / 0.08;
   --input: 255 255 255 / 0.08;
   --ring: 0 229 255;
 }
 
 @theme inline {
-  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
-  --font-heading: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-heading: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -83,15 +83,80 @@
   body {
     @apply bg-[#030305] text-foreground;
   }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
-  }
 }
 
 @layer utilities {
-  .text-gradient-cyan {
-    @apply bg-gradient-to-r from-white to-[#00e5ff] bg-clip-text text-transparent;
+  /* Vertical gradient heading: white at top fading to slate-400 at bottom */
+  .text-gradient-heading {
+    background: linear-gradient(180deg, #ffffff 30%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
+
+  /* Vibrant blue-cyan gradient for accent text */
+  .text-gradient-cyan {
+    background: linear-gradient(135deg, #00e5ff 0%, #0018d8 50%, #00e5ff 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 4s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Premium glass card – directional top-lit lighting */
+  .glass-premium {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top-color: rgba(255, 255, 255, 0.20);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      0 20px 40px -10px rgba(0, 0, 0, 0.5);
+    border-radius: 1.5rem;
+  }
+
+  .glass-premium:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(0, 229, 255, 0.25);
+    border-top-color: rgba(255, 255, 255, 0.25);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      0 25px 50px -12px rgba(0, 24, 216, 0.35),
+      0 0 30px -8px rgba(0, 229, 255, 0.15);
+    transform: translateY(-3px);
+  }
+
+  /* Sweeping shine for CTA button */
+  @keyframes btn-shine {
+    0% { left: -100%; }
+    100% { left: 200%; }
+  }
+  .btn-shine-effect::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -100%;
+    width: 60%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transform: skewX(-20deg);
+    pointer-events: none;
+  }
+  .btn-shine-effect:hover::after {
+    animation: btn-shine 0.75s ease-out forwards;
+  }
+
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -99,6 +164,7 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+
   .bg-gradient-radial {
     background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
   }
