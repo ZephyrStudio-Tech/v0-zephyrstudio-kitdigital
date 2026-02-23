@@ -12,6 +12,7 @@ import {
 import { AnimatedBackground } from '@/components/animated-background'
 import { Header } from '@/components/header'
 import { Marquee } from '@/components/marquee'
+import { MagneticButton } from '@/components/magnetic-button'
 
 /* ── Animation Variants ────────────────────────────────────────── */
 
@@ -244,19 +245,17 @@ export default function Home() {
               variants={fadeUp}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button
-                className="btn-shine-effect relative group overflow-hidden rounded-full bg-gradient-to-b from-[#0022ff] to-[#000f8a] px-8 py-4 text-white font-bold tracking-wide shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_40px_-10px_rgba(0,34,255,0.8)] transition-all hover:scale-[1.02] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_0_60px_-10px_rgba(0,34,255,1)] text-base flex items-center gap-2"
+              <MagneticButton
+                className="btn-neon-pulse group rounded-full bg-gradient-to-b from-[#0022ff] to-[#000f8a] px-8 py-4 text-white font-bold tracking-wide shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_40px_-10px_rgba(0,34,255,0.8)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_0_60px_-10px_rgba(0,34,255,1)] transition-all text-base flex items-center gap-2 justify-center"
               >
                 Solicitar Consulta
                 <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="glass-premium font-medium text-white px-8 py-6 text-base rounded-2xl hover:-translate-y-1 transition-all duration-300"
+              </MagneticButton>
+              <button
+                className="btn-liquid-fill glass-premium font-medium text-white px-8 py-4 text-base rounded-2xl transition-all duration-300"
               >
                 Ver Soluciones
-              </Button>
+              </button>
             </motion.div>
           </motion.div>
         </div>
@@ -272,7 +271,7 @@ export default function Home() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: '-80px' }}
+              viewport={{ once: true, amount: 0.1 }}
               variants={fadeUp}
             >
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-[0.92] mb-8">
@@ -294,7 +293,7 @@ export default function Home() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: '-80px' }}
+              viewport={{ once: true, amount: 0.1 }}
               variants={fadeUp}
               className="glass-premium rounded-3xl p-8 md:p-10 relative"
             >
@@ -333,7 +332,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={fadeUp}
             className="text-center mb-20"
           >
@@ -349,7 +348,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={stagger}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
           >
@@ -408,7 +407,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={fadeUp}
             className="text-center mb-20"
           >
@@ -421,7 +420,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={stagger}
             className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-4"
           >
@@ -486,7 +485,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={fadeUp}
             className="text-center mb-20 px-4"
           >
@@ -503,7 +502,7 @@ export default function Home() {
                   key={idx}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true, margin: '-80px' }}
+                  viewport={{ once: true, amount: 0.1 }}
                   variants={cardFade}
                   className="glass-premium rounded-3xl p-8 min-w-[85vw] md:min-w-0 snap-center flex-shrink-0 transition-all duration-300"
                 >
@@ -541,7 +540,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={fadeUp}
             className="text-center mb-20"
           >
@@ -554,7 +553,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={stagger}
             className="grid md:grid-cols-3 gap-5"
           >
@@ -601,7 +600,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={fadeUp}
             className="text-center mb-20"
           >
@@ -614,7 +613,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={fadeUp}
           >
             <Accordion type="single" collapsible className="space-y-3">
@@ -637,46 +636,160 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── Final CTA ────────────────────────────────────────── */}
-      <section className="relative px-4 py-20 md:px-8 md:py-36">
-        <div className="container mx-auto max-w-5xl">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
-            variants={fadeUp}
-            className="relative rounded-[2rem] overflow-hidden p-14 md:p-28 text-center"
-          >
-            {/* Radial mesh bg */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  'radial-gradient(ellipse at 50% 40%, rgba(0, 24, 216, 0.6) 0%, rgba(67, 56, 202, 0.3) 40%, #030305 80%)',
-              }}
-            />
-            {/* Noise overlay */}
-            <div className="absolute inset-0 opacity-[0.03]" style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-            }} />
+      {/* Final CTA Asymmetrical Section */}
+      <section className="relative px-4 py-20 md:px-8 md:py-36 overflow-x-clip">
+        <div className="mx-auto w-full max-w-[1200px]">
 
-            <div className="relative z-10">
-              <h2 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tighter leading-[0.92]">
-                <span className="text-gradient-heading">Construye tu futuro</span>{' '}
-                <span className="text-[#00e5ff]">hoy</span>
-              </h2>
-              <p className="text-lg md:text-xl text-slate-300 mb-12 max-w-xl mx-auto font-light leading-relaxed">
-                Infraestructura enterprise. Hardware premium. Financiación 100%.
-                Sin papeleo.
-              </p>
-              <button
-                className="btn-shine-effect relative group overflow-hidden rounded-full bg-gradient-to-b from-[#0022ff] to-[#000f8a] px-10 py-5 text-white font-bold tracking-wide shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_40px_-10px_rgba(0,34,255,0.8)] transition-all hover:scale-[1.02] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_0_60px_-10px_rgba(0,34,255,1)] text-base flex items-center gap-2 mx-auto"
+          {/* Outer Glass Container */}
+          <div
+            className="relative w-full rounded-[1.5rem] sm:rounded-[2.5rem] p-5 sm:p-10 lg:p-[5rem_4rem] grid grid-cols-[1.1fr_0.9fr] gap-4 sm:gap-10 lg:gap-16 items-center"
+            style={{
+              background: 'rgba(255,255,255,0.02)',
+              backdropFilter: 'blur(24px)',
+              WebkitBackdropFilter: 'blur(24px)',
+              border: '1px solid rgba(255,255,255,0.06)',
+              borderTop: '1px solid rgba(255,255,255,0.12)',
+              boxShadow: '0 40px 80px -20px rgba(0,0,0,0.8)',
+            }}
+          >
+
+            {/* ===== LEFT COLUMN: Content ===== */}
+            <div className="relative z-10 text-left">
+
+              {/* Badge */}
+              <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1 sm:py-1.5 rounded-full bg-[#00e5ff]/5 border border-[#00e5ff]/20 mb-4 sm:mb-8">
+                <span
+                  className="w-1.5 h-1.5 rounded-full bg-[#00e5ff]"
+                  style={{ boxShadow: '0 0 10px #00e5ff', animation: 'pulse 2s infinite' }}
+                />
+                <span className="text-[#00e5ff] font-mono text-[10px] sm:text-xs font-bold uppercase tracking-widest">
+                  System Ready
+                </span>
+              </div>
+
+              {/* Heading */}
+              <h2
+                className="font-extrabold leading-[0.95] tracking-tighter mb-3 sm:mb-6"
+                style={{ fontSize: 'clamp(1.5rem, 5vw, 4.5rem)' }}
               >
-                Solicitar Consulta
-                <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
-              </button>
+                <span className="text-white">Arquitectura Web.</span>
+                <span
+                  className="block mt-1 sm:mt-2 text-transparent"
+                  style={{
+                    WebkitTextStroke: '1px rgba(255,255,255,0.6)',
+                  }}
+                >
+                  Cero Burocracia.
+                </span>
+              </h2>
+
+              {/* Description */}
+              <p className="text-xs sm:text-sm md:text-lg text-slate-400 leading-relaxed sm:leading-[1.7] mb-6 sm:mb-12 max-w-[500px]">
+                Desplegamos tu infraestructura digital y te equipamos con
+                hardware de grado empresarial (Apple Mac) financiado al 100%
+                por los fondos europeos.
+              </p>
+
+              {/* CTA Button */}
+              <a
+                href="#"
+                className="group relative inline-flex items-center gap-2 sm:gap-3 bg-white text-[#030305] font-semibold text-xs sm:text-sm md:text-base px-5 sm:px-10 py-2.5 sm:py-4 rounded-full overflow-hidden transition-all duration-300 hover:-translate-y-0.5 shadow-[0_10px_30px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_20px_40px_-10px_rgba(0,229,255,0.4)] no-underline"
+              >
+                <span className="absolute inset-0 bg-gradient-to-r from-[#00e5ff] to-[#0018d8] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[1]" />
+                <span className="relative z-[2] group-hover:text-white transition-colors duration-300">
+                  Iniciar_Deploy()
+                </span>
+                <svg
+                  className="relative z-[2] w-3.5 h-3.5 sm:w-[18px] sm:h-[18px] group-hover:text-white transition-all duration-300 group-hover:translate-x-2"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </a>
             </div>
-          </motion.div>
+
+            {/* ===== RIGHT COLUMN: 3D Visuals ===== */}
+            <div className="relative w-full flex items-center justify-center group" style={{ perspective: '1200px' }}>
+
+              {/* Terminal Card */}
+              <div
+                className="relative w-full max-w-[400px] backdrop-blur-xl rounded-xl sm:rounded-3xl p-4 sm:p-8 transition-all duration-700 ease-out
+                           transform lg:[transform:rotateY(-8deg)_rotateX(4deg)] 
+                           group-hover:[transform:rotateY(0deg)_rotateX(0deg)_translateY(-10px)]
+                           shadow-[0_30px_60px_rgba(0,0,0,0.6)] group-hover:shadow-[0_40px_80px_rgba(0,229,255,0.15)]
+                           border border-white/10 border-t-white/20 group-hover:border-[#00e5ff]/30"
+                style={{
+                  background: 'rgba(10,10,15,0.7)',
+                  transformStyle: 'preserve-3d',
+                }}
+              >
+                {/* Header bar */}
+                <div className="flex justify-between items-center border-b border-white/5 pb-2 sm:pb-4 mb-3 sm:mb-6">
+                  <div className="flex items-center gap-1.5 sm:gap-2">
+                    <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" strokeWidth="2">
+                      <polyline points="4 17 10 11 4 5" />
+                      <line x1="12" y1="19" x2="20" y2="19" />
+                    </svg>
+                    <span className="text-white font-mono text-[10px] sm:text-sm">diagnostic.sh</span>
+                  </div>
+                  <div className="flex gap-1">
+                    <span className="w-1.5 h-1.5 sm:w-2.5 sm:h-2.5 rounded-full bg-zinc-700" />
+                    <span className="w-1.5 h-1.5 sm:w-2.5 sm:h-2.5 rounded-full bg-zinc-700" />
+                  </div>
+                </div>
+
+                {/* Rows */}
+                <div className="space-y-2 sm:space-y-5">
+                  {[
+                    { cmd: '> Verify_Grant_Limit', val: '[3.000€]', color: 'text-[#00e5ff]' },
+                    { cmd: '> Hardware_Payload', val: 'MAC_READY', color: 'text-blue-500' },
+                    { cmd: '> Bureaucracy_Bypass', val: '[OK]', color: 'text-[#00e5ff]' },
+                    { cmd: '> System_Status', val: 'ONLINE', color: 'text-emerald-400 animate-pulse' },
+                  ].map((r, i) => (
+                    <div key={i} className="flex justify-between items-center font-mono text-[9px] sm:text-[13px] text-slate-400">
+                      <span>{r.cmd}</span>
+                      <span className={`${r.color} font-bold`}>{r.val}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Chip 1 - Top Right */}
+              <div className="absolute top-[-0.5rem] right-[-0.25rem] sm:top-[-1rem] sm:right-0 lg:top-[-2rem] lg:right-[-2rem] bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-lg sm:rounded-2xl p-2 sm:p-4 flex items-center gap-2 sm:gap-3 shadow-[0_20px_40px_rgba(0,0,0,0.4)] animate-float" style={{ transform: 'translateZ(20px)' }}>
+                <div className="hidden sm:flex items-center justify-center w-9 h-9 rounded-lg bg-[#00e5ff]/10">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" strokeWidth="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[8px] sm:text-[10px] text-slate-400 uppercase tracking-wider font-mono">Seguridad</span>
+                  <span className="text-[10px] sm:text-sm font-semibold text-white">Biometría Cripto</span>
+                </div>
+              </div>
+
+              {/* Chip 2 - Bottom Left */}
+              <div className="absolute bottom-[-0.5rem] left-[-0.25rem] sm:bottom-[-1rem] sm:left-0 lg:bottom-[-1rem] lg:left-[-3rem] bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-lg sm:rounded-2xl p-2 sm:p-4 flex items-center gap-2 sm:gap-3 shadow-[0_20px_40px_rgba(0,0,0,0.4)] animate-float-delayed" style={{ transform: 'translateZ(30px)' }}>
+                <div className="hidden sm:flex items-center justify-center w-9 h-9 rounded-lg bg-[#0018d8]/10">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7e8cff" strokeWidth="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                    <line x1="8" y1="21" x2="16" y2="21" />
+                    <line x1="12" y1="17" x2="12" y2="21" />
+                  </svg>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[8px] sm:text-[10px] text-slate-400 uppercase tracking-wider font-mono">Hardware</span>
+                  <span className="text-[10px] sm:text-sm font-semibold text-white">Apple Silicon</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
