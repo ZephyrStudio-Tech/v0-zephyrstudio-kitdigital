@@ -4,13 +4,13 @@ import { motion } from 'framer-motion'
 
 export function AnimatedBackground() {
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">
+    <div className="fixed inset-0 -z-10 overflow-hidden" style={{ filter: 'blur(100px)' }}>
       {/* Primary blue orb - top left */}
       <motion.div
         className="absolute -top-[200px] -left-[200px] w-[800px] h-[800px] rounded-full"
         style={{
           background: 'radial-gradient(circle, rgba(0, 24, 216, 0.25) 0%, transparent 65%)',
-          filter: 'blur(80px)',
+          willChange: 'transform',
         }}
         animate={{
           x: [0, 60, 0],
@@ -29,7 +29,7 @@ export function AnimatedBackground() {
         className="absolute top-1/3 -right-[100px] w-[600px] h-[600px] rounded-full"
         style={{
           background: 'radial-gradient(circle, rgba(0, 229, 255, 0.12) 0%, transparent 65%)',
-          filter: 'blur(100px)',
+          willChange: 'transform',
         }}
         animate={{
           x: [0, -50, 0],
@@ -48,7 +48,7 @@ export function AnimatedBackground() {
         className="absolute -bottom-[200px] left-1/4 w-[900px] h-[900px] rounded-full"
         style={{
           background: 'radial-gradient(circle, rgba(67, 56, 202, 0.2) 0%, transparent 60%)',
-          filter: 'blur(100px)',
+          willChange: 'transform',
         }}
         animate={{
           x: [0, -80, 0],
@@ -62,9 +62,13 @@ export function AnimatedBackground() {
         }}
       />
 
-      {/* Cinematic film-grain noise overlay */}
+      {/* Cinematic film-grain noise overlay - GPU accelerated */}
       <svg
         className="absolute inset-0 h-full w-full opacity-[0.07] mix-blend-overlay pointer-events-none"
+        style={{
+          transform: 'translateZ(0)',
+          backfaceVisibility: 'hidden',
+        }}
         aria-hidden="true"
       >
         <filter id="grain">

@@ -12,6 +12,7 @@ import {
 import { AnimatedBackground } from '@/components/animated-background'
 import { Header } from '@/components/header'
 import { Marquee } from '@/components/marquee'
+import { MagneticButton } from '@/components/magnetic-button'
 
 /* ── Animation Variants ────────────────────────────────────────── */
 
@@ -244,19 +245,17 @@ export default function Home() {
               variants={fadeUp}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button
-                className="btn-shine-effect relative group overflow-hidden rounded-full bg-gradient-to-b from-[#0022ff] to-[#000f8a] px-8 py-4 text-white font-bold tracking-wide shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_40px_-10px_rgba(0,34,255,0.8)] transition-all hover:scale-[1.02] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_0_60px_-10px_rgba(0,34,255,1)] text-base flex items-center gap-2"
+              <MagneticButton
+                className="btn-neon-pulse group rounded-full bg-gradient-to-b from-[#0022ff] to-[#000f8a] px-8 py-4 text-white font-bold tracking-wide shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_40px_-10px_rgba(0,34,255,0.8)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_0_60px_-10px_rgba(0,34,255,1)] transition-all text-base flex items-center gap-2 justify-center"
               >
                 Solicitar Consulta
                 <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="glass-premium font-medium text-white px-8 py-6 text-base rounded-2xl hover:-translate-y-1 transition-all duration-300"
+              </MagneticButton>
+              <button
+                className="btn-liquid-fill glass-premium font-medium text-white px-8 py-4 text-base rounded-2xl transition-all duration-300"
               >
                 Ver Soluciones
-              </Button>
+              </button>
             </motion.div>
           </motion.div>
         </div>
@@ -272,7 +271,7 @@ export default function Home() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: '-80px' }}
+              viewport={{ once: true, amount: 0.1 }}
               variants={fadeUp}
             >
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-[0.92] mb-8">
@@ -294,7 +293,7 @@ export default function Home() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: '-80px' }}
+              viewport={{ once: true, amount: 0.1 }}
               variants={fadeUp}
               className="glass-premium rounded-3xl p-8 md:p-10 relative"
             >
@@ -333,7 +332,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={fadeUp}
             className="text-center mb-20"
           >
@@ -349,7 +348,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={stagger}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
           >
@@ -408,7 +407,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={fadeUp}
             className="text-center mb-20"
           >
@@ -421,7 +420,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={stagger}
             className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-4"
           >
@@ -486,7 +485,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={fadeUp}
             className="text-center mb-20 px-4"
           >
@@ -503,7 +502,7 @@ export default function Home() {
                   key={idx}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true, margin: '-80px' }}
+                  viewport={{ once: true, amount: 0.1 }}
                   variants={cardFade}
                   className="glass-premium rounded-3xl p-8 min-w-[85vw] md:min-w-0 snap-center flex-shrink-0 transition-all duration-300"
                 >
@@ -541,7 +540,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={fadeUp}
             className="text-center mb-20"
           >
@@ -554,7 +553,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={stagger}
             className="grid md:grid-cols-3 gap-5"
           >
@@ -601,7 +600,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={fadeUp}
             className="text-center mb-20"
           >
@@ -614,7 +613,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={fadeUp}
           >
             <Accordion type="single" collapsible className="space-y-3">
@@ -643,7 +642,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={fadeUp}
             className="relative rounded-[2rem] overflow-hidden p-14 md:p-28 text-center"
           >
@@ -669,12 +668,12 @@ export default function Home() {
                 Infraestructura enterprise. Hardware premium. Financiación 100%.
                 Sin papeleo.
               </p>
-              <button
-                className="btn-shine-effect relative group overflow-hidden rounded-full bg-gradient-to-b from-[#0022ff] to-[#000f8a] px-10 py-5 text-white font-bold tracking-wide shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_40px_-10px_rgba(0,34,255,0.8)] transition-all hover:scale-[1.02] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_0_60px_-10px_rgba(0,34,255,1)] text-base flex items-center gap-2 mx-auto"
+              <MagneticButton
+                className="btn-neon-pulse group rounded-full bg-gradient-to-b from-[#0022ff] to-[#000f8a] px-10 py-5 text-white font-bold tracking-wide shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_40px_-10px_rgba(0,34,255,0.8)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_0_60px_-10px_rgba(0,34,255,1)] transition-all text-base flex items-center gap-2 mx-auto"
               >
                 Solicitar Consulta
                 <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
-              </button>
+              </MagneticButton>
             </div>
           </motion.div>
         </div>
