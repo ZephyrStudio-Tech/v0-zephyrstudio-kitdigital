@@ -1,10 +1,22 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
+import Link from 'next/link'
+
+const navLinks = [
+  { href: '/segmento-iii', label: 'Segmento III' },
+  { href: '/segmento-ii', label: 'Segmento II' },
+  { href: '/kit-digital-sin-iva', label: 'Sin IVA' },
+  { href: '/faq', label: 'FAQ' },
+]
 
 export function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false)
+
   return (
     <motion.header
       initial={{ y: -100, opacity: 0 }}
@@ -14,7 +26,8 @@ export function Header() {
     >
       <div className="container mx-auto max-w-7xl">
         <div className="glass-premium rounded-2xl px-6 py-3.5 flex items-center justify-between transition-all duration-300">
-          <div className="flex items-center gap-3">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-3">
             <Image 
               src="https://kitdigital-2026-supabase-kd2026.ijatkc.easypanel.host/storage/v1/object/public/img_web/logo_zephyrstudio.png"
               alt="ZephyrStudio"
@@ -23,15 +36,74 @@ export function Header() {
               className="h-7 w-auto md:h-8"
               priority
             />
-          </div>
+          </Link>
 
-          <Button
-            size="sm"
-            className="bg-white/[0.06] hover:bg-white/[0.1] text-white text-xs font-medium tracking-wide border border-white/[0.08] hover:border-white/20 rounded-xl px-5 py-2 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-10px_rgba(0,24,216,0.4)]"
-          >
-            Iniciar Sesión
-          </Button>
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Right side */}
+          <div className="flex items-center gap-3">
+            <Button
+              size="sm"
+              className="hidden md:inline-flex bg-white/[0.06] hover:bg-white/[0.1] text-white text-xs font-medium tracking-wide border border-white/[0.08] hover:border-white/20 rounded-xl px-5 py-2 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-10px_rgba(0,24,216,0.4)]"
+            >
+              Iniciar Sesión
+            </Button>
+
+            {/* Mobile hamburger */}
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="md:hidden flex items-center justify-center w-9 h-9 rounded-lg text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors"
+              aria-label={mobileOpen ? 'Cerrar menú' : 'Abrir menú'}
+            >
+              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Menu Panel */}
+        <AnimatePresence>
+          {mobileOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -10, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -10, scale: 0.98 }}
+              transition={{ duration: 0.2, ease: 'easeOut' }}
+              className="mt-2 glass-premium rounded-2xl p-6 md:hidden"
+            >
+              <nav className="flex flex-col gap-1">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="text-sm font-medium text-slate-300 hover:text-white hover:bg-white/[0.04] transition-colors duration-200 px-4 py-3 rounded-xl"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+              <div className="mt-4 pt-4 border-t border-white/[0.06]">
+                <Button
+                  size="sm"
+                  className="w-full bg-white/[0.06] hover:bg-white/[0.1] text-white text-xs font-medium tracking-wide border border-white/[0.08] hover:border-white/20 rounded-xl px-5 py-2.5 transition-all duration-300"
+                >
+                  Iniciar Sesión
+                </Button>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </motion.header>
   )
