@@ -39,45 +39,45 @@ const packages = [
   {
     name: 'WEB',
     features: [
-      '> Diseño responsive premium',
-      '> Arquitectura Next.js 15',
-      '> Deploy en Vercel/AWS',
-      '> SSL & CDN global',
-      '> CMS headless integrado',
-      '> Analítica avanzada'
+      'Diseño responsive premium',
+      'Arquitectura Next.js 15',
+      'Deploy en Vercel/AWS',
+      'SSL & CDN global',
+      'CMS headless integrado',
+      'Analítica avanzada'
     ]
   },
   {
     name: 'ECOMMERCE',
     features: [
-      '> Plataforma WooCommerce',
-      '> Pasarela de pago Stripe',
-      '> Gestión de inventario',
-      '> Panel de administración',
-      '> Optimización SEO',
-      '> Integración ERP'
+      'Plataforma WooCommerce',
+      'Pasarela de pago Stripe',
+      'Gestión de inventario',
+      'Panel de administración',
+      'Optimización SEO',
+      'Integración ERP'
     ]
   },
   {
     name: 'RRSS',
     features: [
-      '> Estrategia de contenido',
-      '> Gestión multicanal',
-      '> Calendario editorial',
-      '> Analítica y reporting',
-      '> Community management',
-      '> Campañas publicitarias'
+      'Estrategia de contenido',
+      'Gestión multicanal',
+      'Calendario editorial',
+      'Analítica y reporting',
+      'Community management',
+      'Campañas publicitarias'
     ]
   },
   {
     name: 'SEO',
     features: [
-      '> Auditoría técnica completa',
-      '> Keyword research',
-      '> Optimización on-page',
-      '> Link building',
-      '> Contenido optimizado',
-      '> Reporting mensual'
+      'Auditoría técnica completa',
+      'Keyword research',
+      'Optimización on-page',
+      'Link building',
+      'Contenido optimizado',
+      'Reporting mensual'
     ]
   }
 ]
@@ -170,25 +170,24 @@ export default function Home() {
           >
             <motion.div 
               variants={fadeUpVariants}
-              className="mb-8 inline-flex items-center gap-2 rounded-full bg-white/[0.02] backdrop-blur-xl border border-white/5 px-4 py-2 font-mono text-xs text-cyan-400"
+              className="mb-8 inline-flex items-center gap-2 rounded-full bg-white/[0.03] backdrop-blur-xl border border-white/10 px-5 py-2.5 text-sm text-white font-medium"
             >
-              <div className="h-2 w-2 rounded-full bg-[#00e5ff] animate-pulse" />
-              [SYS.UPDATE: KIT_DIGITAL_2026]
+              <div className="h-2 w-2 rounded-full bg-[#00e5ff]" />
+              Kit Digital 2026 Activo
             </motion.div>
 
             <motion.h1 
               variants={fadeUpVariants}
-              className="mb-8 text-5xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tighter leading-[0.95]"
+              className="mb-8 text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95]"
             >
               Arquitectura Digital.
               <br />
               <span className="text-gradient-cyan">Equipamiento Premium</span>
-              <span className="inline-block ml-2 animate-pulse">█</span>
             </motion.h1>
 
             <motion.p 
               variants={fadeUpVariants}
-              className="mb-12 max-w-2xl text-base md:text-lg text-slate-400 leading-relaxed"
+              className="mb-12 max-w-2xl text-base md:text-lg text-slate-300 leading-relaxed"
             >
               Desplegamos tu infraestructura en la nube y te equipamos con hardware de grado empresarial (Apple/Mac) financiado al 100% por el Bono Digital.
             </motion.p>
@@ -199,17 +198,17 @@ export default function Home() {
             >
               <Button 
                 size="lg"
-                className="bg-[#0018d8] hover:bg-[#0018d8]/90 hover:shadow-[0_0_30px_rgba(0,24,216,0.4)] text-white font-mono transition-all duration-300 px-8"
+                className="bg-[#0018d8] hover:bg-[#0018d8]/90 hover:shadow-[0_10px_30px_-10px_rgba(0,24,216,0.5)] text-white font-semibold transition-all duration-300 px-8"
               >
-                Init_Deploy()
+                Solicitar Consulta
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
               <Button 
                 size="lg"
                 variant="outline"
-                className="bg-white/[0.02] hover:bg-white/[0.05] border-white/5 hover:border-[#00e5ff]/50 hover:shadow-[0_0_20px_rgba(0,229,255,0.2)] font-mono text-white transition-all duration-300"
+                className="bg-white/[0.03] hover:bg-white/[0.05] border-white/10 hover:border-white/20 hover:shadow-[0_10px_30px_-10px_rgba(0,24,216,0.3)] text-white transition-all duration-300"
               >
-                Ver_Paquetes
+                Ver Soluciones
               </Button>
             </motion.div>
           </motion.div>
@@ -244,23 +243,23 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeUpVariants}
-              className="bg-white/[0.02] hover:bg-white/[0.03] backdrop-blur-xl border border-white/5 hover:border-[#00e5ff]/30 hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all duration-300 rounded-2xl p-8 relative"
+              className="bg-white/[0.03] hover:bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-white/20 hover:shadow-[0_10px_30px_-10px_rgba(0,24,216,0.3)] transition-all duration-300 rounded-2xl p-8 relative"
             >
-              <div className="absolute -top-3 left-8 bg-[#030305] px-4 py-1 rounded-full border border-[#00e5ff]/50">
-                <p className="font-mono text-xs text-[#00e5ff]">El fin del papeleo manual</p>
+              <div className="absolute -top-3 left-8 bg-[#030305] px-4 py-1.5 rounded-full border border-[#00e5ff]/50">
+                <p className="text-xs font-medium text-[#00e5ff]">Proceso 100% Digital</p>
               </div>
               
               <div className="space-y-4 mt-4">
                 {[
-                  'Triage en < 1 min',
-                  'Solicitud automatizada',
-                  'Sin gestiones presenciales',
+                  'Evaluación inicial en menos de 1 minuto',
+                  'Solicitud completamente automatizada',
+                  'Sin gestiones presenciales requeridas',
                   'Concesión en 2-3 semanas',
-                  'Hardware incluido'
+                  'Hardware empresarial incluido'
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-3 font-mono text-xs">
-                    <Check className="h-4 w-4 text-[#00e5ff] flex-shrink-0" />
-                    <span className="text-slate-300">[OK] {item}</span>
+                  <div key={idx} className="flex items-center gap-3 text-sm">
+                    <Check className="h-5 w-5 text-[#00e5ff] flex-shrink-0" />
+                    <span className="text-slate-300">{item}</span>
                   </div>
                 ))}
               </div>
@@ -279,10 +278,10 @@ export default function Home() {
             variants={fadeUpVariants}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-6xl font-heading font-bold mb-4 tracking-tight">
-              Paquetes <span className="text-[#00e5ff]">Digitales</span>
+            <h2 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight">
+              Framework de <span className="text-[#00e5ff]">Soluciones</span>
             </h2>
-            <p className="text-slate-500 font-mono text-xs">// Todos incluyen Mac empresarial</p>
+            <p className="text-slate-400 text-sm">Todos los paquetes incluyen equipamiento Mac empresarial</p>
           </motion.div>
 
           <motion.div
@@ -296,31 +295,31 @@ export default function Home() {
               <motion.div
                 key={idx}
                 variants={fadeUpVariants}
-                className="bg-white/[0.02] hover:bg-white/[0.03] backdrop-blur-xl border border-white/5 hover:border-[#00e5ff]/30 hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all duration-300 rounded-2xl p-6 relative overflow-hidden"
+                className="bg-white/[0.03] hover:bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-white/20 hover:shadow-[0_10px_30px_-10px_rgba(0,24,216,0.3)] transition-all duration-300 rounded-2xl p-6 relative overflow-hidden"
               >
                 {/* MAC Badge */}
-                <div className="absolute -top-2 -right-2 bg-[#030305] border-2 border-[#00e5ff] rounded-lg px-3 py-1 rotate-12 shadow-[0_0_20px_rgba(0,229,255,0.4)]">
-                  <p className="font-mono text-[10px] font-bold text-[#00e5ff]">INCL. MAC</p>
+                <div className="absolute -top-2 -right-2 bg-white rounded-lg px-3 py-1.5 rotate-12 shadow-lg">
+                  <p className="text-[10px] font-bold text-[#0018d8]">+ EQUIPO MAC</p>
                 </div>
 
                 <div className="mb-6">
-                  <h3 className="text-2xl font-heading font-bold mb-2">{pkg.name}</h3>
+                  <h3 className="text-2xl font-bold mb-2">{pkg.name}</h3>
                   <div className="h-1 w-12 bg-gradient-to-r from-[#00e5ff] to-[#0018d8] rounded-full" />
                 </div>
 
                 <ul className="space-y-3 mb-8">
                   {pkg.features.map((feature, fidx) => (
-                    <li key={fidx} className="font-mono text-xs text-slate-400">
+                    <li key={fidx} className="text-sm text-slate-300">
                       {feature}
                     </li>
                   ))}
                 </ul>
 
                 <Button 
-                  className="w-full bg-white/[0.02] hover:bg-white/[0.05] border border-white/5 hover:border-[#00e5ff]/50 transition-all duration-300 font-mono text-xs"
+                  className="w-full bg-white/[0.03] hover:bg-white/[0.05] border border-white/10 hover:border-white/20 transition-all duration-300 text-sm"
                   variant="outline"
                 >
-                  Install
+                  Más Información
                 </Button>
               </motion.div>
             ))}
@@ -338,8 +337,8 @@ export default function Home() {
             variants={fadeUpVariants}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-6xl font-heading font-bold mb-4 tracking-tight">
-              Proyectos <span className="text-[#00e5ff]">Desplegados</span>
+            <h2 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight">
+              Proyectos <span className="text-[#00e5ff]">Destacados</span>
             </h2>
           </motion.div>
 
@@ -354,14 +353,14 @@ export default function Home() {
               <motion.div
                 key={idx}
                 variants={fadeUpVariants}
-                className={`${idx === 0 ? 'col-span-2 row-span-1 md:row-span-2' : 'col-span-1 row-span-1'} group bg-white/[0.02] backdrop-blur-xl border border-white/5 hover:border-[#00e5ff]/30 hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all duration-300 rounded-2xl p-6 md:p-8 relative overflow-hidden cursor-pointer ${idx === 0 ? 'min-h-[250px] md:min-h-[500px]' : 'min-h-[200px] md:min-h-[240px]'} flex flex-col justify-end`}
+                className={`${idx === 0 ? 'col-span-2 row-span-1 md:row-span-2' : 'col-span-1 row-span-1'} group bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-white/20 hover:shadow-[0_10px_30px_-10px_rgba(0,24,216,0.3)] transition-all duration-300 rounded-2xl p-6 md:p-8 relative overflow-hidden cursor-pointer ${idx === 0 ? 'min-h-[250px] md:min-h-[500px]' : 'min-h-[200px] md:min-h-[240px]'} flex flex-col justify-end`}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-[#0018d8]/10 to-[#4338ca]/10" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#030305] via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-all duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#030305] via-[#030305]/50 to-transparent opacity-90 group-hover:opacity-70 transition-all duration-300" />
                 
                 <div className="relative z-10 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                  <p className="font-mono text-[10px] md:text-xs text-[#00e5ff] mb-2">{project.tag}</p>
-                  <h3 className={`${idx === 0 ? 'text-xl md:text-3xl' : 'text-base md:text-lg'} font-heading font-bold`}>{project.name}</h3>
+                  <p className="text-xs md:text-sm text-[#00e5ff] mb-2 font-medium">{project.tag}</p>
+                  <h3 className={`${idx === 0 ? 'text-xl md:text-3xl' : 'text-base md:text-lg'} font-bold`}>{project.name}</h3>
                 </div>
               </motion.div>
             ))}
@@ -379,8 +378,8 @@ export default function Home() {
             variants={fadeUpVariants}
             className="text-center mb-16 px-4"
           >
-            <h2 className="text-4xl md:text-6xl font-heading font-bold mb-4 tracking-tight">
-              Lo que dicen <span className="text-[#00e5ff]">nuestros clientes</span>
+            <h2 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight">
+              Logs de <span className="text-[#00e5ff]">Clientes</span>
             </h2>
           </motion.div>
 
@@ -393,7 +392,7 @@ export default function Home() {
                   whileInView="visible"
                   viewport={{ once: true, margin: "-100px" }}
                   variants={fadeUpVariants}
-                  className="bg-white/[0.02] hover:bg-white/[0.03] backdrop-blur-xl border border-white/5 hover:border-[#00e5ff]/30 hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all duration-300 rounded-2xl p-8 min-w-[85vw] md:min-w-0 snap-center flex-shrink-0"
+                  className="bg-white/[0.03] hover:bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-white/20 hover:shadow-[0_10px_30px_-10px_rgba(0,24,216,0.3)] transition-all duration-300 rounded-2xl p-8 min-w-[85vw] md:min-w-0 snap-center flex-shrink-0"
                 >
                   <div className="flex gap-1 mb-4 text-[#00e5ff]">
                     {[...Array(5)].map((_, i) => (
@@ -403,8 +402,8 @@ export default function Home() {
                   <p className="text-slate-300 mb-6 leading-relaxed text-sm md:text-base">{review.text}</p>
                   <div>
                     <p className="font-semibold">{review.author}</p>
-                    <p className="font-mono text-xs text-slate-500">{review.role}</p>
-                    <p className="text-xs text-slate-600">{review.company}</p>
+                    <p className="text-xs text-slate-400">{review.role}</p>
+                    <p className="text-xs text-slate-500">{review.company}</p>
                   </div>
                 </motion.div>
               ))}
@@ -423,8 +422,8 @@ export default function Home() {
             variants={fadeUpVariants}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-6xl font-heading font-bold mb-4 tracking-tight">
-              Recursos <span className="text-[#00e5ff]">& Artículos</span>
+            <h2 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight">
+              Centro de <span className="text-[#00e5ff]">Datos</span>
             </h2>
           </motion.div>
 
@@ -439,7 +438,7 @@ export default function Home() {
               <motion.div
                 key={idx}
                 variants={fadeUpVariants}
-                className="bg-white/[0.02] hover:bg-white/[0.03] backdrop-blur-xl border border-white/5 hover:border-[#00e5ff]/30 hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all duration-300 rounded-2xl overflow-hidden group cursor-pointer"
+                className="bg-white/[0.03] hover:bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-white/20 hover:shadow-[0_10px_30px_-10px_rgba(0,24,216,0.3)] transition-all duration-300 rounded-2xl overflow-hidden group cursor-pointer"
               >
                 <div className="h-48 bg-gradient-to-br from-[#0018d8]/20 to-[#4338ca]/20 relative">
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -447,12 +446,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <p className="font-mono text-xs text-[#00e5ff] mb-2">{post.tag}</p>
-                  <h3 className="text-lg font-heading font-bold mb-4 group-hover:text-[#00e5ff] transition-colors">
+                  <p className="text-xs text-[#00e5ff] mb-2 font-medium">{post.tag}</p>
+                  <h3 className="text-lg font-bold mb-4 group-hover:text-[#00e5ff] transition-colors">
                     {post.title}
                   </h3>
-                  <p className="font-mono text-xs text-slate-500 group-hover:text-[#00e5ff] transition-colors">
-                    Leer_Articulo() →
+                  <p className="text-sm text-slate-400 group-hover:text-[#00e5ff] transition-colors">
+                    Leer Artículo →
                   </p>
                 </div>
               </motion.div>
@@ -471,7 +470,7 @@ export default function Home() {
             variants={fadeUpVariants}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-6xl font-heading font-bold mb-4 tracking-tight">
+            <h2 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight">
               Preguntas <span className="text-[#00e5ff]">Frecuentes</span>
             </h2>
           </motion.div>
@@ -487,12 +486,12 @@ export default function Home() {
                 <AccordionItem
                   key={idx}
                   value={`item-${idx}`}
-                  className="bg-white/[0.02] backdrop-blur-xl border border-white/5 rounded-xl px-6"
+                  className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl px-6"
                 >
                   <AccordionTrigger className="text-left hover:text-[#00e5ff] transition-colors font-semibold py-6 text-base">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-slate-400 leading-relaxed pb-6 text-sm">
+                  <AccordionContent className="text-slate-300 leading-relaxed pb-6 text-sm">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -514,17 +513,17 @@ export default function Home() {
           >
             <div className="absolute inset-0 bg-gradient-radial from-[#0018d8]/80 via-[#4338ca]/60 to-[#030305]" />
             <div className="relative z-10">
-              <h2 className="text-4xl md:text-6xl font-heading font-bold mb-6 tracking-tight">
-                Compila tu futuro <span className="text-[#00e5ff]">hoy</span>
+              <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+                Construye tu futuro <span className="text-[#00e5ff]">hoy</span>
               </h2>
-              <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
                 Infraestructura enterprise. Hardware premium. Financiación 100%. Sin papeleo.
               </p>
               <Button 
                 size="lg"
-                className="bg-white text-[#030305] hover:bg-[#00e5ff] hover:text-[#030305] hover:shadow-[0_0_40px_rgba(0,229,255,0.4)] font-mono text-sm md:text-base px-8 py-6 transition-all duration-300"
+                className="bg-white text-[#030305] hover:bg-[#00e5ff] hover:text-[#030305] hover:shadow-[0_10px_40px_rgba(0,229,255,0.4)] font-semibold text-sm md:text-base px-8 py-6 transition-all duration-300"
               >
-                RUN DIAGNOSTIC
+                Solicitar Consulta
                 <ChevronRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
@@ -533,14 +532,14 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="relative px-4 py-12 md:px-8 border-t border-white/5">
+      <footer className="relative px-4 py-12 md:px-8 border-t border-white/10">
         <div className="container mx-auto max-w-7xl">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="font-mono text-xs md:text-sm text-slate-500">
+            <p className="text-xs md:text-sm text-slate-400">
               © 2026 ZephyrStudio. Agente digitalizador adherido.
             </p>
-            <p className="font-mono text-xs text-slate-600">
-              // Built with Next.js + Framer Motion
+            <p className="text-xs text-slate-500">
+              Desarrollado con Next.js + Framer Motion
             </p>
           </div>
         </div>
