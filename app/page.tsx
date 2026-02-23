@@ -637,21 +637,30 @@ export default function Home() {
       </section>
 
       {/* Final CTA Asymmetrical Section */}
-      <section className="relative px-4 py-20 md:px-8 md:py-36">
-        <div className="container mx-auto max-w-[1200px]">
-          {/* Contenedor Principal con Grid */}
-          <div className="relative w-full rounded-[2.5rem] bg-white/[0.02] backdrop-blur-[24px] border border-white/[0.06] border-t-white/[0.12] p-8 md:p-16 lg:p-20 grid lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-16 items-center shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)]">
-            
-            {/* ===== COLUMNA IZQUIERDA: Contenido ===== */}
-            <div className="relative z-10">
+      <section className="relative px-4 py-20 md:px-8 md:py-36 overflow-x-clip">
+        <div className="mx-auto w-full max-w-[1200px]">
+
+          {/* Outer Glass Container */}
+          <div
+            className="relative w-full rounded-[2.5rem] p-8 sm:p-10 lg:p-[5rem_4rem] grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-center"
+            style={{
+              background: 'rgba(255,255,255,0.02)',
+              backdropFilter: 'blur(24px)',
+              WebkitBackdropFilter: 'blur(24px)',
+              border: '1px solid rgba(255,255,255,0.06)',
+              borderTop: '1px solid rgba(255,255,255,0.12)',
+              boxShadow: '0 40px 80px -20px rgba(0,0,0,0.8)',
+            }}
+          >
+
+            {/* ===== LEFT COLUMN: Content ===== */}
+            <div className="relative z-10 text-center lg:text-left">
+
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#00e5ff]/5 border border-[#00e5ff]/20 mb-8">
-                <span 
-                  className="w-1.5 h-1.5 rounded-full bg-[#00e5ff]" 
-                  style={{
-                    boxShadow: '0 0 10px #00e5ff',
-                    animation: 'pulse 2s infinite'
-                  }}
+                <span
+                  className="w-1.5 h-1.5 rounded-full bg-[#00e5ff]"
+                  style={{ boxShadow: '0 0 10px #00e5ff', animation: 'pulse 2s infinite' }}
                 />
                 <span className="text-[#00e5ff] font-mono text-xs font-bold uppercase tracking-widest">
                   System Ready
@@ -659,13 +668,15 @@ export default function Home() {
               </div>
 
               {/* Heading */}
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[0.95] tracking-tighter mb-6">
+              <h2
+                className="font-extrabold leading-[0.95] tracking-tighter mb-6"
+                style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)' }}
+              >
                 <span className="text-white">Arquitectura Web.</span>
-                <span 
-                  className="block mt-2 text-transparent" 
-                  style={{ 
-                    WebkitTextStroke: '1px rgba(255, 255, 255, 0.6)',
-                    textStroke: '1px rgba(255, 255, 255, 0.6)'
+                <span
+                  className="block mt-2 text-transparent"
+                  style={{
+                    WebkitTextStroke: '1px rgba(255,255,255,0.6)',
                   }}
                 >
                   Cero Burocracia.
@@ -673,98 +684,97 @@ export default function Home() {
               </h2>
 
               {/* Description */}
-              <p className="text-lg text-slate-400 leading-relaxed mb-12 max-w-lg">
-                Desplegamos tu infraestructura digital y te equipamos con hardware de grado empresarial (Apple Mac) financiado al 100% por los fondos europeos.
+              <p className="text-lg text-slate-400 leading-[1.7] mb-12 max-w-[500px] mx-auto lg:mx-0">
+                Desplegamos tu infraestructura digital y te equipamos con
+                hardware de grado empresarial (Apple Mac) financiado al 100%
+                por los fondos europeos.
               </p>
 
               {/* CTA Button */}
-              <button className="group relative inline-flex items-center gap-3 bg-white text-[#030305] font-semibold text-base px-10 py-4 rounded-full overflow-hidden transition-all duration-300 hover:-translate-y-0.5 shadow-[0_10px_30px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_20px_40px_-10px_rgba(0,229,255,0.4)]">
-                {/* Gradient overlay */}
-                <span className="absolute inset-0 bg-gradient-to-r from-[#00e5ff] to-[#0018d8] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                <span className="relative z-10 group-hover:text-white transition-colors duration-300">
+              <a
+                href="#"
+                className="group relative inline-flex items-center gap-3 bg-white text-[#030305] font-semibold text-base px-10 py-4 rounded-full overflow-hidden transition-all duration-300 hover:-translate-y-0.5 shadow-[0_10px_30px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_20px_40px_-10px_rgba(0,229,255,0.4)] no-underline"
+              >
+                <span className="absolute inset-0 bg-gradient-to-r from-[#00e5ff] to-[#0018d8] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[1]" />
+                <span className="relative z-[2] group-hover:text-white transition-colors duration-300">
                   Iniciar_Deploy()
                 </span>
-                
-                <svg 
-                  className="relative z-10 w-[18px] h-[18px] group-hover:text-white transition-all duration-300 group-hover:translate-x-2" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2.5" 
-                  strokeLinecap="round" 
+                <svg
+                  className="relative z-[2] w-[18px] h-[18px] group-hover:text-white transition-all duration-300 group-hover:translate-x-2"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
                 </svg>
-              </button>
+              </a>
             </div>
 
-            {/* ===== COLUMNA DERECHA: Visuals 3D ===== */}
-            <div 
-              className="relative w-full flex items-center justify-center min-h-[400px] lg:min-h-[500px]" 
-              style={{ perspective: '1000px' }}
-            >
-              {/* Terminal Card con 3D Transform */}
-              <div 
-                className="relative w-full max-w-[400px] bg-[rgba(10,10,15,0.7)] backdrop-blur-xl border border-white/8 border-t-white/20 rounded-2xl p-8 shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-all duration-500"
+            {/* ===== RIGHT COLUMN: 3D Visuals ===== */}
+            <div className="relative w-full flex items-center justify-center mt-12 lg:mt-0" style={{ perspective: '1000px' }}>
+
+              {/* Terminal Card */}
+              <div
+                className="cta-terminal relative w-full max-w-[400px] backdrop-blur-xl rounded-3xl p-8 transition-all duration-500"
                 style={{
-                  transform: 'rotateY(-8deg) rotateX(4deg)',
-                  transformStyle: 'preserve-3d'
+                  background: 'rgba(10,10,15,0.7)',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                  borderTop: '1px solid rgba(255,255,255,0.2)',
+                  boxShadow: '0 30px 60px rgba(0,0,0,0.6)',
+                  transformStyle: 'preserve-3d',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'rotateY(0deg) rotateX(0deg) translateY(-10px)';
-                  e.currentTarget.style.boxShadow = '0 40px 80px rgba(0, 229, 255, 0.15)';
-                  e.currentTarget.style.borderColor = 'rgba(0, 229, 255, 0.3)';
+                  e.currentTarget.style.transform = 'rotateY(0deg) rotateX(0deg) translateY(-10px)'
+                  e.currentTarget.style.boxShadow = '0 40px 80px rgba(0,229,255,0.15)'
+                  e.currentTarget.style.borderColor = 'rgba(0,229,255,0.3)'
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'rotateY(-8deg) rotateX(4deg)';
-                  e.currentTarget.style.boxShadow = '0 30px 60px rgba(0,0,0,0.6)';
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                  const isMobile = window.innerWidth < 1024
+                  e.currentTarget.style.transform = isMobile ? 'none' : 'rotateY(-8deg) rotateX(4deg)'
+                  e.currentTarget.style.boxShadow = '0 30px 60px rgba(0,0,0,0.6)'
+                  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'
                 }}
               >
-                {/* Header */}
+                {/* Header bar */}
                 <div className="flex justify-between items-center border-b border-white/5 pb-4 mb-6">
                   <div className="flex items-center gap-2">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" strokeWidth="2">
-                      <polyline points="4 17 10 11 4 5"></polyline>
-                      <line x1="12" y1="19" x2="20" y2="19"></line>
+                      <polyline points="4 17 10 11 4 5" />
+                      <line x1="12" y1="19" x2="20" y2="19" />
                     </svg>
                     <span className="text-white font-mono text-sm">diagnostic.sh</span>
                   </div>
-                  <div className="flex gap-1.5">
+                  <div className="flex gap-1">
                     <span className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
                     <span className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
                   </div>
                 </div>
 
-                {/* Terminal Rows */}
+                {/* Rows */}
                 <div className="space-y-5">
-                  <div className="flex justify-between items-center font-mono text-[13px] text-slate-400">
-                    <span>&gt; Verify_Grant_Limit</span>
-                    <span className="text-[#00e5ff] font-bold">[3.000€]</span>
-                  </div>
-                  <div className="flex justify-between items-center font-mono text-[13px] text-slate-400">
-                    <span>&gt; Hardware_Payload</span>
-                    <span className="text-blue-500 font-bold">MAC_READY</span>
-                  </div>
-                  <div className="flex justify-between items-center font-mono text-[13px] text-slate-400">
-                    <span>&gt; Bureaucracy_Bypass</span>
-                    <span className="text-[#00e5ff] font-bold">[OK]</span>
-                  </div>
-                  <div className="flex justify-between items-center font-mono text-[13px] text-slate-400">
-                    <span>&gt; System_Status</span>
-                    <span className="text-emerald-400 font-bold animate-pulse">ONLINE</span>
-                  </div>
+                  {[
+                    { cmd: '> Verify_Grant_Limit', val: '[3.000€]', color: 'text-[#00e5ff]' },
+                    { cmd: '> Hardware_Payload', val: 'MAC_READY', color: 'text-blue-500' },
+                    { cmd: '> Bureaucracy_Bypass', val: '[OK]', color: 'text-[#00e5ff]' },
+                    { cmd: '> System_Status', val: 'ONLINE', color: 'text-emerald-400 animate-pulse' },
+                  ].map((r, i) => (
+                    <div key={i} className="flex justify-between items-center font-mono text-[13px] text-slate-400">
+                      <span>{r.cmd}</span>
+                      <span className={`${r.color} font-bold`}>{r.val}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              {/* Floating Chip 1: Top-Right */}
-              <div className="absolute -top-8 -right-8 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-4 flex items-center gap-3 shadow-[0_20px_40px_rgba(0,0,0,0.4)] animate-float">
+              {/* Chip 1 - Top Right */}
+              <div className="absolute top-[-1rem] right-0 lg:top-[-2rem] lg:right-[-2rem] bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-2xl p-4 flex items-center gap-3 shadow-[0_20px_40px_rgba(0,0,0,0.4)] animate-float">
                 <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#00e5ff]/10">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" strokeWidth="2">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                   </svg>
                 </div>
                 <div className="flex flex-col">
@@ -773,13 +783,13 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Floating Chip 2: Bottom-Left */}
-              <div className="absolute -bottom-4 -left-12 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-4 flex items-center gap-3 shadow-[0_20px_40px_rgba(0,0,0,0.4)] animate-float-delayed">
+              {/* Chip 2 - Bottom Left */}
+              <div className="absolute bottom-[-1rem] left-0 lg:bottom-[-1rem] lg:left-[-3rem] bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-2xl p-4 flex items-center gap-3 shadow-[0_20px_40px_rgba(0,0,0,0.4)] animate-float-delayed">
                 <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#0018d8]/10">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7e8cff" strokeWidth="2">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                    <line x1="8" y1="21" x2="16" y2="21"></line>
-                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                    <line x1="8" y1="21" x2="16" y2="21" />
+                    <line x1="12" y1="17" x2="12" y2="21" />
                   </svg>
                 </div>
                 <div className="flex flex-col">

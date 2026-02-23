@@ -245,14 +245,14 @@
     text-stroke: 1px rgba(255, 255, 255, 0.6);
   }
 
-  /* 3D Card perspective helper */
-  .card-3d {
-    transform-style: preserve-3d;
-    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    will-change: transform;
+  /* CTA Terminal: 3D on desktop, flat on mobile */
+  .cta-terminal {
+    transform: none;
   }
 
-  .card-3d-content {
-    transform: translateZ(40px);
+  @media (min-width: 1024px) {
+    .cta-terminal {
+      transform: rotateY(-8deg) rotateX(4deg);
+    }
   }
 }
