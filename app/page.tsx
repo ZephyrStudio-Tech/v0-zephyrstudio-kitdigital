@@ -637,47 +637,101 @@ export default function Home() {
       </section>
 
       {/* Final CTA Asymmetrical Section */}
-      <section className="relative px-4 py-20 md:px-8 md:py-36 overflow-hidden">
+      <section className="relative px-4 py-20 md:px-8 md:py-36">
         <div className="container mx-auto max-w-[1200px]">
-          <div className="relative w-full rounded-[2.5rem] bg-white/[0.02] backdrop-blur-3xl border border-white/[0.06] border-t-white/[0.15] p-10 lg:p-20 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)] hover:-translate-y-1 transition-transform duration-500">
-
-            {/* Left Column */}
+          {/* Contenedor Principal con Grid */}
+          <div className="relative w-full rounded-[2.5rem] bg-white/[0.02] backdrop-blur-[24px] border border-white/[0.06] border-t-white/[0.12] p-8 md:p-16 lg:p-20 grid lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-16 items-center shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)]">
+            
+            {/* ===== COLUMNA IZQUIERDA: Contenido ===== */}
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#00e5ff]/5 border border-[#00e5ff]/20 text-[#00e5ff] font-mono text-xs font-bold uppercase tracking-widest mb-8">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#00e5ff] animate-pulse" />
-                System Ready
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#00e5ff]/5 border border-[#00e5ff]/20 mb-8">
+                <span 
+                  className="w-1.5 h-1.5 rounded-full bg-[#00e5ff]" 
+                  style={{
+                    boxShadow: '0 0 10px #00e5ff',
+                    animation: 'pulse 2s infinite'
+                  }}
+                />
+                <span className="text-[#00e5ff] font-mono text-xs font-bold uppercase tracking-widest">
+                  System Ready
+                </span>
               </div>
 
-              <h2 className="font-heading text-5xl lg:text-7xl font-extrabold leading-[0.9] tracking-tighter text-white mb-6">
-                Arquitectura Web.
-                <span className="block mt-2 text-transparent" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.6)' }}>
+              {/* Heading */}
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[0.95] tracking-tighter mb-6">
+                <span className="text-white">Arquitectura Web.</span>
+                <span 
+                  className="block mt-2 text-transparent" 
+                  style={{ 
+                    WebkitTextStroke: '1px rgba(255, 255, 255, 0.6)',
+                    textStroke: '1px rgba(255, 255, 255, 0.6)'
+                  }}
+                >
                   Cero Burocracia.
                 </span>
               </h2>
 
-              <p className="text-slate-400 text-lg leading-relaxed mb-10 max-w-lg">
+              {/* Description */}
+              <p className="text-lg text-slate-400 leading-relaxed mb-12 max-w-lg">
                 Desplegamos tu infraestructura digital y te equipamos con hardware de grado empresarial (Apple Mac) financiado al 100% por los fondos europeos.
               </p>
 
-              <button className="group relative inline-flex items-center gap-3 bg-white text-[#030305] font-semibold text-base px-8 py-4 rounded-full overflow-hidden transition-all hover:-translate-y-0.5 hover:shadow-[0_20px_40px_-10px_rgba(0,229,255,0.4)]">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#00e5ff] to-[#0018d8] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" />
-                <span className="relative z-10 group-hover:text-white transition-colors duration-300">Iniciar_Deploy()</span>
-                <svg className="relative z-10 w-5 h-5 group-hover:text-white group-hover:translate-x-1 transition-all duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              {/* CTA Button */}
+              <button className="group relative inline-flex items-center gap-3 bg-white text-[#030305] font-semibold text-base px-10 py-4 rounded-full overflow-hidden transition-all duration-300 hover:-translate-y-0.5 shadow-[0_10px_30px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_20px_40px_-10px_rgba(0,229,255,0.4)]">
+                {/* Gradient overlay */}
+                <span className="absolute inset-0 bg-gradient-to-r from-[#00e5ff] to-[#0018d8] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                <span className="relative z-10 group-hover:text-white transition-colors duration-300">
+                  Iniciar_Deploy()
+                </span>
+                
+                <svg 
+                  className="relative z-10 w-[18px] h-[18px] group-hover:text-white transition-all duration-300 group-hover:translate-x-2" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2.5" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                >
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
               </button>
             </div>
 
-            {/* Right Column (3D Visuals) */}
-            <div className="relative w-full h-[400px] lg:h-[500px] flex items-center justify-center [perspective:1000px] group">
-              
-              {/* Main Terminal Card */}
-              <div className="w-full max-w-[400px] bg-[#0a0a0f]/80 backdrop-blur-xl border border-white/10 border-t-white/20 rounded-2xl p-8 shadow-[0_30px_60px_rgba(0,0,0,0.6)] transform -rotate-y-6 rotate-x-6 transition-all duration-500 ease-out group-hover:rotate-y-0 group-hover:rotate-x-0 group-hover:-translate-y-2 group-hover:shadow-[0_40px_80px_rgba(0,229,255,0.15)] group-hover:border-[#00e5ff]/30">
+            {/* ===== COLUMNA DERECHA: Visuals 3D ===== */}
+            <div 
+              className="relative w-full flex items-center justify-center min-h-[400px] lg:min-h-[500px]" 
+              style={{ perspective: '1000px' }}
+            >
+              {/* Terminal Card con 3D Transform */}
+              <div 
+                className="relative w-full max-w-[400px] bg-[rgba(10,10,15,0.7)] backdrop-blur-xl border border-white/8 border-t-white/20 rounded-2xl p-8 shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-all duration-500"
+                style={{
+                  transform: 'rotateY(-8deg) rotateX(4deg)',
+                  transformStyle: 'preserve-3d'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'rotateY(0deg) rotateX(0deg) translateY(-10px)';
+                  e.currentTarget.style.boxShadow = '0 40px 80px rgba(0, 229, 255, 0.15)';
+                  e.currentTarget.style.borderColor = 'rgba(0, 229, 255, 0.3)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'rotateY(-8deg) rotateX(4deg)';
+                  e.currentTarget.style.boxShadow = '0 30px 60px rgba(0,0,0,0.6)';
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                }}
+              >
+                {/* Header */}
                 <div className="flex justify-between items-center border-b border-white/5 pb-4 mb-6">
-                  <div className="flex items-center gap-2 font-mono text-sm text-white">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" strokeWidth="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-                    diagnostic.sh
+                  <div className="flex items-center gap-2">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" strokeWidth="2">
+                      <polyline points="4 17 10 11 4 5"></polyline>
+                      <line x1="12" y1="19" x2="20" y2="19"></line>
+                    </svg>
+                    <span className="text-white font-mono text-sm">diagnostic.sh</span>
                   </div>
                   <div className="flex gap-1.5">
                     <span className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
@@ -685,30 +739,33 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="space-y-5 font-mono text-sm">
-                  <div className="flex justify-between text-slate-400">
+                {/* Terminal Rows */}
+                <div className="space-y-5">
+                  <div className="flex justify-between items-center font-mono text-[13px] text-slate-400">
                     <span>&gt; Verify_Grant_Limit</span>
                     <span className="text-[#00e5ff] font-bold">[3.000€]</span>
                   </div>
-                  <div className="flex justify-between text-slate-400">
+                  <div className="flex justify-between items-center font-mono text-[13px] text-slate-400">
                     <span>&gt; Hardware_Payload</span>
                     <span className="text-blue-500 font-bold">MAC_READY</span>
                   </div>
-                  <div className="flex justify-between text-slate-400">
+                  <div className="flex justify-between items-center font-mono text-[13px] text-slate-400">
                     <span>&gt; Bureaucracy_Bypass</span>
                     <span className="text-[#00e5ff] font-bold">[OK]</span>
                   </div>
-                  <div className="flex justify-between text-slate-400">
+                  <div className="flex justify-between items-center font-mono text-[13px] text-slate-400">
                     <span>&gt; System_Status</span>
                     <span className="text-emerald-400 font-bold animate-pulse">ONLINE</span>
                   </div>
                 </div>
               </div>
 
-              {/* Floating Chip 1 */}
-              <div className="absolute -top-4 -right-4 lg:-right-8 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl p-4 flex items-center gap-4 shadow-2xl animate-float">
-                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#00e5ff]/10 text-[#00e5ff]">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              {/* Floating Chip 1: Top-Right */}
+              <div className="absolute -top-8 -right-8 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-4 flex items-center gap-3 shadow-[0_20px_40px_rgba(0,0,0,0.4)] animate-float">
+                <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#00e5ff]/10">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" strokeWidth="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
                 </div>
                 <div className="flex flex-col">
                   <span className="text-[10px] text-slate-400 uppercase tracking-wider font-mono">Seguridad</span>
@@ -716,18 +773,22 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Floating Chip 2 */}
-              <div className="absolute -bottom-8 -left-4 lg:-left-12 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl p-4 flex items-center gap-4 shadow-2xl animate-float-delayed">
-                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#0018d8]/20 text-[#7e8cff]">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              {/* Floating Chip 2: Bottom-Left */}
+              <div className="absolute -bottom-4 -left-12 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl p-4 flex items-center gap-3 shadow-[0_20px_40px_rgba(0,0,0,0.4)] animate-float-delayed">
+                <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#0018d8]/10">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7e8cff" strokeWidth="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
                 </div>
                 <div className="flex flex-col">
                   <span className="text-[10px] text-slate-400 uppercase tracking-wider font-mono">Hardware</span>
                   <span className="text-sm font-semibold text-white">Apple Silicon</span>
                 </div>
               </div>
-
             </div>
+
           </div>
         </div>
       </section>
