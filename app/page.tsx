@@ -16,14 +16,16 @@ import { Marquee } from '@/components/marquee'
 /* ── Animation Variants ────────────────────────────────────────── */
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 40, scale: 0.95 },
   visible: {
     opacity: 1,
     y: 0,
+    scale: 1,
     transition: {
       type: 'spring',
-      damping: 25,
-      stiffness: 120,
+      damping: 22,
+      stiffness: 100,
+      mass: 0.8,
     },
   },
 }
@@ -32,12 +34,27 @@ const stagger = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.08 },
+    transition: { staggerChildren: 0.1 },
+  },
+}
+
+const heroLine = {
+  hidden: { opacity: 0, y: 60, scale: 0.92 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      type: 'spring',
+      damping: 18,
+      stiffness: 80,
+      mass: 1,
+    },
   },
 }
 
 const cardFade = {
-  hidden: { opacity: 0, y: 50, scale: 0.97 },
+  hidden: { opacity: 0, y: 50, scale: 0.95 },
   visible: {
     opacity: 1,
     y: 0,
@@ -45,7 +62,8 @@ const cardFade = {
     transition: {
       type: 'spring',
       damping: 20,
-      stiffness: 100,
+      stiffness: 90,
+      mass: 0.8,
     },
   },
 }
@@ -195,15 +213,21 @@ export default function Home() {
               Kit Digital 2026 Activo
             </motion.div>
 
-            {/* H1 */}
-            <motion.h1
-              variants={fadeUp}
-              className="mb-8 text-6xl md:text-8xl lg:text-[7rem] font-extrabold tracking-tighter leading-[0.92]"
-            >
-              <span className="text-gradient-heading">Arquitectura Digital.</span>
-              <br />
-              <span className="text-gradient-cyan">Equipamiento Premium</span>
-            </motion.h1>
+            {/* H1 – staggers line by line */}
+            <div className="mb-8">
+              <motion.h1
+                variants={heroLine}
+                className="text-6xl md:text-8xl lg:text-[7rem] font-extrabold tracking-tighter leading-[0.85]"
+              >
+                <span className="text-gradient-heading">Arquitectura Digital.</span>
+              </motion.h1>
+              <motion.h1
+                variants={heroLine}
+                className="text-6xl md:text-8xl lg:text-[7rem] font-extrabold tracking-tighter leading-[0.85]"
+              >
+                <span className="text-gradient-cyan drop-shadow-[0_0_40px_rgba(0,229,255,0.3)]">Equipamiento Premium</span>
+              </motion.h1>
+            </div>
 
             {/* Subtitle */}
             <motion.p
@@ -220,13 +244,12 @@ export default function Home() {
               variants={fadeUp}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-700 to-indigo-600 hover:from-blue-600 hover:to-indigo-500 text-white font-semibold px-8 py-6 text-base rounded-2xl shadow-lg shadow-blue-600/40 hover:shadow-xl hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-1"
+              <button
+                className="btn-shine-effect relative group overflow-hidden rounded-full bg-gradient-to-b from-[#0022ff] to-[#000f8a] px-8 py-4 text-white font-bold tracking-wide shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_40px_-10px_rgba(0,34,255,0.8)] transition-all hover:scale-[1.02] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_0_60px_-10px_rgba(0,34,255,1)] text-base flex items-center gap-2"
               >
                 Solicitar Consulta
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
+                <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </button>
               <Button
                 size="lg"
                 variant="outline"
@@ -273,9 +296,9 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, margin: '-80px' }}
               variants={fadeUp}
-              className="glass-premium rounded-3xl p-8 md:p-10 relative transition-all duration-300"
+              className="glass-premium rounded-3xl p-8 md:p-10 relative"
             >
-              <div className="absolute -top-3.5 left-8 bg-[#030305] px-5 py-1.5 rounded-full border border-[#00e5ff]/40 shadow-[0_0_20px_rgba(0,229,255,0.15)]">
+              <div className="absolute -top-3.5 left-8 bg-[#030305] px-5 py-1.5 rounded-full border border-[#00e5ff]/30 shadow-[0_0_20px_rgba(0,229,255,0.1)]">
                 <p className="text-xs font-semibold text-[#00e5ff] tracking-wide">
                   Proceso 100% Digital
                 </p>
@@ -359,11 +382,9 @@ export default function Home() {
                   {pkg.features.map((feature, fidx) => (
                     <li
                       key={fidx}
-                      className="text-sm text-slate-400 font-light flex items-start gap-2"
+                      className="text-sm text-slate-400 font-light flex items-start gap-2.5"
                     >
-                      <span className="text-[#00e5ff]/60 mt-1 text-[10px]">
-                        {'//'}
-                      </span>
+                      <span className="mt-2 h-1 w-1 rounded-full bg-[#00e5ff]/40 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -648,13 +669,12 @@ export default function Home() {
                 Infraestructura enterprise. Hardware premium. Financiación 100%.
                 Sin papeleo.
               </p>
-              <Button
-                size="lg"
-                className="bg-white text-[#030305] hover:bg-[#00e5ff] hover:text-[#030305] font-semibold text-base px-10 py-6 rounded-2xl shadow-xl shadow-white/10 hover:shadow-[#00e5ff]/30 transition-all duration-300 hover:-translate-y-1"
+              <button
+                className="btn-shine-effect relative group overflow-hidden rounded-full bg-gradient-to-b from-[#0022ff] to-[#000f8a] px-10 py-5 text-white font-bold tracking-wide shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_40px_-10px_rgba(0,34,255,0.8)] transition-all hover:scale-[1.02] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_0_60px_-10px_rgba(0,34,255,1)] text-base flex items-center gap-2 mx-auto"
               >
                 Solicitar Consulta
-                <ChevronRight className="ml-2 h-5 w-5" />
-              </Button>
+                <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+              </button>
             </div>
           </motion.div>
         </div>
