@@ -232,26 +232,11 @@
 
   /* Floating animation for badges/icons */
   @keyframes float {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-15px);
-    }
+    0%, 100% { transform: translateY(0px) translateZ(0); }
+    50% { transform: translateY(-15px) translateZ(0); }
   }
-
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-    will-change: transform;
-    transform: translateZ(0);
-  }
-
-  .animate-float-delayed {
-    animation: float 6s ease-in-out infinite;
-    animation-delay: -3s;
-    will-change: transform;
-    transform: translateZ(0);
-  }
+  .animate-float { animation: float 6s ease-in-out infinite; }
+  .animate-float-delayed { animation: float 6s ease-in-out infinite; animation-delay: -3s; }
 
   /* Hollow/Outline text effect */
   .text-outline {
