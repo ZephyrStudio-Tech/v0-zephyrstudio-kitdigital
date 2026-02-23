@@ -160,7 +160,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative px-4 pt-32 pb-20 md:pt-40 md:pb-32">
+      <section className="relative px-4 pt-32 pb-16 md:px-8 md:pt-40 md:pb-32 lg:py-48">
         <div className="container mx-auto max-w-6xl">
           <motion.div
             initial="hidden"
@@ -170,15 +170,15 @@ export default function Home() {
           >
             <motion.div 
               variants={fadeUpVariants}
-              className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 px-4 py-2 font-mono text-xs md:text-sm text-cyan-400"
+              className="mb-8 inline-flex items-center gap-2 rounded-full bg-white/[0.02] backdrop-blur-xl border border-white/5 px-4 py-2 font-mono text-xs text-cyan-400"
             >
-              <div className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+              <div className="h-2 w-2 rounded-full bg-[#00e5ff] animate-pulse" />
               [SYS.UPDATE: KIT_DIGITAL_2026]
             </motion.div>
 
             <motion.h1 
               variants={fadeUpVariants}
-              className="mb-6 text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight"
+              className="mb-8 text-5xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tighter leading-[0.95]"
             >
               Arquitectura Digital.
               <br />
@@ -188,7 +188,7 @@ export default function Home() {
 
             <motion.p 
               variants={fadeUpVariants}
-              className="mb-10 max-w-2xl text-lg md:text-xl text-gray-300 leading-relaxed"
+              className="mb-12 max-w-2xl text-base md:text-lg text-slate-400 leading-relaxed"
             >
               Desplegamos tu infraestructura en la nube y te equipamos con hardware de grado empresarial (Apple/Mac) financiado al 100% por el Bono Digital.
             </motion.p>
@@ -199,7 +199,7 @@ export default function Home() {
             >
               <Button 
                 size="lg"
-                className="bg-gradient-to-r from-[#0018d8] to-[#4338ca] hover:shadow-[0_0_40px_rgba(0,24,216,0.5)] text-white font-mono transition-all duration-300"
+                className="bg-[#0018d8] hover:bg-[#0018d8]/90 hover:shadow-[0_0_30px_rgba(0,24,216,0.4)] text-white font-mono transition-all duration-300 px-8"
               >
                 Init_Deploy()
                 <ChevronRight className="ml-2 h-4 w-4" />
@@ -207,7 +207,7 @@ export default function Home() {
               <Button 
                 size="lg"
                 variant="outline"
-                className="glass-card glass-card-hover font-mono text-white border-white/20"
+                className="bg-white/[0.02] hover:bg-white/[0.05] border-white/5 hover:border-[#00e5ff]/50 hover:shadow-[0_0_20px_rgba(0,229,255,0.2)] font-mono text-white transition-all duration-300"
               >
                 Ver_Paquetes
               </Button>
@@ -220,21 +220,21 @@ export default function Home() {
       <Marquee />
 
       {/* Authority & SEO Block */}
-      <section className="relative px-4 py-20 md:py-32">
+      <section className="relative px-4 py-16 md:px-8 md:py-32">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16">
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeUpVariants}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-8 leading-[1] tracking-tight">
                 Agentes Digitalizadores
                 <br />
-                <span className="text-cyan-400">Adheridos</span>
+                <span className="text-[#00e5ff]">Adheridos</span>
               </h2>
-              <p className="text-gray-300 leading-relaxed text-lg">
+              <p className="text-slate-400 leading-relaxed text-base md:text-lg">
                 No somos una agencia tradicional. Somos ingenieros de software especializados en arquitectura cloud y modernización empresarial. Diseñamos sistemas escalables, implementamos infraestructura crítica y te equipamos con las herramientas que Silicon Valley usa para liderar.
               </p>
             </motion.div>
@@ -244,10 +244,10 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeUpVariants}
-              className="glass-card glass-card-hover rounded-2xl p-8 relative"
+              className="bg-white/[0.02] hover:bg-white/[0.03] backdrop-blur-xl border border-white/5 hover:border-[#00e5ff]/30 hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all duration-300 rounded-2xl p-8 relative"
             >
-              <div className="absolute -top-3 left-8 bg-[#030305] px-4 py-1 rounded-full border border-cyan-400/50">
-                <p className="font-mono text-sm text-cyan-400">El fin del papeleo manual</p>
+              <div className="absolute -top-3 left-8 bg-[#030305] px-4 py-1 rounded-full border border-[#00e5ff]/50">
+                <p className="font-mono text-xs text-[#00e5ff]">El fin del papeleo manual</p>
               </div>
               
               <div className="space-y-4 mt-4">
@@ -258,9 +258,9 @@ export default function Home() {
                   'Concesión en 2-3 semanas',
                   'Hardware incluido'
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-3 font-mono text-sm">
-                    <Check className="h-4 w-4 text-cyan-400 flex-shrink-0" />
-                    <span className="text-gray-300">[OK] {item}</span>
+                  <div key={idx} className="flex items-center gap-3 font-mono text-xs">
+                    <Check className="h-4 w-4 text-[#00e5ff] flex-shrink-0" />
+                    <span className="text-slate-300">[OK] {item}</span>
                   </div>
                 ))}
               </div>
@@ -270,7 +270,7 @@ export default function Home() {
       </section>
 
       {/* Packages */}
-      <section id="packages" className="relative px-4 py-20 md:py-32">
+      <section id="packages" className="relative px-4 py-16 md:px-8 md:py-32">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial="hidden"
@@ -279,10 +279,10 @@ export default function Home() {
             variants={fadeUpVariants}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
-              Paquetes <span className="text-cyan-400">Digitales</span>
+            <h2 className="text-4xl md:text-6xl font-heading font-bold mb-4 tracking-tight">
+              Paquetes <span className="text-[#00e5ff]">Digitales</span>
             </h2>
-            <p className="text-gray-400 font-mono text-sm">// Todos incluyen Mac empresarial</p>
+            <p className="text-slate-500 font-mono text-xs">// Todos incluyen Mac empresarial</p>
           </motion.div>
 
           <motion.div
@@ -290,34 +290,34 @@ export default function Home() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
           >
             {packages.map((pkg, idx) => (
               <motion.div
                 key={idx}
                 variants={fadeUpVariants}
-                className="glass-card glass-card-hover rounded-2xl p-6 relative"
+                className="bg-white/[0.02] hover:bg-white/[0.03] backdrop-blur-xl border border-white/5 hover:border-[#00e5ff]/30 hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all duration-300 rounded-2xl p-6 relative overflow-hidden"
               >
                 {/* MAC Badge */}
-                <div className="absolute -top-3 -right-3 bg-black border-2 border-cyan-400 rounded-lg px-3 py-1 rotate-12 shadow-[0_0_20px_rgba(0,229,255,0.5)]">
-                  <p className="font-mono text-xs font-bold text-cyan-400">INCL. MAC</p>
+                <div className="absolute -top-2 -right-2 bg-[#030305] border-2 border-[#00e5ff] rounded-lg px-3 py-1 rotate-12 shadow-[0_0_20px_rgba(0,229,255,0.4)]">
+                  <p className="font-mono text-[10px] font-bold text-[#00e5ff]">INCL. MAC</p>
                 </div>
 
                 <div className="mb-6">
-                  <h3 className="text-2xl font-bold mb-2">{pkg.name}</h3>
-                  <div className="h-1 w-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full" />
+                  <h3 className="text-2xl font-heading font-bold mb-2">{pkg.name}</h3>
+                  <div className="h-1 w-12 bg-gradient-to-r from-[#00e5ff] to-[#0018d8] rounded-full" />
                 </div>
 
                 <ul className="space-y-3 mb-8">
                   {pkg.features.map((feature, fidx) => (
-                    <li key={fidx} className="font-mono text-sm text-gray-300">
+                    <li key={fidx} className="font-mono text-xs text-slate-400">
                       {feature}
                     </li>
                   ))}
                 </ul>
 
                 <Button 
-                  className="w-full bg-white/5 hover:bg-white/10 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 font-mono"
+                  className="w-full bg-white/[0.02] hover:bg-white/[0.05] border border-white/5 hover:border-[#00e5ff]/50 transition-all duration-300 font-mono text-xs"
                   variant="outline"
                 >
                   Install
@@ -329,7 +329,7 @@ export default function Home() {
       </section>
 
       {/* Projects Bento Grid */}
-      <section className="relative px-4 py-20 md:py-32">
+      <section className="relative px-4 py-16 md:px-8 md:py-32">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial="hidden"
@@ -338,8 +338,8 @@ export default function Home() {
             variants={fadeUpVariants}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
-              Proyectos <span className="text-cyan-400">Desplegados</span>
+            <h2 className="text-4xl md:text-6xl font-heading font-bold mb-4 tracking-tight">
+              Proyectos <span className="text-[#00e5ff]">Desplegados</span>
             </h2>
           </motion.div>
 
@@ -348,20 +348,20 @@ export default function Home() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4"
+            className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-4"
           >
             {projects.map((project, idx) => (
               <motion.div
                 key={idx}
                 variants={fadeUpVariants}
-                className={`${project.span} group glass-card rounded-2xl p-6 md:p-8 relative overflow-hidden cursor-pointer min-h-[200px] md:min-h-[250px] flex flex-col justify-end`}
+                className={`${idx === 0 ? 'col-span-2 row-span-1 md:row-span-2' : 'col-span-1 row-span-1'} group bg-white/[0.02] backdrop-blur-xl border border-white/5 hover:border-[#00e5ff]/30 hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all duration-300 rounded-2xl p-6 md:p-8 relative overflow-hidden cursor-pointer ${idx === 0 ? 'min-h-[250px] md:min-h-[500px]' : 'min-h-[200px] md:min-h-[240px]'} flex flex-col justify-end`}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-indigo-900/20" />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0018d8]/10 to-[#4338ca]/10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#030305] via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-all duration-300" />
                 
-                <div className="relative z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="font-mono text-xs text-cyan-400 mb-2">{project.tag}</p>
-                  <h3 className="text-lg md:text-xl font-bold">{project.name}</h3>
+                <div className="relative z-10 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  <p className="font-mono text-[10px] md:text-xs text-[#00e5ff] mb-2">{project.tag}</p>
+                  <h3 className={`${idx === 0 ? 'text-xl md:text-3xl' : 'text-base md:text-lg'} font-heading font-bold`}>{project.name}</h3>
                 </div>
               </motion.div>
             ))}
@@ -370,22 +370,22 @@ export default function Home() {
       </section>
 
       {/* Reviews */}
-      <section className="relative px-4 py-20 md:py-32">
+      <section className="relative py-16 md:px-8 md:py-32">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeUpVariants}
-            className="text-center mb-16"
+            className="text-center mb-16 px-4"
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
-              Lo que dicen <span className="text-cyan-400">nuestros clientes</span>
+            <h2 className="text-4xl md:text-6xl font-heading font-bold mb-4 tracking-tight">
+              Lo que dicen <span className="text-[#00e5ff]">nuestros clientes</span>
             </h2>
           </motion.div>
 
-          <div className="overflow-x-auto pb-4 -mx-4 px-4 snap-x snap-mandatory scrollbar-hide">
-            <div className="flex gap-6 w-max md:w-full md:grid md:grid-cols-3">
+          <div className="md:px-4">
+            <div className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory scrollbar-hide pb-4 px-4 md:px-0 -mx-4 md:mx-0">
               {reviews.map((review, idx) => (
                 <motion.div
                   key={idx}
@@ -393,18 +393,18 @@ export default function Home() {
                   whileInView="visible"
                   viewport={{ once: true, margin: "-100px" }}
                   variants={fadeUpVariants}
-                  className="glass-card glass-card-hover rounded-2xl p-8 w-[85vw] md:w-auto snap-center"
+                  className="bg-white/[0.02] hover:bg-white/[0.03] backdrop-blur-xl border border-white/5 hover:border-[#00e5ff]/30 hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all duration-300 rounded-2xl p-8 min-w-[85vw] md:min-w-0 snap-center flex-shrink-0"
                 >
-                  <div className="flex gap-1 mb-4 text-cyan-400">
+                  <div className="flex gap-1 mb-4 text-[#00e5ff]">
                     {[...Array(5)].map((_, i) => (
                       <span key={i}>★</span>
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-6 leading-relaxed">{review.text}</p>
+                  <p className="text-slate-300 mb-6 leading-relaxed text-sm md:text-base">{review.text}</p>
                   <div>
-                    <p className="font-bold">{review.author}</p>
-                    <p className="font-mono text-sm text-gray-400">{review.role}</p>
-                    <p className="text-sm text-gray-500">{review.company}</p>
+                    <p className="font-semibold">{review.author}</p>
+                    <p className="font-mono text-xs text-slate-500">{review.role}</p>
+                    <p className="text-xs text-slate-600">{review.company}</p>
                   </div>
                 </motion.div>
               ))}
@@ -414,7 +414,7 @@ export default function Home() {
       </section>
 
       {/* Blog/Resources */}
-      <section className="relative px-4 py-20 md:py-32">
+      <section className="relative px-4 py-16 md:px-8 md:py-32">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             initial="hidden"
@@ -423,8 +423,8 @@ export default function Home() {
             variants={fadeUpVariants}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
-              Recursos <span className="text-cyan-400">& Artículos</span>
+            <h2 className="text-4xl md:text-6xl font-heading font-bold mb-4 tracking-tight">
+              Recursos <span className="text-[#00e5ff]">& Artículos</span>
             </h2>
           </motion.div>
 
@@ -433,25 +433,25 @@ export default function Home() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid md:grid-cols-3 gap-8"
+            className="grid md:grid-cols-3 gap-6"
           >
             {blogPosts.map((post, idx) => (
               <motion.div
                 key={idx}
                 variants={fadeUpVariants}
-                className="glass-card glass-card-hover rounded-2xl overflow-hidden group cursor-pointer"
+                className="bg-white/[0.02] hover:bg-white/[0.03] backdrop-blur-xl border border-white/5 hover:border-[#00e5ff]/30 hover:shadow-[0_0_30px_rgba(0,229,255,0.15)] transition-all duration-300 rounded-2xl overflow-hidden group cursor-pointer"
               >
-                <div className="h-48 bg-gradient-to-br from-blue-900/40 to-indigo-900/40 relative">
+                <div className="h-48 bg-gradient-to-br from-[#0018d8]/20 to-[#4338ca]/20 relative">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Terminal className="h-12 w-12 text-cyan-400/50" />
+                    <Terminal className="h-12 w-12 text-[#00e5ff]/30 group-hover:text-[#00e5ff]/50 transition-colors" />
                   </div>
                 </div>
                 <div className="p-6">
-                  <p className="font-mono text-xs text-cyan-400 mb-2">{post.tag}</p>
-                  <h3 className="text-xl font-bold mb-4 group-hover:text-cyan-400 transition-colors">
+                  <p className="font-mono text-xs text-[#00e5ff] mb-2">{post.tag}</p>
+                  <h3 className="text-lg font-heading font-bold mb-4 group-hover:text-[#00e5ff] transition-colors">
                     {post.title}
                   </h3>
-                  <p className="font-mono text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+                  <p className="font-mono text-xs text-slate-500 group-hover:text-[#00e5ff] transition-colors">
                     Leer_Articulo() →
                   </p>
                 </div>
@@ -462,7 +462,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="relative px-4 py-20 md:py-32">
+      <section className="relative px-4 py-16 md:px-8 md:py-32">
         <div className="container mx-auto max-w-4xl">
           <motion.div
             initial="hidden"
@@ -471,8 +471,8 @@ export default function Home() {
             variants={fadeUpVariants}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
-              Preguntas <span className="text-cyan-400">Frecuentes</span>
+            <h2 className="text-4xl md:text-6xl font-heading font-bold mb-4 tracking-tight">
+              Preguntas <span className="text-[#00e5ff]">Frecuentes</span>
             </h2>
           </motion.div>
 
@@ -487,12 +487,12 @@ export default function Home() {
                 <AccordionItem
                   key={idx}
                   value={`item-${idx}`}
-                  className="glass-card rounded-xl border-white/10 px-6"
+                  className="bg-white/[0.02] backdrop-blur-xl border border-white/5 rounded-xl px-6"
                 >
-                  <AccordionTrigger className="text-left hover:text-cyan-400 transition-colors font-semibold py-6">
+                  <AccordionTrigger className="text-left hover:text-[#00e5ff] transition-colors font-semibold py-6 text-base">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-300 leading-relaxed pb-6">
+                  <AccordionContent className="text-slate-400 leading-relaxed pb-6 text-sm">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -503,26 +503,26 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative px-4 py-20 md:py-32">
+      <section className="relative px-4 py-16 md:px-8 md:py-32">
         <div className="container mx-auto max-w-5xl">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeUpVariants}
-            className="relative rounded-3xl overflow-hidden p-12 md:p-20 text-center"
+            className="relative rounded-3xl overflow-hidden p-12 md:p-24 text-center"
           >
-            <div className="absolute inset-0 bg-gradient-radial from-[#0018d8] via-[#4338ca] to-[#030305]" />
+            <div className="absolute inset-0 bg-gradient-radial from-[#0018d8]/80 via-[#4338ca]/60 to-[#030305]" />
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                Compila tu futuro <span className="text-cyan-400">hoy</span>
+              <h2 className="text-4xl md:text-6xl font-heading font-bold mb-6 tracking-tight">
+                Compila tu futuro <span className="text-[#00e5ff]">hoy</span>
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
                 Infraestructura enterprise. Hardware premium. Financiación 100%. Sin papeleo.
               </p>
               <Button 
                 size="lg"
-                className="bg-white text-[#0018d8] hover:bg-cyan-400 hover:text-black font-mono text-lg px-8 py-6 transition-all duration-300"
+                className="bg-white text-[#030305] hover:bg-[#00e5ff] hover:text-[#030305] hover:shadow-[0_0_40px_rgba(0,229,255,0.4)] font-mono text-sm md:text-base px-8 py-6 transition-all duration-300"
               >
                 RUN DIAGNOSTIC
                 <ChevronRight className="ml-2 h-5 w-5" />
@@ -533,13 +533,13 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="relative px-4 py-12 border-t border-white/10">
+      <footer className="relative px-4 py-12 md:px-8 border-t border-white/5">
         <div className="container mx-auto max-w-7xl">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="font-mono text-sm text-gray-400">
+            <p className="font-mono text-xs md:text-sm text-slate-500">
               © 2026 ZephyrStudio. Agente digitalizador adherido.
             </p>
-            <p className="font-mono text-xs text-gray-500">
+            <p className="font-mono text-xs text-slate-600">
               // Built with Next.js + Framer Motion
             </p>
           </div>
