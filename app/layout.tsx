@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { Outfit } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const outfit = Outfit({ 
+const inter = Inter({ 
   subsets: ["latin"],
-  variable: '--font-outfit',
-  weight: ['300', '400', '500', '600', '700', '800']
+  variable: '--font-inter',
+  weight: ['300', '400', '500', '600', '700', '800', '900']
 });
 
 export const metadata: Metadata = {
@@ -39,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="dark">
-      <body className={`${outfit.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
