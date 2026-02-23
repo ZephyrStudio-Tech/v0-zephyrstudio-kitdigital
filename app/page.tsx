@@ -636,44 +636,153 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── Final CTA ────────────────────────────────────────── */}
+      {/* ─── Final CTA: 3D Asymmetrical Split ────────────────── */}
       <section className="relative px-4 py-20 md:px-8 md:py-36">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-7xl">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
             variants={fadeUp}
-            className="relative rounded-[2rem] overflow-hidden p-14 md:p-28 text-center"
+            className="glass-premium rounded-[2.5rem] p-8 md:p-12 lg:p-20 relative overflow-visible"
           >
-            {/* Radial mesh bg */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  'radial-gradient(ellipse at 50% 40%, rgba(0, 24, 216, 0.6) 0%, rgba(67, 56, 202, 0.3) 40%, #030305 80%)',
-              }}
-            />
-            {/* Noise overlay */}
-            <div className="absolute inset-0 opacity-[0.03]" style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-            }} />
+            {/* Grid Layout: Left Content + Right 3D Visual */}
+            <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center">
+              
+              {/* ─── LEFT COLUMN: Content ─── */}
+              <div className="relative z-10">
+                {/* Terminal Badge */}
+                <motion.div
+                  variants={fadeUp}
+                  className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-[#00e5ff]/10 border border-[#00e5ff]/30"
+                >
+                  <div className="h-2 w-2 rounded-full bg-[#00e5ff] animate-pulse" />
+                  <span className="text-xs font-semibold text-[#00e5ff] tracking-wider">
+                    [SYSTEM READY]
+                  </span>
+                </motion.div>
 
-            <div className="relative z-10">
-              <h2 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tighter leading-[0.92]">
-                <span className="text-gradient-heading">Construye tu futuro</span>{' '}
-                <span className="text-[#00e5ff]">hoy</span>
-              </h2>
-              <p className="text-lg md:text-xl text-slate-300 mb-12 max-w-xl mx-auto font-light leading-relaxed">
-                Infraestructura enterprise. Hardware premium. Financiación 100%.
-                Sin papeleo.
-              </p>
-              <MagneticButton
-                className="btn-neon-pulse group rounded-full bg-gradient-to-b from-[#0022ff] to-[#000f8a] px-10 py-5 text-white font-bold tracking-wide shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_40px_-10px_rgba(0,34,255,0.8)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_0_60px_-10px_rgba(0,34,255,1)] transition-all text-base flex items-center gap-2 mx-auto"
+                {/* Heading with Hollow Text */}
+                <motion.h2
+                  variants={fadeUp}
+                  className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[0.88] mb-8"
+                >
+                  <span className="text-gradient-heading">Arquitectura Web.</span>
+                  <br />
+                  <span className="text-outline block mt-2">Cero Burocracia.</span>
+                </motion.h2>
+
+                {/* Description */}
+                <motion.p
+                  variants={fadeUp}
+                  className="text-lg text-slate-300 mb-10 max-w-lg font-light leading-relaxed"
+                >
+                  Despliega tu infraestructura en 48h. Hardware Mac incluido. 
+                  Financiación 100% sin gestiones presenciales.
+                </motion.p>
+
+                {/* Interactive Button */}
+                <motion.button
+                  variants={fadeUp}
+                  className="group relative overflow-hidden rounded-full bg-white px-8 py-4 text-[#030305] font-bold text-base transition-all hover:scale-105 hover:shadow-[0_20px_50px_-15px_rgba(255,255,255,0.4)] flex items-center gap-2"
+                >
+                  {/* Inner gradient reveal on hover */}
+                  <span className="absolute inset-0 bg-gradient-to-r from-[#00e5ff] to-[#0018d8] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <span className="relative z-10 group-hover:text-white transition-colors">
+                    Iniciar Proyecto
+                  </span>
+                  <ChevronRight className="relative z-10 h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:text-white" />
+                </motion.button>
+              </div>
+
+              {/* ─── RIGHT COLUMN: 3D Terminal Scene ─── */}
+              <motion.div
+                variants={fadeUp}
+                className="relative hidden lg:block group"
+                style={{ perspective: '1000px' }}
               >
-                Solicitar Consulta
-                <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
-              </MagneticButton>
+                {/* Center: Terminal Card */}
+                <motion.div
+                  initial={{ rotateY: -8, rotateX: 4 }}
+                  whileHover={{ 
+                    rotateY: 0, 
+                    rotateX: 0, 
+                    y: -10,
+                    transition: { type: 'spring', stiffness: 120, damping: 15 }
+                  }}
+                  className="card-3d relative bg-[#0a0a0f]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-[0_30px_60px_-20px_rgba(0,229,255,0.4)] hover:shadow-[0_40px_80px_-15px_rgba(0,229,255,0.6)]"
+                  style={{ 
+                    transformStyle: 'preserve-3d',
+                    willChange: 'transform'
+                  }}
+                >
+                  {/* Terminal Header */}
+                  <div className="flex items-center gap-2 mb-4 pb-3 border-b border-white/5">
+                    <div className="flex gap-1.5">
+                      <div className="h-2.5 w-2.5 rounded-full bg-red-500/80" />
+                      <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/80" />
+                      <div className="h-2.5 w-2.5 rounded-full bg-green-500/80" />
+                    </div>
+                    <span className="text-xs text-slate-500 ml-2">diagnostic.sh</span>
+                  </div>
+
+                  {/* Terminal Content */}
+                  <div className="space-y-2 text-xs font-mono">
+                    <div className="text-slate-400">
+                      <span className="text-[#00e5ff]">&gt;</span> Verify_Grant_Limit <span className="text-green-400">[3.000€]</span>
+                    </div>
+                    <div className="text-slate-400">
+                      <span className="text-[#00e5ff]">&gt;</span> Check_Hardware <span className="text-green-400">[Mac M3 Pro]</span>
+                    </div>
+                    <div className="text-slate-400">
+                      <span className="text-[#00e5ff]">&gt;</span> Deploy_Status <span className="text-yellow-400">[Ready]</span>
+                    </div>
+                    <div className="text-slate-400 flex items-center gap-2">
+                      <span className="text-[#00e5ff]">&gt;</span> 
+                      <span className="animate-pulse">_</span>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Floating Chip: Top Right */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.3, type: 'spring' }}
+                  className="animate-float absolute -top-8 -right-4 glass-premium rounded-xl p-4 shadow-lg w-36"
+                  style={{ willChange: 'transform', transform: 'translateZ(0)' }}
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <div className="h-6 w-6 rounded-lg bg-gradient-to-br from-[#00e5ff] to-[#0018d8] flex items-center justify-center">
+                      <span className="text-white text-xs font-bold">🔐</span>
+                    </div>
+                    <span className="text-[10px] font-bold text-white">Biometría</span>
+                  </div>
+                  <p className="text-[9px] text-slate-400 leading-tight">
+                    Autenticación<br />Blockchain
+                  </p>
+                </motion.div>
+
+                {/* Floating Chip: Bottom Left */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.5, type: 'spring' }}
+                  className="animate-float-delayed absolute -bottom-6 -left-4 glass-premium rounded-xl p-4 shadow-lg w-36"
+                  style={{ willChange: 'transform', transform: 'translateZ(0)' }}
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <div className="h-6 w-6 rounded-lg bg-gradient-to-br from-[#00e5ff] to-[#0018d8] flex items-center justify-center">
+                      <span className="text-white text-xs font-bold">⚡</span>
+                    </div>
+                    <span className="text-[10px] font-bold text-white">Apple Silicon</span>
+                  </div>
+                  <p className="text-[9px] text-slate-400 leading-tight">
+                    M3 Pro<br />Enterprise
+                  </p>
+                </motion.div>
+              </motion.div>
+
             </div>
           </motion.div>
         </div>

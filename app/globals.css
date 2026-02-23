@@ -229,4 +229,45 @@
   .bg-gradient-radial {
     background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
   }
+
+  /* Floating animation for badges/icons */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  .animate-float-delayed {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: -3s;
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  /* Hollow/Outline text effect */
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+    text-stroke: 1px rgba(255, 255, 255, 0.6);
+  }
+
+  /* 3D Card perspective helper */
+  .card-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: transform;
+  }
+
+  .card-3d-content {
+    transform: translateZ(40px);
+  }
 }
