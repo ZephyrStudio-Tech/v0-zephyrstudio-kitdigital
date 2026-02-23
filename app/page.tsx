@@ -715,28 +715,18 @@ export default function Home() {
             </div>
 
             {/* ===== RIGHT COLUMN: 3D Visuals ===== */}
-            <div className="relative w-full flex items-center justify-center mt-12 lg:mt-0" style={{ perspective: '1000px' }}>
+            <div className="relative w-full flex items-center justify-center mt-12 lg:mt-0 group" style={{ perspective: '1200px' }}>
 
               {/* Terminal Card */}
               <div
-                className="cta-terminal relative w-full max-w-[400px] backdrop-blur-xl rounded-3xl p-8 transition-all duration-500"
+                className="relative w-full max-w-[400px] backdrop-blur-xl rounded-3xl p-8 transition-all duration-700 ease-out
+                           transform lg:[transform:rotateY(-8deg)_rotateX(4deg)] 
+                           group-hover:[transform:rotateY(0deg)_rotateX(0deg)_translateY(-10px)]
+                           shadow-[0_30px_60px_rgba(0,0,0,0.6)] group-hover:shadow-[0_40px_80px_rgba(0,229,255,0.15)]
+                           border border-white/10 border-t-white/20 group-hover:border-[#00e5ff]/30"
                 style={{
                   background: 'rgba(10,10,15,0.7)',
-                  border: '1px solid rgba(255,255,255,0.08)',
-                  borderTop: '1px solid rgba(255,255,255,0.2)',
-                  boxShadow: '0 30px 60px rgba(0,0,0,0.6)',
                   transformStyle: 'preserve-3d',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'rotateY(0deg) rotateX(0deg) translateY(-10px)'
-                  e.currentTarget.style.boxShadow = '0 40px 80px rgba(0,229,255,0.15)'
-                  e.currentTarget.style.borderColor = 'rgba(0,229,255,0.3)'
-                }}
-                onMouseLeave={(e) => {
-                  const isMobile = window.innerWidth < 1024
-                  e.currentTarget.style.transform = isMobile ? 'none' : 'rotateY(-8deg) rotateX(4deg)'
-                  e.currentTarget.style.boxShadow = '0 30px 60px rgba(0,0,0,0.6)'
-                  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'
                 }}
               >
                 {/* Header bar */}
@@ -771,7 +761,7 @@ export default function Home() {
               </div>
 
               {/* Chip 1 - Top Right */}
-              <div className="absolute top-[-1rem] right-0 lg:top-[-2rem] lg:right-[-2rem] bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-2xl p-4 flex items-center gap-3 shadow-[0_20px_40px_rgba(0,0,0,0.4)] animate-float">
+              <div className="absolute top-[-1rem] right-0 lg:top-[-2rem] lg:right-[-2rem] bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-2xl p-4 flex items-center gap-3 shadow-[0_20px_40px_rgba(0,0,0,0.4)] animate-float" style={{ transform: 'translateZ(20px)' }}>
                 <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#00e5ff]/10">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" strokeWidth="2">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -784,7 +774,7 @@ export default function Home() {
               </div>
 
               {/* Chip 2 - Bottom Left */}
-              <div className="absolute bottom-[-1rem] left-0 lg:bottom-[-1rem] lg:left-[-3rem] bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-2xl p-4 flex items-center gap-3 shadow-[0_20px_40px_rgba(0,0,0,0.4)] animate-float-delayed">
+              <div className="absolute bottom-[-1rem] left-0 lg:bottom-[-1rem] lg:left-[-3rem] bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-2xl p-4 flex items-center gap-3 shadow-[0_20px_40px_rgba(0,0,0,0.4)] animate-float-delayed" style={{ transform: 'translateZ(30px)' }}>
                 <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#0018d8]/10">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7e8cff" strokeWidth="2">
                     <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
