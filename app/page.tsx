@@ -13,6 +13,7 @@ import { AnimatedBackground } from '@/components/animated-background'
 import { Header } from '@/components/header'
 import { Marquee } from '@/components/marquee'
 import { MagneticButton } from '@/components/magnetic-button'
+import Link from 'next/link'
 
 /* ── Animation Variants ────────────────────────────────────────── */
 
@@ -272,12 +273,14 @@ export default function Home() {
               variants={fadeUp}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <MagneticButton
-                className="btn-neon-pulse group rounded-full bg-gradient-to-b from-[#0022ff] to-[#000f8a] px-8 py-4 text-white font-bold tracking-wide shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_40px_-10px_rgba(0,34,255,0.8)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_0_60px_-10px_rgba(0,34,255,1)] transition-all text-base flex items-center gap-2 justify-center"
-              >
-                Solicitar Consulta
-                <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </MagneticButton>
+              <Link href="/triage">
+                <MagneticButton
+                  className="btn-neon-pulse group rounded-full bg-gradient-to-b from-[#0022ff] to-[#000f8a] px-8 py-4 text-white font-bold tracking-wide shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_40px_-10px_rgba(0,34,255,0.8)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_0_60px_-10px_rgba(0,34,255,1)] transition-all text-base flex items-center gap-2 justify-center"
+                >
+                  Solicitar Consulta
+                  <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </MagneticButton>
+              </Link>
               <button
                 className="btn-liquid-fill glass-premium font-medium text-white px-8 py-4 text-base rounded-2xl transition-all duration-300"
               >
@@ -493,10 +496,10 @@ export default function Home() {
                     ))}
                   </div>
 
-                  <a href="#triage" className="flex justify-between items-center w-full p-4 bg-white/[0.03] border border-white/10 rounded-xl text-white text-sm font-medium transition-all duration-300 mt-auto group/btn hover:bg-white/[0.08] hover:border-white/20">
+                  <Link href="/triage" className="flex justify-between items-center w-full p-4 bg-white/[0.03] border border-white/10 rounded-xl text-white text-sm font-medium transition-all duration-300 mt-auto group/btn hover:bg-white/[0.08] hover:border-white/20">
                     <span>Configurar Módulo</span>
                     <ChevronRight className="w-4 h-4 text-[#00e5ff] transition-transform duration-300 group-hover/btn:translate-x-1" />
-                  </a>
+                  </Link>
                 </div>
               </motion.div>
             ))}
@@ -579,6 +582,21 @@ export default function Home() {
               </motion.div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* ─── Slim CTA Ribbon (Conversion Point) ──────────────────────── */}
+      <section className="relative px-4 py-12 md:px-8">
+        <div className="container mx-auto max-w-5xl">
+          <div className="glass-premium rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 border-[#00e5ff]/20 bg-gradient-to-r from-white/[0.02] to-[#0018d8]/10 shadow-[0_0_40px_rgba(0,229,255,0.05)] hover:shadow-[0_0_60px_rgba(0,229,255,0.1)] transition-shadow duration-500">
+            <div>
+              <h3 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight mb-2">¿Listo para escalar tu infraestructura?</h3>
+              <p className="text-slate-400 font-light text-sm md:text-base">Análisis de viabilidad algorítmico en 60 segundos. 100% financiado.</p>
+            </div>
+            <Link href="/triage" className="shrink-0 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-[#00e5ff] hover:text-black transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(0,229,255,0.6)] hover:-translate-y-1">
+              Verificar Viabilidad
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -794,8 +812,8 @@ export default function Home() {
               </p>
 
               {/* CTA Button */}
-              <a
-                href="#"
+              <Link
+                href="/triage"
                 className="group relative inline-flex items-center gap-2 sm:gap-3 bg-white text-[#030305] font-semibold text-xs sm:text-sm md:text-base px-5 sm:px-10 py-2.5 sm:py-4 rounded-full overflow-hidden transition-all duration-300 hover:-translate-y-0.5 shadow-[0_10px_30px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_20px_40px_-10px_rgba(0,229,255,0.4)] no-underline"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-[#00e5ff] to-[#0018d8] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[1]" />
@@ -814,7 +832,7 @@ export default function Home() {
                   <line x1="5" y1="12" x2="19" y2="12" />
                   <polyline points="12 5 19 12 12 19" />
                 </svg>
-              </a>
+              </Link>
             </div>
 
             {/* ===== RIGHT COLUMN: 3D Visuals ===== */}
