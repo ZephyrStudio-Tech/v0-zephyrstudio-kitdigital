@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Check, ChevronRight } from 'lucide-react'
+import Link from 'next/link'
 import { AnimatedBackground } from '@/components/animated-background'
 import { Header } from '@/components/header'
 
@@ -235,6 +236,14 @@ export default function SegmentoIII() {
               </motion.div>
             ))}
           </motion.div>
+
+          <Link
+            href="/puesto-de-trabajo-seguro"
+            className="block mt-8 p-6 bg-[#00e5ff]/5 border border-[#00e5ff]/30 rounded-2xl hover:bg-[#00e5ff]/10 transition-colors"
+          >
+            <h3 className="text-[#00e5ff] font-bold text-xl mb-2">Novedad: Consigue tu Mac o PC Gratis</h3>
+            <p className="text-slate-300">Descubre el nuevo bono Puesto de Trabajo Seguro exclusivo para tu segmento &rarr;</p>
+          </Link>
         </div>
       </section>
 
