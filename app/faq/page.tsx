@@ -133,7 +133,7 @@ export default function FAQ() {
                     value={`item-${idx}`}
                     className="glass-premium rounded-2xl px-7 border-white/[0.08] transition-all duration-300"
                   >
-                    <AccordionTrigger className="text-left hover:text-[#00e5ff] transition-colors font-semibold py-6 text-base tracking-tight [&[data-state=open]]:text-[#00e5ff]">
+                    <AccordionTrigger className="text-left text-white hover:text-[#00e5ff] transition-colors font-semibold py-6 text-base tracking-tight [&[data-state=open]]:text-[#00e5ff] [&>svg]:text-white">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-slate-400 leading-relaxed pb-6 text-sm font-light">
