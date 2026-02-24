@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { FloatingActionButton } from '@/components/floating-action-button'
 import './globals.css'
 
 const inter = Inter({ 
@@ -28,6 +29,7 @@ export default function RootLayout({
     <html lang="es" className="dark">
       <body className={`${inter.variable} font-sans antialiased`}>
         {children}
+        <FloatingActionButton />
         <Analytics />
       </body>
     </html>
