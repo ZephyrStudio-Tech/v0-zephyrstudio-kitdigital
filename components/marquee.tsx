@@ -3,16 +3,16 @@
 import React from 'react'
 
 const techLogos = [
-  { name: 'Apple', url: 'https://kitdigital-2026-supabase-kd2026.ijatkc.easypanel.host/storage/v1/object/public/img_web/apple-11.svg' },
-  { name: 'AWS', url: 'https://kitdigital-2026-supabase-kd2026.ijatkc.easypanel.host/storage/v1/object/public/img_web/aws-2.svg' },
-  { name: 'Canva', url: 'https://kitdigital-2026-supabase-kd2026.ijatkc.easypanel.host/storage/v1/object/public/img_web/canva-wordmark-2.svg' },
-  { name: 'Figma', url: 'https://kitdigital-2026-supabase-kd2026.ijatkc.easypanel.host/storage/v1/object/public/img_web/figma-icon.svg' },
-  { name: 'Google Ads', url: 'https://kitdigital-2026-supabase-kd2026.ijatkc.easypanel.host/storage/v1/object/public/img_web/google-ads-2.svg' },
-  { name: 'Hostinger', url: 'https://kitdigital-2026-supabase-kd2026.ijatkc.easypanel.host/storage/v1/object/public/img_web/hostinger.svg' },
-  { name: 'Odoo', url: 'https://kitdigital-2026-supabase-kd2026.ijatkc.easypanel.host/storage/v1/object/public/img_web/odoo.svg' },
-  { name: 'PostgreSQL', url: 'https://kitdigital-2026-supabase-kd2026.ijatkc.easypanel.host/storage/v1/object/public/img_web/postgresql-inc.svg' },
-  { name: 'WooCommerce', url: 'https://kitdigital-2026-supabase-kd2026.ijatkc.easypanel.host/storage/v1/object/public/img_web/woocommerce.svg' },
-  { name: 'WordPress', url: 'https://kitdigital-2026-supabase-kd2026.ijatkc.easypanel.host/storage/v1/object/public/img_web/wordpress-2.svg' }
+  { name: 'Apple', url: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/apple-11.svg' },
+  { name: 'AWS', url: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/aws-2.svg' },
+  { name: 'Canva', url: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/canva-wordmark-2.svg' },
+  { name: 'Figma', url: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/figma-icon.svg' },
+  { name: 'Google Ads', url: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/google-ads-2.svg' },
+  { name: 'Hostinger', url: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/hostinger.svg' },
+  { name: 'Odoo', url: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/odoo.svg' },
+  { name: 'PostgreSQL', url: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/postgresql-inc.svg' },
+  { name: 'WooCommerce', url: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/woocommerce.svg' },
+  { name: 'WordPress', url: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/wordpress-2.svg' }
 ]
 
 export function Marquee() {
