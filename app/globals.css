@@ -238,6 +238,12 @@
   .animate-float { animation: float 6s ease-in-out infinite; }
   .animate-float-delayed { animation: float 6s ease-in-out infinite; animation-delay: -3s; }
 
+  /* Soft float for 3D PNG icons */
+  @keyframes float-soft {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
   /* Hollow/Outline text effect */
   .text-outline {
     color: transparent;

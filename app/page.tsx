@@ -74,52 +74,52 @@ const cardFade = {
 const packages = [
   {
     name: 'WEB',
-    description: 'Presencia digital de alto rendimiento',
+    grantValue: 'Hasta 2.000€',
+    description: 'No hacemos webs corporativas tradicionales. Desarrollamos plataformas de ultra-alta velocidad (Core Web Vitals) orientadas a la conversión B2B/B2C.',
+    iconUrl: 'https://kitdigital-2026-supabase-kd2026.ijatkc.easypanel.host/storage/v1/object/public/img_web/icono%20web.png',
     features: [
-      'Diseño responsive premium',
-      'Arquitectura Next.js 15',
-      'Deploy en Vercel / AWS',
-      'SSL & CDN global',
-      'CMS headless integrado',
-      'Analítica avanzada',
+      { title: 'Arquitectura Headless', sub: 'Cargas inferiores a 1 segundo.' },
+      { title: 'Diseño UI/UX Custom', sub: 'Cero plantillas. Diseño a medida para tu marca.' },
+      { title: 'CMS Autogestionable', sub: 'Panel de control intuitivo para tu equipo.' }
     ],
+    techStack: ['Next.js', 'Vercel', 'TailwindCSS', 'React']
   },
   {
     name: 'ECOMMERCE',
-    description: 'Tienda online preparada para escalar',
+    grantValue: 'Hasta 2.000€',
+    description: 'Sistemas transaccionales escalables. Desde la captación del usuario hasta el checkout encriptado y la sincronización de stock bidireccional.',
+    iconUrl: 'https://kitdigital-2026-supabase-kd2026.ijatkc.easypanel.host/storage/v1/object/public/img_web/icono%20ecom.png',
     features: [
-      'Plataforma WooCommerce',
-      'Pasarela de pago Stripe',
-      'Gestión de inventario',
-      'Panel de administración',
-      'Optimización SEO',
-      'Integración ERP',
+      { title: 'Pasarelas de Pago Integradas', sub: 'Stripe, PayPal, Apple Pay y Redsys.' },
+      { title: 'Gestión Avanzada de Inventario', sub: 'Control de stock y sincronización con tu ERP.' },
+      { title: 'Funnels de Alta Conversión', sub: 'Checkout optimizado para evitar carritos abandonados.' }
     ],
+    techStack: ['WooCommerce', 'Stripe', 'AWS Cloud']
   },
   {
-    name: 'RRSS',
-    description: 'Estrategia social que convierte',
+    name: 'SOCIAL',
+    grantValue: 'Hasta 2.500€',
+    description: 'Construimos autoridad de marca. Estrategias algorítmicas diseñadas para capturar atención y derivar tráfico cualificado a tu embudo comercial.',
+    iconUrl: 'https://kitdigital-2026-supabase-kd2026.ijatkc.easypanel.host/storage/v1/object/public/img_web/icono%20rrss.png',
     features: [
-      'Estrategia de contenido',
-      'Gestión multicanal',
-      'Calendario editorial',
-      'Analítica y reporting',
-      'Community management',
-      'Campañas publicitarias',
+      { title: 'Auditoría de Mercado', sub: 'Análisis de competidores y blueprint estratégico.' },
+      { title: 'Producción de Activos Visuales', sub: 'Creación de contenido estático y short-form video.' },
+      { title: 'Reporting de KPIs', sub: 'Métricas de conversión mensuales transparentes.' }
     ],
+    techStack: ['Meta Suite', 'LinkedIn B2B', 'TikTok Ads']
   },
   {
-    name: 'SEO',
-    description: 'Posicionamiento orgánico medible',
+    name: 'SEO CORE',
+    grantValue: 'Hasta 2.000€',
+    description: 'Posicionamiento orgánico científico. Dominamos las SERPs mediante auditorías técnicas exhaustivas, arquitectura de enlaces y contenido semántico.',
+    iconUrl: 'https://kitdigital-2026-supabase-kd2026.ijatkc.easypanel.host/storage/v1/object/public/img_web/icono%20web.png',
     features: [
-      'Auditoría técnica completa',
-      'Keyword research',
-      'Optimización on-page',
-      'Link building estratégico',
-      'Contenido optimizado',
-      'Reporting mensual',
+      { title: 'Keyword Research Transaccional', sub: 'Atacamos palabras clave que generan ingresos reales.' },
+      { title: 'Auditoría de Indexación', sub: 'Corrección de crawl budget y errores técnicos WPO.' },
+      { title: 'Estrategia Off-Page', sub: 'Construcción de autoridad de dominio (Linkbuilding).' }
     ],
-  },
+    techStack: ['Ahrefs', 'Screaming Frog', 'Google Analytics 4']
+  }
 ]
 
 const projects = [
@@ -264,6 +264,46 @@ export default function Home() {
       {/* ─── Marquee ──────────────────────────────────────────── */}
       <Marquee />
 
+      {/* ─── Hardware Showcase ─────────────────────────────────────────────── */}
+      <section className="relative px-4 py-20 md:px-8 md:py-32 overflow-hidden [perspective:1000px]">
+        <div className="container mx-auto max-w-7xl">
+          <div className="glass-premium rounded-[2.5rem] p-8 md:p-16 grid lg:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-16 items-center relative overflow-hidden group">
+            {/* Glow orb */}
+            <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-gradient-radial from-[#0018d8]/20 to-transparent blur-[80px] pointer-events-none z-0 transition-colors duration-700 group-hover:from-[#00e5ff]/15" />
+            
+            <div className="relative z-10">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-white font-mono text-xs uppercase tracking-widest mb-8">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
+                Puesto de Trabajo Seguro
+              </div>
+              <h2 className="text-5xl md:text-6xl lg:text-[4.5rem] font-extrabold tracking-tighter mb-6 leading-[0.95] text-white">
+                Tu oficina, nivel <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-400">Silicon Valley.</span>
+              </h2>
+              <p className="text-lg text-slate-400 mb-10 max-w-md font-light leading-relaxed">
+                No te conformes con equipos de entrada. Financiamos el 100% de tu <strong className="text-white font-semibold">MacBook Pro, Air o iMac</strong> a través del Kit Digital.
+              </p>
+              <div className="flex flex-wrap gap-3 font-mono">
+                <span className="px-4 py-2 rounded-xl bg-[#00e5ff]/10 border border-[#00e5ff]/20 text-[#00e5ff] text-sm font-semibold">M2 / M3 Chip</span>
+                <span className="px-4 py-2 rounded-xl bg-white/[0.03] border border-white/10 text-white text-sm">Touch ID</span>
+                <span className="px-4 py-2 rounded-xl bg-white/[0.03] border border-white/10 text-white text-sm">FileVault</span>
+              </div>
+            </div>
+
+            <div className="relative z-10 w-full h-full min-h-[300px] flex items-center justify-center mt-8 lg:mt-0">
+              <div className="w-full max-w-[380px] aspect-[16/10] bg-gradient-to-b from-white/[0.05] to-transparent border-4 border-white/10 border-b-0 rounded-t-2xl flex items-center justify-center relative shadow-[0_-20px_50px_rgba(255,255,255,0.02)] transition-all duration-500 ease-out group-hover:border-white/20 group-hover:shadow-[0_-20px_60px_rgba(0,229,255,0.15)] group-hover:-translate-y-2">
+                <div className="absolute -bottom-1 -left-[10%] w-[120%] h-1.5 bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-full blur-[1px]" />
+                <svg className="w-20 h-20 text-white/10 transition-colors duration-500 group-hover:text-white/40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ─── Authority & SEO Block ────────────────────────────── */}
       <section className="relative px-4 py-20 md:px-8 md:py-36">
         <div className="container mx-auto max-w-6xl">
@@ -328,20 +368,20 @@ export default function Home() {
 
       {/* ─── Packages ─────────────────────────────────────────── */}
       <section id="packages" className="relative px-4 py-20 md:px-8 md:py-36">
-        <div className="container mx-auto max-w-7xl">
+        <div className="container mx-auto max-w-[1200px]">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
             variants={fadeUp}
-            className="text-center mb-20"
+            className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[0.92] mb-5">
-              <span className="text-gradient-heading">Nuestras</span>{' '}
-              <span className="text-gradient-cyan">Soluciones</span>
+            <h2 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tighter leading-[0.92] mb-4">
+              <span className="text-gradient-heading">Framework de</span>{' '}
+              <span className="text-[#00e5ff]">Soluciones</span>
             </h2>
-            <p className="text-slate-400 text-base font-light">
-              Todos los paquetes incluyen equipamiento Mac empresarial
+            <p className="text-slate-400 text-lg font-light">
+              Estructuras digitales de ultra-alto rendimiento financiadas al 100%.
             </p>
           </motion.div>
 
@@ -350,51 +390,79 @@ export default function Home() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
             variants={stagger}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8"
           >
             {packages.map((pkg, idx) => (
               <motion.div
                 key={idx}
                 variants={cardFade}
-                className="glass-premium rounded-3xl p-7 relative overflow-visible transition-all duration-300 group"
+                className="group relative glass-premium rounded-[2.5rem] p-8 md:p-12 overflow-hidden flex flex-col transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.9),0_0_40px_rgba(0,229,255,0.1)] hover:border-[#00e5ff]/30"
               >
-                {/* MAC Badge */}
-                <div className="absolute -top-3 -right-3 z-10">
-                  <div className="bg-gradient-to-r from-blue-600 to-indigo-500 text-white rounded-xl px-3.5 py-1.5 rotate-6 shadow-lg shadow-blue-600/30">
-                    <p className="text-[10px] font-bold tracking-wider uppercase">
-                      + Mac
-                    </p>
-                  </div>
-                </div>
+                {/* Watermark Icon */}
+                <svg className="absolute -right-[15%] -top-[10%] w-[350px] h-[350px] text-white/[0.03] pointer-events-none z-0 transition-all duration-700 ease-out group-hover:scale-110 group-hover:-rotate-12 group-hover:text-[#00e5ff]/[0.06] group-hover:drop-shadow-[0_0_20px_rgba(0,229,255,0.2)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+                  {idx === 0 && <><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></>}
+                  {idx === 1 && <><circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" /><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" /></>}
+                  {idx === 2 && <><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></>}
+                  {idx === 3 && <><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></>}
+                </svg>
 
-                <div className="mb-5">
-                  <h3 className="text-2xl font-extrabold tracking-tight mb-1">
-                    {pkg.name}
-                  </h3>
-                  <p className="text-xs text-slate-500 font-light">
+                <div className="relative z-10 flex flex-col flex-grow">
+                  {/* Header */}
+                  <div className="flex justify-between items-start gap-4 mb-2 flex-wrap">
+                    <div className="flex items-center gap-4">
+                      {/* 3D PNG Icon */}
+                      <div className="w-[72px] h-[72px] flex items-center justify-center animate-[float-soft_4s_ease-in-out_infinite] relative z-10">
+                        <img 
+                          src={pkg.iconUrl} 
+                          alt={`${pkg.name} Icon`} 
+                          className="w-full h-full object-contain drop-shadow-[0_15px_15px_rgba(0,0,0,0.7)] transition-all duration-500 ease-out group-hover:scale-125 group-hover:-translate-y-2 group-hover:-rotate-6 group-hover:drop-shadow-[0_20px_25px_rgba(0,229,255,0.4)]"
+                        />
+                      </div>
+                      <h3 className="text-3xl md:text-4xl font-extrabold text-white leading-none m-0 tracking-tight">{pkg.name}</h3>
+                    </div>
+                    <div className="bg-[#0018d8]/20 border border-[#0018d8]/50 text-blue-300 px-3.5 py-1.5 rounded-full font-mono text-[0.7rem] font-bold uppercase tracking-widest whitespace-nowrap shrink-0 mt-4 lg:mt-0">
+                      + Mac Incluido
+                    </div>
+                  </div>
+
+                  <span className="font-mono text-sm text-[#00e5ff] mb-6 block">&gt; Bono Red.es: {pkg.grantValue}</span>
+                  
+                  <p className="text-slate-400 text-base md:text-lg font-light mb-8">
                     {pkg.description}
                   </p>
-                  <div className="mt-3 h-px w-10 bg-gradient-to-r from-[#00e5ff] to-transparent" />
+
+                  <div className="w-full h-px bg-gradient-to-r from-white/10 to-transparent mb-8" />
+                  
+                  <h4 className="text-xs uppercase tracking-wider text-slate-300 mb-6 font-semibold">Entregables Core</h4>
+
+                  <ul className="space-y-5 mb-10 flex-grow">
+                    {pkg.features.map((feature, fidx) => (
+                      <li key={fidx} className="flex items-start gap-4">
+                        <div className="mt-1 w-5 h-5 rounded-md bg-[#00e5ff]/10 border border-[#00e5ff]/30 flex items-center justify-center shrink-0">
+                          <div className="w-[5px] h-[9px] border-solid border-[#00e5ff] border-b-2 border-r-0 border-l-0 border-t-0 rotate-45 -mt-0.5" />
+                        </div>
+                        <div className="flex flex-col">
+                          <span className="text-slate-50 text-sm font-medium mb-0.5">{feature.title}</span>
+                          <span className="text-slate-400 text-sm font-light">{feature.sub}</span>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Tech Stack Pills */}
+                  <div className="flex flex-wrap gap-2 mb-10">
+                    {pkg.techStack.map((tech, tidx) => (
+                      <span key={tidx} className="px-3 py-1.5 bg-white/[0.03] border border-white/[0.08] rounded-lg text-xs text-slate-400 font-mono">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <a href="#triage" className="flex justify-between items-center w-full p-5 bg-white/[0.03] border border-white/10 rounded-2xl text-white font-medium transition-all duration-300 mt-auto group/btn hover:bg-white/[0.08] hover:border-white/20 hover:shadow-[0_10px_20px_-5px_rgba(255,255,255,0.05)]">
+                    <span>Configurar Módulo</span>
+                    <ChevronRight className="w-5 h-5 text-[#00e5ff] transition-transform duration-300 group-hover/btn:translate-x-1" />
+                  </a>
                 </div>
-
-                <ul className="space-y-3 mb-8">
-                  {pkg.features.map((feature, fidx) => (
-                    <li
-                      key={fidx}
-                      className="text-sm text-slate-400 font-light flex items-start gap-2.5"
-                    >
-                      <span className="mt-2 h-1 w-1 rounded-full bg-[#00e5ff]/40 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <Button
-                  className="w-full glass-premium font-medium text-sm text-white rounded-xl hover:-translate-y-0.5 transition-all duration-300"
-                  variant="outline"
-                >
-                  Más Información
-                </Button>
               </motion.div>
             ))}
           </motion.div>
