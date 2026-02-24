@@ -77,7 +77,7 @@ const packages = [
     name: 'WEB',
     grantValue: 'Hasta 2.000€',
     description: 'No hacemos webs corporativas tradicionales. Desarrollamos plataformas de ultra-alta velocidad (Core Web Vitals) orientadas a la conversión B2B/B2C.',
-    iconUrl: 'https://kitdigital-2026-supabase-kd2026.ijatkc.easypanel.host/storage/v1/object/public/img_web/icono%20web.png',
+    iconUrl: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/icono%20web.png',
     features: [
       { title: 'Arquitectura Headless', sub: 'Cargas inferiores a 1 segundo.' },
       { title: 'Diseño UI/UX Custom', sub: 'Cero plantillas. Diseño a medida para tu marca.' },
@@ -89,7 +89,7 @@ const packages = [
     name: 'ECOMMERCE',
     grantValue: 'Hasta 2.000€',
     description: 'Sistemas transaccionales escalables. Desde la captación del usuario hasta el checkout encriptado y la sincronización de stock bidireccional.',
-    iconUrl: 'https://kitdigital-2026-supabase-kd2026.ijatkc.easypanel.host/storage/v1/object/public/img_web/icono%20ecom.png',
+    iconUrl: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/icono%20ecom.png',
     features: [
       { title: 'Pasarelas de Pago Integradas', sub: 'Stripe, PayPal, Apple Pay y Redsys.' },
       { title: 'Gestión Avanzada de Inventario', sub: 'Control de stock y sincronización con tu ERP.' },
@@ -101,7 +101,7 @@ const packages = [
     name: 'SOCIAL',
     grantValue: 'Hasta 2.500€',
     description: 'Construimos autoridad de marca. Estrategias algorítmicas diseñadas para capturar atención y derivar tráfico cualificado a tu embudo comercial.',
-    iconUrl: 'https://kitdigital-2026-supabase-kd2026.ijatkc.easypanel.host/storage/v1/object/public/img_web/icono%20rrss.png',
+    iconUrl: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/icono%20rrss.png',
     features: [
       { title: 'Auditoría de Mercado', sub: 'Análisis de competidores y blueprint estratégico.' },
       { title: 'Producción de Activos Visuales', sub: 'Creación de contenido estático y short-form video.' },
@@ -113,7 +113,7 @@ const packages = [
     name: 'SEO CORE',
     grantValue: 'Hasta 2.000€',
     description: 'Posicionamiento orgánico científico. Dominamos las SERPs mediante auditorías técnicas exhaustivas, arquitectura de enlaces y contenido semántico.',
-    iconUrl: 'https://kitdigital-2026-supabase-kd2026.ijatkc.easypanel.host/storage/v1/object/public/img_web/1%20SEO.png',
+    iconUrl: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/1%20SEO.png',
     features: [
       { title: 'Keyword Research Transaccional', sub: 'Atacamos palabras clave que generan ingresos reales.' },
       { title: 'Auditoría de Indexación', sub: 'Corrección de crawl budget y errores técnicos WPO.' },
