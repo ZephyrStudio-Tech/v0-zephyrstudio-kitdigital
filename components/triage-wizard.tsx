@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronLeft, ChevronRight, CheckCircle2, Phone, Mail, MessageCircle } from 'lucide-react'
+import { ChevronLeft, ChevronRight, CheckCircle2, Phone, Mail, MessageCircle, Loader2 } from 'lucide-react'
+import { supabase } from '@/lib/supabase'
 
 interface FormData {
   entity: string
@@ -22,6 +23,7 @@ interface FormData {
 
 export function TriageWizard() {
   const [currentStep, setCurrentStep] = useState(0)
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState<FormData>({
     entity: '',
     size: '',
@@ -43,6 +45,35 @@ export function TriageWizard() {
 
   const updateField = (field: keyof FormData, value: string | boolean) => {
     setFormData(prev => ({ ...prev, [field]: value }))
+  }
+
+  const submitForm = async () => {
+    setIsSubmitting(true)
+    const { error } = await supabase.from('triage_leads').insert([
+      {
+        entity_type: formData.entity,
+        company_size: formData.size,
+        full_name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        province: formData.prov,
+        company_name: formData.entity === 'pyme' ? formData.companyName : null,
+        nif: formData.entity === 'pyme' ? formData.nif : null,
+        service_requested: formData.service,
+        hardware_pref: formData.hw_pref || null,
+        web_state: formData.web_state || null,
+        sla_urgency: formData.sla,
+        rgpd_accepted: formData.rgpd,
+        status: 'pending',
+      },
+    ])
+    if (error) {
+      console.error('Supabase insert error:', error)
+      alert('Ha ocurrido un error al enviar tu solicitud. Por favor, inténtalo de nuevo.')
+    } else {
+      setCurrentStep(6)
+    }
+    setIsSubmitting(false)
   }
 
   const nextStep = () => setCurrentStep(prev => Math.min(prev + 1, totalSteps))
@@ -600,11 +631,18 @@ export function TriageWizard() {
                   Atrás
                 </button>
                 <button
-                  onClick={nextStep}
-                  disabled={!formData.rgpd}
+                  onClick={submitForm}
+                  disabled={!formData.rgpd || isSubmitting}
                   className="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[#00e5ff] to-[#0018d8] rounded-xl text-white font-bold text-lg hover:shadow-[0_20px_40px_rgba(0,229,255,0.4)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Confirmar y Enviar 🚀
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-5 h-5 animate-spin" />
+                      Conectando con Red.es...
+                    </>
+                  ) : (
+                    'Confirmar y Enviar'
+                  )}
                 </button>
               </div>
             </motion.div>
