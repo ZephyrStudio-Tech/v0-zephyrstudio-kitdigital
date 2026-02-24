@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Check, ChevronRight } from 'lucide-react'
+import Link from 'next/link'
 import { AnimatedBackground } from '@/components/animated-background'
 import { Header } from '@/components/header'
 
@@ -236,6 +237,14 @@ export default function SegmentoII() {
               </motion.div>
             ))}
           </motion.div>
+
+          <Link
+            href="/factura-electronica"
+            className="block mt-8 p-6 bg-blue-500/5 border border-blue-500/30 rounded-2xl hover:bg-blue-500/10 transition-colors"
+          >
+            <h3 className="text-blue-400 font-bold text-xl mb-2">Normativa Obligatoria B2B</h3>
+            <p className="text-slate-300">Evita sanciones implementando la Factura Electrónica 100% subvencionada &rarr;</p>
+          </Link>
         </div>
       </section>
 

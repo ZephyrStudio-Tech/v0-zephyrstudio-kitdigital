@@ -1,11 +1,15 @@
+import { Metadata } from 'next'
 import { TriageWizard } from '@/components/triage-wizard'
 import { AnimatedBackground } from '@/components/animated-background'
 import Link from 'next/link'
 import { ChevronLeft } from 'lucide-react'
 
-export const metadata = {
-  title: 'Formulario de Contacto | ZephyrStudio',
-  description: 'Cuéntanos tu proyecto y te asesoramos sobre las soluciones Kit Digital disponibles para tu empresa.',
+export const metadata: Metadata = {
+  title: 'Análisis de Viabilidad - Kit Digital | ZephyrStudio',
+  robots: {
+    index: false,
+    follow: false,
+  },
 }
 
 export default function FormularioContactoPage() {
