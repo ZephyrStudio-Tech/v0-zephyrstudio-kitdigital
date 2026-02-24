@@ -28,14 +28,11 @@ export function Header() {
         <div className="glass-premium rounded-2xl px-6 py-3.5 flex items-center justify-between transition-all duration-300">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <Image 
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/logo_zephyrstudio.png"
               alt="ZephyrStudio"
-              width={140}
-              height={32}
               className="h-7 w-auto md:h-8"
-              style={{ width: 'auto' }}
-              priority
             />
           </Link>
 
