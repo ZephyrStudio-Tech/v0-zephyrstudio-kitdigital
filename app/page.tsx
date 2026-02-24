@@ -273,7 +273,7 @@ export default function Home() {
               variants={fadeUp}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link href="/triage">
+              <Link href="/formulario-contacto">
                 <MagneticButton
                   className="btn-neon-pulse group rounded-full bg-gradient-to-b from-[#0022ff] to-[#000f8a] px-8 py-4 text-white font-bold tracking-wide shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_40px_-10px_rgba(0,34,255,0.8)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_0_60px_-10px_rgba(0,34,255,1)] transition-all text-base flex items-center gap-2 justify-center"
                 >
@@ -496,7 +496,7 @@ export default function Home() {
                     ))}
                   </div>
 
-                  <Link href="/triage" className="flex justify-between items-center w-full p-4 bg-white/[0.03] border border-white/10 rounded-xl text-white text-sm font-medium transition-all duration-300 mt-auto group/btn hover:bg-white/[0.08] hover:border-white/20">
+                  <Link href="/formulario-contacto" className="flex justify-between items-center w-full p-4 bg-white/[0.03] border border-white/10 rounded-xl text-white text-sm font-medium transition-all duration-300 mt-auto group/btn hover:bg-white/[0.08] hover:border-white/20">
                     <span>Configurar Módulo</span>
                     <ChevronRight className="w-4 h-4 text-[#00e5ff] transition-transform duration-300 group-hover/btn:translate-x-1" />
                   </Link>
@@ -593,7 +593,7 @@ export default function Home() {
               <h3 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight mb-2">¿Listo para escalar tu infraestructura?</h3>
               <p className="text-slate-400 font-light text-sm md:text-base">Análisis de viabilidad algorítmico en 60 segundos. 100% financiado.</p>
             </div>
-            <Link href="/triage" className="shrink-0 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-[#00e5ff] hover:text-black transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(0,229,255,0.6)] hover:-translate-y-1">
+            <Link href="/formulario-contacto" className="shrink-0 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-[#00e5ff] hover:text-black transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(0,229,255,0.6)] hover:-translate-y-1">
               Verificar Viabilidad
             </Link>
           </div>
@@ -813,7 +813,7 @@ export default function Home() {
 
               {/* CTA Button */}
               <Link
-                href="/triage"
+                href="/formulario-contacto"
                 className="group relative inline-flex items-center gap-2 sm:gap-3 bg-white text-[#030305] font-semibold text-xs sm:text-sm md:text-base px-5 sm:px-10 py-2.5 sm:py-4 rounded-full overflow-hidden transition-all duration-300 hover:-translate-y-0.5 shadow-[0_10px_30px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_20px_40px_-10px_rgba(0,229,255,0.4)] no-underline"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-[#00e5ff] to-[#0018d8] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[1]" />

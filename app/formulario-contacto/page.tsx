@@ -3,11 +3,16 @@ import { AnimatedBackground } from '@/components/animated-background'
 import Link from 'next/link'
 import { ChevronLeft } from 'lucide-react'
 
-export default function TriagePage() {
+export const metadata = {
+  title: 'Formulario de Contacto | ZephyrStudio',
+  description: 'Cuéntanos tu proyecto y te asesoramos sobre las soluciones Kit Digital disponibles para tu empresa.',
+}
+
+export default function FormularioContactoPage() {
   return (
     <div className="relative min-h-screen overflow-hidden flex flex-col items-center justify-center p-4 py-12 md:py-20">
       <AnimatedBackground />
-      
+
       {/* Back button - Distraction free header */}
       <div className="absolute top-6 left-6 md:top-10 md:left-10 z-50">
         <Link href="/" className="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-sm font-mono uppercase tracking-widest">
