@@ -2,20 +2,24 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import Image from 'next/image'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import Link from 'next/link'
 
-const navLinks = [
-  { href: '/segmento-iii', label: 'Segmento III' },
-  { href: '/segmento-ii', label: 'Segmento II' },
-  { href: '/kit-digital-sin-iva', label: 'Sin IVA' },
+const solucionesLinks = [
+  { href: '/segmento-iii', label: 'Segmento III', sub: '0–2 empleados' },
+  { href: '/segmento-ii', label: 'Segmento II', sub: '3–9 empleados' },
+  { href: '/puesto-de-trabajo-seguro', label: 'Puesto de Trabajo Seguro', sub: 'Mac incluido' },
+  { href: '/factura-electronica', label: 'Factura Electrónica', sub: 'Ley Crea y Crece' },
+  { href: '/kit-digital-sin-iva', label: 'Sin IVA', sub: 'Deducción total' },
+]
+
+const topLinks = [
   { href: '/faq', label: 'FAQ' },
 ]
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [dropdownOpen, setDropdownOpen] = useState(false)
 
   return (
     <motion.header
@@ -37,8 +41,43 @@ export function Header() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+          <nav className="hidden md:flex items-center gap-6">
+            {/* Soluciones dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setDropdownOpen(true)}
+              onMouseLeave={() => setDropdownOpen(false)}
+            >
+              <button className="flex items-center gap-1 text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200">
+                Soluciones
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              <AnimatePresence>
+                {dropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 6, scale: 0.98 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 6, scale: 0.98 }}
+                    transition={{ duration: 0.15 }}
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-64 glass-premium rounded-2xl p-2 shadow-[0_20px_40px_rgba(0,0,0,0.6)]"
+                  >
+                    {solucionesLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="flex flex-col px-4 py-3 rounded-xl hover:bg-white/[0.05] transition-colors duration-150 group"
+                      >
+                        <span className="text-sm font-medium text-slate-200 group-hover:text-white transition-colors">{link.label}</span>
+                        <span className="text-xs text-slate-500 group-hover:text-slate-400 transition-colors">{link.sub}</span>
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {topLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -79,8 +118,22 @@ export function Header() {
               transition={{ duration: 0.2, ease: 'easeOut' }}
               className="mt-2 glass-premium rounded-2xl p-6 md:hidden"
             >
+              <p className="text-[10px] uppercase tracking-widest text-slate-500 font-mono px-4 mb-2">Soluciones</p>
               <nav className="flex flex-col gap-1">
-                {navLinks.map((link) => (
+                {solucionesLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="flex flex-col px-4 py-3 rounded-xl hover:bg-white/[0.04] transition-colors duration-200"
+                  >
+                    <span className="text-sm font-medium text-slate-300 hover:text-white">{link.label}</span>
+                    <span className="text-xs text-slate-500">{link.sub}</span>
+                  </Link>
+                ))}
+              </nav>
+              <div className="mt-3 pt-3 border-t border-white/[0.06] flex flex-col gap-1">
+                {topLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
@@ -90,7 +143,7 @@ export function Header() {
                     {link.label}
                   </Link>
                 ))}
-              </nav>
+              </div>
               <div className="mt-4 pt-4 border-t border-white/[0.06]">
                 <Link
                   href="/formulario-contacto"
