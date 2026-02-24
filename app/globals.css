@@ -244,6 +244,15 @@
     50% { transform: translateY(-6px); }
   }
 
+  /* Infinite marquee carousel */
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee 35s linear infinite;
+  }
+
   /* Hollow/Outline text effect */
   .text-outline {
     color: transparent;
