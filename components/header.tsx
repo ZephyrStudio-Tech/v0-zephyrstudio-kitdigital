@@ -53,12 +53,12 @@ export function Header() {
 
           {/* Right side */}
           <div className="flex items-center gap-3">
-            <Button
-              size="sm"
-              className="hidden md:inline-flex bg-white/[0.06] hover:bg-white/[0.1] text-white text-xs font-medium tracking-wide border border-white/[0.08] hover:border-white/20 rounded-xl px-5 py-2 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-10px_rgba(0,24,216,0.4)]"
+            <Link
+              href="/triage"
+              className="hidden md:inline-flex items-center bg-gradient-to-r from-[#00e5ff]/10 to-[#0018d8]/10 hover:from-[#00e5ff]/20 hover:to-[#0018d8]/20 text-[#00e5ff] text-xs font-bold tracking-wide border border-[#00e5ff]/30 hover:border-[#00e5ff]/50 rounded-xl px-5 py-2 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-10px_rgba(0,229,255,0.4)] uppercase"
             >
-              Iniciar Sesión
-            </Button>
+              Diagnóstico Gratis
+            </Link>
 
             {/* Mobile hamburger */}
             <button
@@ -94,12 +94,13 @@ export function Header() {
                 ))}
               </nav>
               <div className="mt-4 pt-4 border-t border-white/[0.06]">
-                <Button
-                  size="sm"
-                  className="w-full bg-white/[0.06] hover:bg-white/[0.1] text-white text-xs font-medium tracking-wide border border-white/[0.08] hover:border-white/20 rounded-xl px-5 py-2.5 transition-all duration-300"
+                <Link
+                  href="/triage"
+                  onClick={() => setMobileOpen(false)}
+                  className="w-full inline-flex items-center justify-center bg-gradient-to-r from-[#00e5ff]/10 to-[#0018d8]/10 text-[#00e5ff] text-xs font-bold tracking-wide border border-[#00e5ff]/30 rounded-xl px-5 py-2.5 transition-all duration-300 uppercase"
                 >
-                  Iniciar Sesión
-                </Button>
+                  Diagnóstico Gratis
+                </Link>
               </div>
             </motion.div>
           )}
