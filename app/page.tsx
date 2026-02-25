@@ -217,8 +217,63 @@ const faqs = [
 /* ── Page ──────────────────────────────────────────────────────── */
 
 export default function Home() {
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'ZephyrStudio',
+    url: 'https://kitdigitalzephyrstudio.es',
+    logo: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/logo_zephyrstudio.png',
+    description: 'Agente Digitalizador Adherido especializado en la tramitación e implantación de soluciones tecnológicas B2B y Kit Digital para PYMEs.',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+34-602-67-87-71',
+      contactType: 'customer service',
+      availableLanguage: 'Spanish',
+    },
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: '¿Qué es el Kit Digital y quién puede solicitarlo?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'El Kit Digital es una iniciativa del Gobierno de España subvencionada por fondos europeos (Next Generation EU) dirigida a pymes y autónomos (de 0 a 49 empleados) para implantar soluciones digitales.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '¿Puedo conseguir un ordenador Mac o PC gratis con el Kit Digital?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Sí, las empresas del Segmento III (0 a 2 empleados) pueden destinar hasta 1.000€ de su bono a la categoría de Puesto de Trabajo Seguro, obteniendo un ordenador portátil o de sobremesa con ciberseguridad avanzada.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '¿Tengo que pagar el IVA del Kit Digital?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Sí, las subvenciones europeas no cubren impuestos. El beneficiario debe abonar el IVA de la factura al Agente Digitalizador, aunque posteriormente podrá deducírselo en sus declaraciones trimestrales.',
+        },
+      },
+    ],
+  }
+
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <div className="relative min-h-screen overflow-hidden">
       <AnimatedBackground />
       <Header />
 
@@ -954,5 +1009,6 @@ export default function Home() {
         </div>
       </footer>
     </div>
+    </>
   )
 }
