@@ -239,33 +239,26 @@ export default function Home() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#00e5ff] opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-[#00e5ff]" />
               </span>
-              Kit Digital 2026 Activo
+              Kit Digital 2026 — Preparados para tramitar
             </motion.div>
 
-            {/* H1 – staggers line by line */}
-            <div className="mb-8">
-              <motion.h1
-                variants={heroLine}
-                className="text-6xl md:text-8xl lg:text-[7rem] font-extrabold tracking-tighter leading-[0.85]"
-              >
-                <span className="text-gradient-heading">Arquitectura Digital.</span>
-              </motion.h1>
-              <motion.h1
-                variants={heroLine}
-                className="text-6xl md:text-8xl lg:text-[7rem] font-extrabold tracking-tighter leading-[0.85]"
-              >
-                <span className="text-gradient-cyan drop-shadow-[0_0_40px_rgba(0,229,255,0.3)]">Equipamiento Premium</span>
-              </motion.h1>
-            </div>
+            {/* H1 — single tag, CRO-first copy */}
+            <motion.h1
+              variants={fadeUp}
+              className="mb-8 text-5xl md:text-7xl lg:text-[6rem] font-extrabold tracking-tighter leading-[0.9] text-white text-balance"
+            >
+              Kit Digital para digitalizar tu negocio{' '}
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#00e5ff] to-blue-500">
+                y conseguir tu equipo de trabajo
+              </span>
+            </motion.h1>
 
             {/* Subtitle */}
             <motion.p
               variants={fadeUp}
-              className="mb-14 max-w-xl text-base md:text-lg font-light text-slate-400 leading-relaxed"
+              className="mb-10 max-w-xl text-base md:text-lg font-light text-slate-400 leading-relaxed"
             >
-              Desplegamos tu infraestructura en la nube y te equipamos con
-              hardware de grado empresarial financiado al 100% por el Bono
-              Digital.
+              Verificamos tu caso en 60 segundos. Si encajas, te contactamos hoy y dejamos la solicitud preparada.
             </motion.p>
 
             {/* CTAs */}
@@ -277,16 +270,25 @@ export default function Home() {
                 <MagneticButton
                   className="btn-neon-pulse group rounded-full bg-gradient-to-b from-[#0022ff] to-[#000f8a] px-8 py-4 text-white font-bold tracking-wide shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_40px_-10px_rgba(0,34,255,0.8)] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_0_60px_-10px_rgba(0,34,255,1)] transition-all text-base flex items-center gap-2 justify-center"
                 >
-                  Solicitar Consulta
+                  Verificar mi caso (60s)
                   <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </MagneticButton>
               </Link>
-              <button
-                className="btn-liquid-fill glass-premium font-medium text-white px-8 py-4 text-base rounded-2xl transition-all duration-300"
+              <a
+                href="#packages"
+                className="btn-liquid-fill glass-premium font-medium text-white px-8 py-4 text-base rounded-2xl transition-all duration-300 flex items-center justify-center"
               >
-                Ver Soluciones
-              </button>
+                Ver soluciones
+              </a>
             </motion.div>
+
+            {/* Microcopy trust bar */}
+            <motion.p
+              variants={fadeUp}
+              className="mt-6 text-xs text-slate-400 text-center"
+            >
+              Contacto en el día · Proceso claro por escrito · Soporte en toda España
+            </motion.p>
           </motion.div>
         </div>
       </section>
@@ -306,11 +308,14 @@ export default function Home() {
               Catálogo 2024
             </div>
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tighter text-white leading-tight">
-              Equipamiento <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00e5ff] to-blue-500">Premium.</span>
+              Equipo de trabajo: hasta 1.000€ subvencionados
             </h2>
             <p className="text-slate-400 mt-4 max-w-2xl md:mx-auto">
-              Financia hasta 1.000€ de cualquier equipo. Si cuesta más, solo pagas la diferencia. Si cuesta menos, es 100% gratuito.
+              Si el equipo cuesta más de 1.000€, pagas solo la diferencia. Si cuesta menos, no pagas nada.
             </p>
+            <Link href="/kit-digital-sin-iva" className="inline-block mt-2 text-sm text-[#00e5ff] hover:text-white underline decoration-[#00e5ff]/30 underline-offset-4 transition-colors">
+              ¿Dudas con IVA/IGIC? Te lo explicamos aquí.
+            </Link>
           </div>
 
           {/* Carousel Container */}
@@ -334,7 +339,7 @@ export default function Home() {
                       {isFree ? '100% Subvencionado' : `Precio Oficial: ${item.price}€`}
                     </span>
                     <span className="text-sm font-bold">
-                      {isFree ? 'GRATIS' : `Solo pagas ${difference}€ + IVA`}
+                      {isFree ? 'GRATIS' : `Solo pagas ${difference}€ (según tu caso)`}
                     </span>
                   </div>
                 </div>
