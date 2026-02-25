@@ -37,13 +37,23 @@ export default async function BlogPostPage({
 
   if (!post) notFound()
 
-  // Extract H2 headings for Table of Contents
-  const headingRegex = /<h2 id="([^"]+)">(.*?)<\/h2>/g
+  // Inject id attributes into every <h2> so anchor links work,
+  // then extract them to build the Table of Contents.
   const toc: { id: string; text: string }[] = []
-  let match
-  while ((match = headingRegex.exec(post.html)) !== null) {
-    toc.push({ id: match[1], text: match[2].replace(/<[^>]+>/g, '') })
-  }
+  const processedHtml = post.html.replace(
+    /<h2>(.*?)<\/h2>/gi,
+    (_full: string, inner: string) => {
+      const text = inner.replace(/<[^>]+>/g, '').trim()
+      const id = text
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '')
+      toc.push({ id, text })
+      return `<h2 id="${id}">${inner}</h2>`
+    }
+  )
 
   return (
     <div className="min-h-screen bg-[#030305] relative overflow-hidden">
@@ -115,7 +125,7 @@ export default async function BlogPostPage({
                 {/* Ghost HTML content */}
                 <div
                   className="ghost-content"
-                  dangerouslySetInnerHTML={{ __html: post.html }}
+                  dangerouslySetInnerHTML={{ __html: processedHtml }}
                 />
 
                 {/* Author / EEAT box */}
