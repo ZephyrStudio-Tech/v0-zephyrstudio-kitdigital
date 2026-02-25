@@ -739,64 +739,7 @@ export default function Home() {
       </section>
 
       {/* ─── Blog / Resources ─────────────────────────────────── */}
-      <section className="relative px-4 py-20 md:px-8 md:py-36">
-        <div className="container mx-auto max-w-7xl">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
-            variants={fadeUp}
-            className="text-center mb-20"
-          >
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[0.92]">
-              <span className="text-gradient-heading">Centro de</span>{' '}
-              <span className="text-gradient-cyan">Recursos</span>
-            </h2>
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
-            variants={stagger}
-            className="grid md:grid-cols-3 gap-5"
-          >
-            {blogPosts.map((post, idx) => (
-              <motion.div
-                key={idx}
-                variants={cardFade}
-                className="glass-premium rounded-3xl overflow-hidden group cursor-pointer transition-all duration-300"
-              >
-                <div className="h-52 relative overflow-hidden">
-                  <div
-                    className="absolute inset-0 group-hover:scale-105 transition-transform duration-700"
-                    style={{
-                      background:
-                        idx === 0
-                          ? 'radial-gradient(ellipse at 30% 40%, rgba(0, 24, 216, 0.3) 0%, rgba(67, 56, 202, 0.15) 50%, transparent 80%)'
-                          : idx === 1
-                            ? 'radial-gradient(ellipse at 60% 50%, rgba(0, 229, 255, 0.2) 0%, rgba(0, 24, 216, 0.1) 50%, transparent 80%)'
-                            : 'radial-gradient(ellipse at 50% 60%, rgba(67, 56, 202, 0.25) 0%, rgba(0, 24, 216, 0.1) 50%, transparent 80%)',
-                    }}
-                  />
-                </div>
-                <div className="p-7">
-                  <p className="text-xs text-[#00e5ff] mb-3 font-semibold tracking-wider uppercase">
-                    {post.tag}
-                  </p>
-                  <h3 className="text-lg font-bold mb-4 group-hover:text-white text-slate-200 transition-colors tracking-tight">
-                    {post.title}
-                  </h3>
-                  <span className="inline-flex items-center gap-1 text-sm text-slate-500 group-hover:text-[#00e5ff] transition-colors font-medium">
-                    Leer Artículo
-                    <ArrowUpRight className="h-3.5 w-3.5" />
-                  </span>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+      <BlogSection />
 
       {/* ─── FAQ ──────────────────────────────────────────────── */}
       <section className="relative px-4 py-20 md:px-8 md:py-36">
@@ -996,9 +939,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* ─── Blog Section ─────────────────────────────────────── */}
-      <BlogSection />
 
       {/* ─── Footer ───────────────────────────────────────────── */}
       <footer className="relative px-4 py-14 md:px-8 border-t border-white/[0.06]">
