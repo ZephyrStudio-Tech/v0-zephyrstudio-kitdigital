@@ -5,6 +5,7 @@ import { Clock, Calendar } from 'lucide-react'
 import type { Metadata } from 'next'
 import { AnimatedBackground } from '@/components/animated-background'
 import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
 
 export async function generateMetadata({
   params,
@@ -35,6 +36,14 @@ export default async function BlogPostPage({
   ])
 
   if (!post) notFound()
+
+  // Extract H2 headings for Table of Contents
+  const headingRegex = /<h2 id="([^"]+)">(.*?)<\/h2>/g
+  const toc: { id: string; text: string }[] = []
+  let match
+  while ((match = headingRegex.exec(post.html)) !== null) {
+    toc.push({ id: match[1], text: match[2].replace(/<[^>]+>/g, '') })
+  }
 
   return (
     <div className="min-h-screen bg-[#030305] relative overflow-hidden">
@@ -127,6 +136,25 @@ export default async function BlogPostPage({
             {/* RIGHT COLUMN: STICKY SIDEBAR */}
             <aside className="lg:sticky lg:top-32 flex flex-col gap-8">
 
+              {/* TABLE OF CONTENTS */}
+              {toc.length > 0 && (
+                <div className="p-6 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl">
+                  <h3 className="text-lg font-bold text-white mb-4">Índice</h3>
+                  <ul className="space-y-3">
+                    {toc.map((item, idx) => (
+                      <li key={idx}>
+                        <a
+                          href={`#${item.id}`}
+                          className="text-slate-400 hover:text-[#00e5ff] text-sm transition-colors block pl-3 border-l-2 border-transparent hover:border-[#00e5ff]"
+                        >
+                          {item.text}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
               {/* Related posts */}
               {relatedPosts && relatedPosts.length > 0 && (
                 <div className="p-6 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl">
@@ -181,6 +209,7 @@ export default async function BlogPostPage({
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
