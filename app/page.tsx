@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Check, ChevronRight, ArrowUpRight } from 'lucide-react'
+import { Check, ChevronRight, ArrowUpRight, User, Users } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
   Accordion,
@@ -295,6 +295,83 @@ export default function Home() {
 
       {/* ─── Marquee ──────────────────────────────────────────── */}
       <Marquee />
+
+      {/* ─── Segment Navigation Block (SEO Siloing) ──────────────────────── */}
+      <section className="relative px-4 py-16 md:py-24 overflow-hidden">
+        <div className="container mx-auto max-w-5xl relative z-10">
+          
+          {/* Header & Side Link */}
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+                Tu bono según el <span className="text-[#00e5ff]">tamaño de tu empresa</span>
+              </h2>
+              <p className="text-slate-400 mt-2 font-light">
+                Selecciona tu segmento para ver las soluciones específicas y la cuantía que te corresponde.
+              </p>
+            </div>
+            <Link
+              href="/kit-digital-sin-iva"
+              className="text-sm text-slate-400 hover:text-[#00e5ff] underline decoration-slate-700 hover:decoration-[#00e5ff] underline-offset-4 transition-colors whitespace-nowrap shrink-0"
+            >
+              {'¿Cómo funciona lo del IVA? (Explicación) →'}
+            </Link>
+          </div>
+
+          {/* Segment Cards Grid */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Card Segmento III */}
+            <Link href="/segmento-iii" className="group glass-premium rounded-3xl p-8 border border-white/10 hover:border-[#00e5ff]/50 hover:bg-white/[0.04] transition-all duration-500 hover:-translate-y-1 block relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-[#00e5ff]/5 blur-[80px] rounded-full pointer-events-none transition-opacity group-hover:opacity-100 opacity-50" />
+              
+              <div className="flex justify-between items-start mb-6 relative z-10">
+                <div className="w-12 h-12 rounded-2xl bg-[#00e5ff]/10 text-[#00e5ff] flex items-center justify-center border border-[#00e5ff]/20">
+                  <User className="w-6 h-6" />
+                </div>
+                <span className="bg-[#00e5ff]/10 border border-[#00e5ff]/20 text-[#00e5ff] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                  Hasta 3.000€
+                </span>
+              </div>
+              
+              <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-[#00e5ff] transition-colors relative z-10">
+                Segmento III <span className="text-slate-400 text-lg font-medium">(0 - 2 empleados)</span>
+              </h3>
+              <p className="text-slate-400 mb-8 relative z-10 leading-relaxed font-light">
+                Incluye la nueva subvención para el <strong className="text-white font-medium">Puesto de Trabajo Seguro</strong> (Ordenador Mac o PC). Ideal para autónomos y microempresas.
+              </p>
+              
+              <div className="flex items-center text-white font-medium text-sm gap-2 group-hover:gap-3 transition-all relative z-10">
+                Ver soluciones del Segmento III <ChevronRight className="w-4 h-4 text-[#00e5ff]" />
+              </div>
+            </Link>
+
+            {/* Card Segmento II */}
+            <Link href="/segmento-ii" className="group glass-premium rounded-3xl p-8 border border-white/10 hover:border-blue-500/50 hover:bg-white/[0.04] transition-all duration-500 hover:-translate-y-1 block relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 blur-[80px] rounded-full pointer-events-none transition-opacity group-hover:opacity-100 opacity-50" />
+              
+              <div className="flex justify-between items-start mb-6 relative z-10">
+                <div className="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-400 flex items-center justify-center border border-blue-500/20">
+                  <Users className="w-6 h-6" />
+                </div>
+                <span className="bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                  Hasta 6.000€
+                </span>
+              </div>
+              
+              <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors relative z-10">
+                Segmento II <span className="text-slate-400 text-lg font-medium">(3 - 9 empleados)</span>
+              </h3>
+              <p className="text-slate-400 mb-8 relative z-10 leading-relaxed font-light">
+                Prepárate para la Ley Crea y Crece con la <strong className="text-white font-medium">Factura Electrónica obligatoria</strong> y moderniza tus procesos corporativos.
+              </p>
+              
+              <div className="flex items-center text-white font-medium text-sm gap-2 group-hover:gap-3 transition-all relative z-10">
+                Ver soluciones del Segmento II <ChevronRight className="w-4 h-4 text-blue-400" />
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* ─── Hardware Catalogue Carousel ──────────────────────── */}
       <section className="relative px-4 py-20 md:px-8 md:py-36 overflow-hidden">
