@@ -896,7 +896,7 @@ export default function Home() {
                 >
                   <span className="absolute inset-0 bg-gradient-to-r from-[#00e5ff] to-[#0018d8] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[1]" />
                   <span className="relative z-[2] group-hover:text-white transition-colors duration-300">
-                    Verificar mi caso (60s)()
+                    Verificar mi caso (60s)
                   </span>
                   <svg
                     className="relative z-[2] w-3.5 h-3.5 sm:w-[18px] sm:h-[18px] group-hover:text-white transition-all duration-300 group-hover:translate-x-2"
@@ -946,7 +946,7 @@ export default function Home() {
                   {/* Rows */}
                   <div className="space-y-2 sm:space-y-5">
                     {[
-                      { cmd: '> Verify_Grant_Limit', val: 'Segmento_Verificado [OK]', color: 'text-[#00e5ff]' },
+                      { cmd: '> Grant_Limit', val: 'Segmento_Verificado [OK]', color: 'text-[#00e5ff]' },
                       { cmd: '> Hardware_Payload', val: 'EQUIPO_GRATIS', color: 'text-blue-500' },
                       { cmd: '> Bureaucracy_Bypass', val: '[Proceso_Guiado]', color: 'text-[#00e5ff]' },
                       { cmd: '> System_Status', val: 'Atención_Rápida [OK]', color: 'text-emerald-400 animate-pulse' },
