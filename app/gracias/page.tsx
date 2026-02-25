@@ -31,7 +31,7 @@ export default function GraciasPage() {
             Hemos recibido tus datos correctamente.
           </p>
           <p className="text-slate-400 text-sm">
-            Nuestro equipo técnico está analizando tu viabilidad para el Kit Digital. Te contactaremos en un plazo máximo de 24 a 48 horas laborales con los siguientes pasos.
+            Nuestro equipo consultor está analizando tu viabilidad para el Kit Digital. Te contactaremos en un plazo máximo de 24 a 48 horas laborales con los siguientes pasos.
           </p>
         </div>
 
