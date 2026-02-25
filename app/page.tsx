@@ -673,8 +673,8 @@ export default function Home() {
                   key={idx}
                   variants={cardFade}
                   className={`${idx === 0
-                      ? 'col-span-2 row-span-1 md:row-span-2'
-                      : 'col-span-1 row-span-1'
+                    ? 'col-span-2 row-span-1 md:row-span-2'
+                    : 'col-span-1 row-span-1'
                     } group glass-premium rounded-3xl p-6 md:p-8 relative overflow-hidden cursor-pointer ${idx === 0
                       ? 'min-h-[280px] md:min-h-[520px]'
                       : 'min-h-[200px] md:min-h-[250px]'
@@ -702,8 +702,8 @@ export default function Home() {
                     </p>
                     <h3
                       className={`${idx === 0
-                          ? 'text-2xl md:text-4xl'
-                          : 'text-base md:text-xl'
+                        ? 'text-2xl md:text-4xl'
+                        : 'text-base md:text-xl'
                         } font-bold tracking-tight`}
                     >
                       {project.name}
@@ -878,14 +878,14 @@ export default function Home() {
                       WebkitTextStroke: '1px rgba(255,255,255,0.6)',
                     }}
                   >
-                    Cero Burocracia.
+                    Proceso claro. Por escrito.
                   </span>
                 </h2>
 
                 {/* Description */}
                 <p className="text-xs sm:text-sm md:text-lg text-slate-400 leading-relaxed sm:leading-[1.7] mb-6 sm:mb-12 max-w-[500px]">
                   Desplegamos tu infraestructura digital y te equipamos con
-                  hardware de grado empresarial (Apple Mac) financiado al 100%
+                  hardware de grado empresarial (Apple Mac) financiado
                   por los fondos europeos.
                 </p>
 
@@ -896,7 +896,7 @@ export default function Home() {
                 >
                   <span className="absolute inset-0 bg-gradient-to-r from-[#00e5ff] to-[#0018d8] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[1]" />
                   <span className="relative z-[2] group-hover:text-white transition-colors duration-300">
-                    Iniciar_Deploy()
+                    Verificar mi caso <60s>()
                   </span>
                   <svg
                     className="relative z-[2] w-3.5 h-3.5 sm:w-[18px] sm:h-[18px] group-hover:text-white transition-all duration-300 group-hover:translate-x-2"
@@ -946,10 +946,10 @@ export default function Home() {
                   {/* Rows */}
                   <div className="space-y-2 sm:space-y-5">
                     {[
-                      { cmd: '> Verify_Grant_Limit', val: '[3.000€]', color: 'text-[#00e5ff]' },
-                      { cmd: '> Hardware_Payload', val: 'MAC_READY', color: 'text-blue-500' },
-                      { cmd: '> Bureaucracy_Bypass', val: '[OK]', color: 'text-[#00e5ff]' },
-                      { cmd: '> System_Status', val: 'ONLINE', color: 'text-emerald-400 animate-pulse' },
+                      { cmd: '> Verify_Grant_Limit', val: 'Segmento_Verificado [OK]', color: 'text-[#00e5ff]' },
+                      { cmd: '> Hardware_Payload', val: 'EQUIPO_GRATIS', color: 'text-blue-500' },
+                      { cmd: '> Bureaucracy_Bypass', val: '[Proceso_Guiado]', color: 'text-[#00e5ff]' },
+                      { cmd: '> System_Status', val: 'Atención_Rápida [OK]', color: 'text-emerald-400 animate-pulse' },
                     ].map((r, i) => (
                       <div key={i} className="flex justify-between items-center font-mono text-[9px] sm:text-[13px] text-slate-400">
                         <span>{r.cmd}</span>
