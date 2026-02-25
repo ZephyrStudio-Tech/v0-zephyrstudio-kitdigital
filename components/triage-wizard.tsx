@@ -1,8 +1,9 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronLeft, ChevronRight, CheckCircle2, Phone, Mail, MessageCircle, Loader2 } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Phone, Mail, Loader2 } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 
 interface FormData {
@@ -22,6 +23,7 @@ interface FormData {
 }
 
 export function TriageWizard() {
+  const router = useRouter()
   const [currentStep, setCurrentStep] = useState(0)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState<FormData>({
@@ -71,7 +73,7 @@ export function TriageWizard() {
       console.error('Supabase insert error:', error)
       alert('Ha ocurrido un error al enviar tu solicitud. Por favor, inténtalo de nuevo.')
     } else {
-      setCurrentStep(6)
+      router.push('/gracias')
     }
     setIsSubmitting(false)
   }
@@ -648,62 +650,7 @@ export function TriageWizard() {
             </motion.div>
           )}
 
-          {/* Step 6: Success State */}
-          {currentStep === 6 && (
-            <motion.div
-              key="step6"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              className="text-center py-12"
-            >
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ type: 'spring', delay: 0.2 }}
-                className="inline-block mb-6"
-              >
-                <CheckCircle2 className="w-24 h-24 text-[#00e5ff] drop-shadow-[0_0_20px_rgba(0,229,255,0.6)]" />
-              </motion.div>
-              
-              <h2 className="text-4xl font-extrabold text-white mb-4 tracking-tight">
-                Solicitud Registrada
-              </h2>
-              
-              <div className="bg-[#00e5ff]/10 border border-[#00e5ff]/30 rounded-2xl p-6 mb-8 max-w-md mx-auto">
-                <p className="text-[#00e5ff] font-semibold mb-2">
-                  {formData.sla === 'Premium' 
-                    ? '⚡ Proceso Automatizado Iniciado' 
-                    : formData.sla === 'Email'
-                    ? '✉️ Responderemos en 24-48h'
-                    : '📞 Te llamaremos en 24-72h'
-                  }
-                </p>
-                <p className="text-slate-400 text-sm">
-                  Hemos recibido tu solicitud para <strong className="text-white">{formData.service}</strong>
-                </p>
-              </div>
 
-              <div className="space-y-4 max-w-md mx-auto">
-                <a
-                  href={`https://wa.me/34XXXXXXXXX?text=Hola, acabo de completar el formulario del Kit Digital. Mi nombre es ${formData.name}.`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 w-full px-8 py-4 bg-[#25D366] hover:bg-[#20BA5A] rounded-xl text-white font-bold text-lg transition-all hover:shadow-[0_10px_30px_rgba(37,211,102,0.4)] hover:-translate-y-1"
-                >
-                  <MessageCircle className="w-6 h-6" />
-                  Hablar por WhatsApp AHORA
-                </a>
-                
-                <button
-                  onClick={reset}
-                  className="w-full px-8 py-3 bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] rounded-xl text-white font-medium transition-all"
-                >
-                  Volver a la web
-                </button>
-              </div>
-            </motion.div>
-          )}
         </AnimatePresence>
       </div>
     </div>
