@@ -14,6 +14,7 @@ import { Header } from '@/components/header'
 import { Marquee } from '@/components/marquee'
 import { MagneticButton } from '@/components/magnetic-button'
 import Link from 'next/link'
+import { BlogSection } from '@/components/blog-section'
 
 /* ── Animation Variants ────────────────────────────────────────── */
 
@@ -995,6 +996,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ─── Blog Section ─────────────────────────────────────── */}
+      <BlogSection />
 
       {/* ─── Footer ───────────────────────────────────────────── */}
       <footer className="relative px-4 py-14 md:px-8 border-t border-white/[0.06]">
