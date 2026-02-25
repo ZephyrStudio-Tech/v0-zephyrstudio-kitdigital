@@ -9,8 +9,38 @@ export const metadata = {
 }
 
 export default function PuestoTrabajoPage() {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Inicio',
+        item: 'https://kitdigitalzephyrstudio.es',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Servicios Kit Digital',
+        item: 'https://kitdigitalzephyrstudio.es/#packages',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Puesto de Trabajo Seguro',
+        item: 'https://kitdigitalzephyrstudio.es/puesto-de-trabajo-seguro',
+      },
+    ],
+  }
+
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className="relative min-h-screen overflow-hidden">
       <AnimatedBackground />
       <Header />
 
@@ -70,6 +100,7 @@ export default function PuestoTrabajoPage() {
           </Link>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   )
 }
