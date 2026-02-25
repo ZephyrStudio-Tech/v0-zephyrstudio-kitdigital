@@ -260,4 +260,14 @@
     text-stroke: 1px rgba(255, 255, 255, 0.6);
   }
 
+  /* Ghost CMS Content Styles */
+  .ghost-content h2 { @apply text-3xl font-bold text-white mt-12 mb-4 tracking-tight; }
+  .ghost-content h3 { @apply text-2xl font-semibold text-white mt-8 mb-4; }
+  .ghost-content p { @apply text-slate-300 text-lg leading-relaxed mb-6 font-light; }
+  .ghost-content ul { @apply list-disc pl-6 mb-6 text-slate-300 text-lg space-y-2 font-light; }
+  .ghost-content ol { @apply list-decimal pl-6 mb-6 text-slate-300 text-lg space-y-2 font-light; }
+  .ghost-content a { @apply text-[#00e5ff] hover:text-white underline underline-offset-4 decoration-[#00e5ff]/40 hover:decoration-[#00e5ff] transition-colors; }
+  .ghost-content blockquote { @apply border-l-4 border-[#0018d8] bg-white/[0.02] p-6 rounded-r-2xl my-8 italic text-white/90 shadow-[inset_0_0_20px_rgba(0,24,216,0.05)]; }
+  .ghost-content img { @apply rounded-2xl border border-white/10 my-8 w-full shadow-2xl; }
+
 }
