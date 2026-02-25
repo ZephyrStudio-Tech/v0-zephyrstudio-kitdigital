@@ -5,6 +5,7 @@ import { Clock, Calendar } from 'lucide-react'
 import type { Metadata } from 'next'
 import { AnimatedBackground } from '@/components/animated-background'
 import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
 
 export async function generateMetadata({
   params,
@@ -35,6 +36,24 @@ export default async function BlogPostPage({
   ])
 
   if (!post) notFound()
+
+  // Inject id attributes into every <h2> so anchor links work,
+  // then extract them to build the Table of Contents.
+  const toc: { id: string; text: string }[] = []
+  const processedHtml = post.html.replace(
+    /<h2>(.*?)<\/h2>/gi,
+    (_full: string, inner: string) => {
+      const text = inner.replace(/<[^>]+>/g, '').trim()
+      const id = text
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '')
+      toc.push({ id, text })
+      return `<h2 id="${id}">${inner}</h2>`
+    }
+  )
 
   return (
     <div className="min-h-screen bg-[#030305] relative overflow-hidden">
@@ -106,7 +125,7 @@ export default async function BlogPostPage({
                 {/* Ghost HTML content */}
                 <div
                   className="ghost-content"
-                  dangerouslySetInnerHTML={{ __html: post.html }}
+                  dangerouslySetInnerHTML={{ __html: processedHtml }}
                 />
 
                 {/* Author / EEAT box */}
@@ -126,6 +145,25 @@ export default async function BlogPostPage({
 
             {/* RIGHT COLUMN: STICKY SIDEBAR */}
             <aside className="lg:sticky lg:top-32 flex flex-col gap-8">
+
+              {/* TABLE OF CONTENTS */}
+              {toc.length > 0 && (
+                <div className="p-6 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl">
+                  <h3 className="text-lg font-bold text-white mb-4">Índice</h3>
+                  <ul className="space-y-3">
+                    {toc.map((item, idx) => (
+                      <li key={idx}>
+                        <a
+                          href={`#${item.id}`}
+                          className="text-slate-400 hover:text-[#00e5ff] text-sm transition-colors block pl-3 border-l-2 border-transparent hover:border-[#00e5ff]"
+                        >
+                          {item.text}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               {/* Related posts */}
               {relatedPosts && relatedPosts.length > 0 && (
@@ -181,6 +219,7 @@ export default async function BlogPostPage({
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
