@@ -896,7 +896,7 @@ export default function Home() {
                 >
                   <span className="absolute inset-0 bg-gradient-to-r from-[#00e5ff] to-[#0018d8] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[1]" />
                   <span className="relative z-[2] group-hover:text-white transition-colors duration-300">
-                    Verificar mi caso <60s>()
+                    Verificar mi caso (60s)()
                   </span>
                   <svg
                     className="relative z-[2] w-3.5 h-3.5 sm:w-[18px] sm:h-[18px] group-hover:text-white transition-all duration-300 group-hover:translate-x-2"
