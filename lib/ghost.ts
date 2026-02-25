@@ -6,6 +6,14 @@ export const ghost = new GhostContentAPI({
   version: 'v5.0'
 })
 
+export async function getPostBySlug(slug: string) {
+  try {
+    return await ghost.posts.read({ slug }, { include: ['tags', 'authors'] })
+  } catch (err) {
+    return null
+  }
+}
+
 export async function getLatestPosts(limit = 3) {
   try {
     return await ghost.posts.browse({
