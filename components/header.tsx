@@ -14,8 +14,8 @@ const solucionesLinks = [
 ]
 const topLinks = [
   { href: '/blog', label: 'Blog' },
-  { href: '/faq', label: 'FAQ' }
-  { href: '/contacto', label: 'Contacto' }
+  { href: '/faq', label: 'FAQ' },
+  { href: '/contacto', label: 'Contacto' },
 ]
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
