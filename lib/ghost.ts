@@ -14,6 +14,19 @@ export async function getPostBySlug(slug: string) {
   }
 }
 
+export async function getAllPosts() {
+  try {
+    return await ghost.posts.browse({
+      limit: 'all',
+      include: ['tags', 'authors'],
+      fields: ['id', 'title', 'slug', 'feature_image', 'excerpt', 'published_at', 'reading_time']
+    })
+  } catch (err) {
+    console.error('Error fetching posts:', err)
+    return []
+  }
+}
+
 export async function getLatestPosts(limit = 3) {
   try {
     return await ghost.posts.browse({
