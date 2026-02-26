@@ -1,27 +1,8 @@
 import type { MetadataRoute } from 'next'
+import { getAllPosts } from '@/lib/ghost'
 
 const BASE_URL = 'https://www.kitdigitalzephyrstudio.es'
-const GHOST_URL = process.env.NEXT_PUBLIC_GHOST_URL   // e.g. https://tu-ghost.com
-const GHOST_KEY = process.env.GHOST_CONTENT_API_KEY   // Content API key
 
-// ── Fetch all published Ghost posts ──────────────────────────────
-async function getGhostPosts(): Promise<{ slug: string; updatedAt: string }[]> {
-  if (!GHOST_URL || !GHOST_KEY) return []
-
-  try {
-    const res = await fetch(
-      `${GHOST_URL}/ghost/api/content/posts/?key=${GHOST_KEY}&fields=slug,updated_at&limit=all`,
-      { next: { revalidate: 3600 } } // ISR: revalidate every hour
-    )
-    if (!res.ok) return []
-    const data = await res.json()
-    return data.posts ?? []
-  } catch {
-    return []
-  }
-}
-
-// ── Static routes ─────────────────────────────────────────────────
 const staticRoutes: MetadataRoute.Sitemap = [
   {
     url: BASE_URL,
@@ -67,14 +48,13 @@ const staticRoutes: MetadataRoute.Sitemap = [
   },
 ]
 
-// ── Sitemap (async) ───────────────────────────────────────────────
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const posts = await getGhostPosts()
+  const posts = await getAllPosts()
 
   const blogRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${BASE_URL}/blog/${post.slug}`,
-    lastModified: new Date(post.updatedAt),
-    changeFrequency: 'monthly',
+    lastModified: post.published_at ? new Date(post.published_at) : new Date(),
+    changeFrequency: 'monthly' as const,
     priority: 0.6,
   }))
 
