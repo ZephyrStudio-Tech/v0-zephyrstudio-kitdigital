@@ -5,7 +5,7 @@ import { Clock, Calendar } from 'lucide-react'
 import type { Metadata } from 'next'
 import { AnimatedBackground } from '@/components/animated-background'
 import { Header } from '@/components/header'
-import { Footer } from '@/components/footer'
+
 
 export async function generateMetadata({
   params,
@@ -219,7 +219,6 @@ export default async function BlogPostPage({
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   )
 }
