@@ -275,7 +275,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <div className="relative min-h-screen overflow-x-hidden">
+      <div className="relative min-h-screen">
         <AnimatedBackground />
         <Header />
 
@@ -432,6 +432,9 @@ export default function Home() {
         </section>
 
         {/* ─── Process Steps ────────────────────────────────────── */}
+        <ProcessSteps />
+
+        {/* ─── Projects ────────────────────────────────────── */}
         <FeaturedProjects />
 
         {/* ─── Hardware Catalogue Carousel ──────────────────────── */}
