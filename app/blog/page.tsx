@@ -2,6 +2,7 @@ import { getAllPosts } from '@/lib/ghost'
 import Link from 'next/link'
 import { Calendar, Clock, Search, ChevronRight } from 'lucide-react'
 import { Metadata } from 'next'
+import { Header } from '@/components/header'
 
 export const metadata: Metadata = {
   title: 'Blog y Recursos Kit Digital 2026 | ZephyrStudio',

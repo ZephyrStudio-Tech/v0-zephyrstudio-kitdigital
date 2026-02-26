@@ -14,9 +14,7 @@ const solucionesLinks = [
 ]
 const topLinks = [
   { href: '/blog', label: 'Blog' },
-]
-const topLinks = [
-  { href: '/faq', label: 'FAQ' },
+  { href: '/faq', label: 'FAQ' }
 ]
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
