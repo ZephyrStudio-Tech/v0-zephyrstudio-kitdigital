@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { FloatingActionButton } from '@/components/floating-action-button'
 import { Footer } from '@/components/footer'
+import { Header } from '@/components/header'
 import './globals.css'
 
 const inter = Inter({ 
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="es" className="dark">
       <body className={`${inter.variable} font-sans antialiased`}>
+        <Header />
         {children}
         <Footer />
         <FloatingActionButton />

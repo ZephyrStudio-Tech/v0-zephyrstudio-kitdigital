@@ -10,7 +10,6 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import { AnimatedBackground } from '@/components/animated-background'
-import { Header } from '@/components/header'
 import { Marquee } from '@/components/marquee'
 import { MagneticButton } from '@/components/magnetic-button'
 import Link from 'next/link'
@@ -277,7 +276,6 @@ export default function Home() {
       />
       <div className="relative min-h-screen">
         <AnimatedBackground />
-        <Header />
 
         {/* ─── Hero ─────────────────────────────────────────────── */}
         <section className="relative px-4 pt-36 pb-20 md:px-8 md:pt-48 md:pb-36 lg:pt-56 lg:pb-44">

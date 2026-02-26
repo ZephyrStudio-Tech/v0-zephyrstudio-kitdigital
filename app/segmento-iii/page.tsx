@@ -4,8 +4,6 @@ import { motion } from 'framer-motion'
 import { Check, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
 import { AnimatedBackground } from '@/components/animated-background'
-import { Header } from '@/components/header'
-
 /* ── Animation Variants ─────────────────────────────────────── */
 
 const fadeUp = {
@@ -65,7 +63,6 @@ export default function SegmentoIII() {
   return (
     <div className="relative min-h-screen overflow-hidden">
       <AnimatedBackground />
-      <Header />
 
       {/* ─── Hero: 2-Column 3D Split ──────────────────────── */}
       <section className="relative px-4 pt-36 pb-20 md:px-8 md:pt-48 md:pb-36 overflow-x-clip">

@@ -4,8 +4,6 @@ import Link from 'next/link'
 import { Clock, Calendar } from 'lucide-react'
 import type { Metadata } from 'next'
 import { AnimatedBackground } from '@/components/animated-background'
-import { Header } from '@/components/header'
-
 
 export async function generateMetadata({
   params,
@@ -58,7 +56,6 @@ export default async function BlogPostPage({
   return (
     <div className="min-h-screen bg-[#030305] relative overflow-hidden">
       <AnimatedBackground />
-      <Header />
 
       <div className="pt-32 pb-20 px-4 md:px-8 relative z-10">
         {/* Background glow */}
