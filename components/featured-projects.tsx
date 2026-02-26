@@ -46,7 +46,7 @@ export function FeaturedProjects() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
   return (
-    <section className="relative px-4 py-24 md:py-32 overflow-hidden bg-[#030305]">
+    <section className="relative px-4 py-24 md:py-32 overflow-hidden">
       <div className="container mx-auto max-w-7xl relative z-10">
 
         {/* Header */}
