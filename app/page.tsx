@@ -16,7 +16,6 @@ import { MagneticButton } from '@/components/magnetic-button'
 import Link from 'next/link'
 import { BlogSection } from '@/components/blog-section'
 import { ProcessSteps } from '@/components/process-steps'
-import { FeaturedProjects } from '@/components/featured-projects'
 
 /* ── Animation Variants ────────────────────────────────────────── */
 
@@ -794,9 +793,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* ─── Featured Projects ────────────────────────────────── */}
-        <FeaturedProjects />
 
         {/* ─── Blog / Resources ─────────────────────────────────── */}
         <BlogSection />
