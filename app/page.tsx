@@ -16,6 +16,7 @@ import { MagneticButton } from '@/components/magnetic-button'
 import Link from 'next/link'
 import { BlogSection } from '@/components/blog-section'
 import { ProcessSteps } from '@/components/process-steps'
+import { FeaturedProjects } from '@/components/featured-projects'
 
 /* ── Animation Variants ────────────────────────────────────────── */
 
@@ -258,7 +259,7 @@ export default function Home() {
         name: '¿Tengo que pagar el IVA del Kit Digital?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Sí, las subvenciones europeas no cubren impuestos. El beneficiario debe abonar el IVA de la factura al Agente Digitalizador, aunque posteriormente podrá deducírselo en sus declaraciones trimestrales.',
+          text: 'Sí, las subvenciones europeas no cubren impuestos. El beneficiario debe abonar el IVA de la factura al Agente Digitalizador, aunque posteriormente podrá deduc��rselo en sus declaraciones trimestrales.',
         },
       },
     ],
@@ -793,6 +794,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* ─── Featured Projects ────────────────────────────────── */}
+        <FeaturedProjects />
 
         {/* ─── Blog / Resources ─────────────────────────────────── */}
         <BlogSection />
