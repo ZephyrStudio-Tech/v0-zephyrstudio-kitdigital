@@ -15,6 +15,7 @@ import { Marquee } from '@/components/marquee'
 import { MagneticButton } from '@/components/magnetic-button'
 import Link from 'next/link'
 import { BlogSection } from '@/components/blog-section'
+import { ProcessSteps } from '@/components/process-steps'
 
 /* ── Animation Variants ────────────────────────────────────────── */
 
@@ -428,6 +429,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* ─── Process Steps ────────────────────────────────────── */}
+        <ProcessSteps />
 
         {/* ─── Hardware Catalogue Carousel ──────────────────────── */}
         <section className="relative px-4 py-20 md:px-8 md:py-36 overflow-hidden">

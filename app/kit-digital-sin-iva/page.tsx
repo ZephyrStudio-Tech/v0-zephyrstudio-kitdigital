@@ -196,21 +196,6 @@ export default function KitDigitalSinIva() {
         </div>
       </section>
 
-      {/* ─── Footer ───────────────────────────────────────── */}
-      <footer className="relative px-4 py-14 md:px-8 border-t border-white/[0.06]">
-        <div className="container mx-auto max-w-7xl">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-slate-500">
-              &copy; {new Date().getFullYear()} ZephyrStudio. Agentes Digitalizadores Adheridos.
-            </p>
-            <div className="flex gap-6 text-xs text-slate-500">
-              <a href="#" className="hover:text-white transition-colors">Privacidad</a>
-              <a href="#" className="hover:text-white transition-colors">Legal</a>
-              <a href="#" className="hover:text-white transition-colors">Contacto</a>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
