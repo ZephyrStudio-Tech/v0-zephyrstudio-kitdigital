@@ -12,11 +12,12 @@ const solucionesLinks = [
   { href: '/factura-electronica', label: 'Factura Electrónica', sub: 'Ley Crea y Crece' },
   { href: '/kit-digital-sin-iva', label: 'Sin IVA', sub: 'Deducción total' },
 ]
-
+const topLinks = [
+  { href: '/blog', label: 'Blog' },
+]
 const topLinks = [
   { href: '/faq', label: 'FAQ' },
 ]
-
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
