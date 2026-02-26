@@ -2,8 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { AnimatedBackground } from '@/components/animated-background'
-import { Header } from '@/components/header'
-
 /* ── Animation Variants ─────────────────────────────────────── */
 
 const fadeUp = {
@@ -65,7 +63,6 @@ export default function KitDigitalSinIva() {
   return (
     <div className="relative min-h-screen overflow-hidden">
       <AnimatedBackground />
-      <Header />
 
       {/* ─── Hero: Centered Editorial ─────────────────────── */}
       <section className="relative px-4 pt-36 pb-20 md:px-8 md:pt-48 md:pb-36">

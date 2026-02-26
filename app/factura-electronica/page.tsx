@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { ChevronRight, FileCheck, Zap, Server } from 'lucide-react'
 import { AnimatedBackground } from '@/components/animated-background'
-import { Header } from '@/components/header'
 
 export const metadata = {
   title: 'Factura Electrónica (Ley Crea y Crece) - Kit Digital | ZephyrStudio',
@@ -12,7 +11,6 @@ export default function FacturaElectronicaPage() {
   return (
     <div className="relative min-h-screen overflow-hidden">
       <AnimatedBackground />
-      <Header />
 
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#0018d8]/10 blur-[150px] rounded-full pointer-events-none" />
 

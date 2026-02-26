@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { ChevronRight, Shield, Laptop, Lock } from 'lucide-react'
 import { AnimatedBackground } from '@/components/animated-background'
-import { Header } from '@/components/header'
 
 export const metadata = {
   title: 'Puesto de Trabajo Seguro - Kit Digital | ZephyrStudio',
@@ -42,7 +41,6 @@ export default function PuestoTrabajoPage() {
       />
       <div className="relative min-h-screen overflow-hidden">
       <AnimatedBackground />
-      <Header />
 
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#00e5ff]/10 blur-[120px] rounded-full pointer-events-none" />
 
