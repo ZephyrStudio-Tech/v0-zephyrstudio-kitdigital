@@ -3,9 +3,9 @@ import React from 'react'
 const cards = [
   {
     number: '01',
-    title: 'Verificamos tu viabilidad',
+    title: 'Verificación en 60 segundos',
     description:
-      'Rellenas nuestro formulario en 60 segundos. Comprobamos tus datos con la base de Red.es y te confirmamos si cumples los requisitos legales para la subvención.',
+      'Rellenas el formulario y validamos tu segmento y requisitos. Si encajas, pasas directo al flujo automatizado (sin esperas).',
     topDesktop: '100px',
     topMobile: '80px',
     zIndex: 10,
@@ -17,9 +17,9 @@ const cards = [
   },
   {
     number: '02',
-    title: 'Tramitamos el expediente',
+    title: 'Tramitación sin llamadas',
     description:
-      'Como Agentes Digitalizadores Adheridos, nos convertimos en tus representantes voluntarios. Hacemos toda la burocracia con el Gobierno para que tú no pierdas ni un minuto.',
+      'Nos encargamos del expediente y de la documentación. Tú solo avanzas pasos: cero llamadas, cero papeleo, todo guiado.',
     topDesktop: '130px',
     topMobile: '100px',
     zIndex: 20,
@@ -31,9 +31,9 @@ const cards = [
   },
   {
     number: '03',
-    title: 'Aprobación del Bono',
+    title: 'Firma digital y activación',
     description:
-      'El Estado te notifica la concesión de tu bono (de 1.000€ a 12.000€ según tu segmento). Firmamos el Acuerdo de Prestación de Soluciones y ponemos los motores en marcha.',
+      'Te enviamos los documentos para firma electrónica y dejamos la solicitud preparada. Cuando se aprueba, activamos tu solución sin fricción.',
     topDesktop: '160px',
     topMobile: '120px',
     zIndex: 30,
@@ -45,9 +45,9 @@ const cards = [
   },
   {
     number: '04',
-    title: 'Despliegue y Hardware',
+    title: 'Despliegue y Equipo',
     description:
-      'Entregamos tu ordenador Mac/PC blindado, publicamos tu nueva web o activamos tu software de Factura Electrónica. Disfrutas de 12 meses de soporte premium incluido.',
+      'Implementamos tu web / factura electrónica y gestionamos el equipo (Mac/PC) según tu caso. Entrega y puesta en marcha con soporte incluido.',
     topDesktop: '190px',
     topMobile: '140px',
     zIndex: 40,
@@ -87,7 +87,7 @@ export function ProcessSteps() {
             marginBottom: '1.25rem',
           }}
         >
-          Proceso Cero Estrés
+          PROCESO AUTOMATIZADO
         </span>
         <h2
           style={{
@@ -109,7 +109,7 @@ export function ProcessSteps() {
               backgroundImage: 'linear-gradient(to right, #00e5ff, #0018d8)',
             }}
           >
-            Tú recibes el Kit Digital.
+            Tú activas el Kit Digital.
           </span>
         </h2>
       </div>
