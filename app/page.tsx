@@ -295,7 +295,7 @@ export default function Home() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#00e5ff] opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-[#00e5ff]" />
                 </span>
-                Kit Digital 2026 — Preparados para tramitar
+                Kit Digital — Tramitación automática disponible
               </motion.div>
 
               {/* H1 — single tag, CRO-first copy */}
@@ -303,9 +303,9 @@ export default function Home() {
                 variants={fadeUp}
                 className="mb-8 text-5xl md:text-7xl lg:text-[6rem] font-extrabold tracking-tighter leading-[0.9] text-white text-balance"
               >
-                Kit Digital para digitalizar tu negocio{' '}
+                Kit Digital para empresas y autónomos{' '}
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#00e5ff] to-blue-500">
-                  y conseguir tu equipo de trabajo
+                  Tramitación automática y equipo
                 </span>
               </motion.h1>
 
@@ -314,7 +314,7 @@ export default function Home() {
                 variants={fadeUp}
                 className="mb-10 max-w-xl text-base md:text-lg font-light text-slate-400 leading-relaxed"
               >
-                Verificamos tu caso en 60 segundos. Si encajas, te contactamos hoy y dejamos la solicitud preparada.
+                Verificamos tu caso en 60s. Si encajas, activamos un proceso prioritario (sin llamadas) y dejamos la solicitud lista.
               </motion.p>
 
               {/* CTAs */}
@@ -343,7 +343,7 @@ export default function Home() {
                 variants={fadeUp}
                 className="mt-6 text-xs text-slate-400 text-center"
               >
-                Contacto en el día · Proceso claro por escrito · Soporte en toda España
+                Sin papeleo en cualquier opción · Tramitación automática = sin esperas · Soporte en toda España
               </motion.p>
             </motion.div>
           </div>
@@ -360,17 +360,17 @@ export default function Home() {
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
               <div>
                 <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
-                  Tu bono según el <span className="text-[#00e5ff]">tamaño de tu empresa</span>
+                  Tu Kit Digital según el <span className="text-[#00e5ff]">tamaño de tu empresa</span>
                 </h2>
                 <p className="text-slate-400 mt-2 font-light">
-                  Selecciona tu segmento para ver las soluciones específicas y la cuantía que te corresponde.
+                  Selecciona tu segmento y te mostramos qué puedes solicitar y cuánto te corresponde (con tramitación guiada o automática)
                 </p>
               </div>
               <Link
                 href="/kit-digital-sin-iva"
                 className="text-sm text-slate-400 hover:text-[#00e5ff] underline decoration-slate-700 hover:decoration-[#00e5ff] underline-offset-4 transition-colors whitespace-nowrap shrink-0"
               >
-                {'¿Cómo funciona lo del IVA? (Explicación) →'}
+                {'Kit Digital sin IVA: cómo funciona en tu caso →'}
               </Link>
             </div>
 
@@ -385,19 +385,19 @@ export default function Home() {
                     <User className="w-6 h-6" />
                   </div>
                   <span className="bg-[#00e5ff]/10 border border-[#00e5ff]/20 text-[#00e5ff] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                    Hasta 3.000€
+                    HASTA 3.000€ · Prioritario
                   </span>
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-[#00e5ff] transition-colors relative z-10">
-                  Segmento III <span className="text-slate-400 text-lg font-medium">(0 - 2 empleados)</span>
+                  Segmento III <span className="text-slate-400 text-lg font-medium">(0-2 empleados)</span>
                 </h3>
                 <p className="text-slate-400 mb-8 relative z-10 leading-relaxed font-light">
-                  Incluye la nueva subvención para el <strong className="text-white font-medium">Puesto de Trabajo Seguro</strong> (Ordenador Mac o PC). Ideal para autónomos y microempresas.
+                  Incluye <strong className="text-white font-medium">Equipo de trabajo (Ordenador Mac o PC)</strong> y soluciones para empezar a digitalizarte. Si eliges Tramitación automática, va sin esperas y sin llamadas.
                 </p>
 
                 <div className="flex items-center text-white font-medium text-sm gap-2 group-hover:gap-3 transition-all relative z-10">
-                  Ver soluciones del Segmento III <ChevronRight className="w-4 h-4 text-[#00e5ff]" />
+                  Ver opciones del Segmento III <ChevronRight className="w-4 h-4 text-[#00e5ff]" />
                 </div>
               </Link>
 
@@ -410,19 +410,19 @@ export default function Home() {
                     <Users className="w-6 h-6" />
                   </div>
                   <span className="bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                    Hasta 6.000€
+                    HASTA 6.000€ · Automatizable
                   </span>
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors relative z-10">
-                  Segmento II <span className="text-slate-400 text-lg font-medium">(3 - 9 empleados)</span>
+                  Segmento II <span className="text-slate-400 text-lg font-medium">(3-9 empleados)</span>
                 </h3>
                 <p className="text-slate-400 mb-8 relative z-10 leading-relaxed font-light">
-                  Prepárate para la Ley Crea y Crece con la <strong className="text-white font-medium">Factura Electrónica obligatoria</strong> y moderniza tus procesos corporativos.
+                  Cumple con <strong className="text-white font-medium">Factura Electrónica (Ley Crea y Crece)</strong> y automatiza tu gestión. Con Tramitación automática, activamos el proceso prioritario y sin llamadas.
                 </p>
 
                 <div className="flex items-center text-white font-medium text-sm gap-2 group-hover:gap-3 transition-all relative z-10">
-                  Ver soluciones del Segmento II <ChevronRight className="w-4 h-4 text-blue-400" />
+                  Ver opciones del Segmento II <ChevronRight className="w-4 h-4 text-blue-400" />
                 </div>
               </Link>
             </div>
