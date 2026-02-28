@@ -149,6 +149,9 @@ export function Header() {
                     onClick={() => setMobileOpen(false)}
                     className="flex items-center gap-2 text-sm font-semibold text-[#00e5ff] hover:bg-[#00e5ff]/10 transition-colors duration-200 px-4 py-3 rounded-xl"
                   >
+                    <Zap className="w-4 h-4" />
+                    Proceso Automatizado
+                  </Link>
                 </div>
               </div>
 
