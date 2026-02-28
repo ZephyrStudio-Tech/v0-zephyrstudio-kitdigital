@@ -855,19 +855,20 @@ export default function Home() {
                     className="glass-premium rounded-2xl px-7 border-white/[0.08] transition-all duration-300"
                   >
                     <AccordionTrigger className="text-left text-white hover:text-[#00e5ff] transition-colors font-semibold py-6 text-base tracking-tight [&[data-state=open]]:text-[#00e5ff] [&>svg]:text-white">
-                      {/* FIX 1: Highlight keyword in cyan */}
-                      {faq.highlight
-                        ? faq.question.split(faq.highlight).map((part, i, arr) =>
-                          i < arr.length - 1 ? (
-                            <React.Fragment key={i}>
-                              {part}
-                              <span className="text-[#00e5ff]">{faq.highlight}</span>
-                            </React.Fragment>
-                          ) : (
-                            part
+                      <span>
+                        {faq.highlight
+                          ? faq.question.split(faq.highlight).map((part, i, arr) =>
+                            i < arr.length - 1 ? (
+                              <React.Fragment key={i}>
+                                {part}
+                                <span className="text-[#00e5ff]">{faq.highlight}</span>
+                              </React.Fragment>
+                            ) : (
+                              part
+                            )
                           )
-                        )
-                        : faq.question}
+                          : faq.question}
+                      </span>
                     </AccordionTrigger>
                     <AccordionContent className="text-slate-400 leading-relaxed pb-6 text-sm font-light">
                       {faq.answer}
