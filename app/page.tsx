@@ -163,22 +163,22 @@ const projects = [
 
 const reviews = [
   {
-    text: 'La integración del hardware Mac con el software fue impecable. Ahora trabajamos con equipos de primer nivel sin inversión inicial.',
-    author: 'María González',
-    role: 'Dir. Comercial',
-    company: 'TechSolutions SL',
+    text: 'Nos gestionaron el Kit Digital de forma súper rápida y eficiente. De todas las opciones que valoré, fueron los más claros y ágiles. Repetiría.',
+    author: 'Àlex Aubets Toneu',
+    role: 'Reseña de Google',
+    company: 'Verificada',
   },
   {
-    text: 'El proceso fue extremadamente ágil. En menos de una semana teníamos nuestro nuevo e-commerce operativo y el equipo Apple configurado.',
-    author: 'Carlos Martínez',
-    role: 'CEO',
-    company: 'ModaOnline',
+    text: 'Nos hicieron todo el tramite del kit digital de forma gratuita, la web la teníamos funcional a las dos semanas de haber sido aprobado el bono y el ordenado llegó correctamente',
+    author: 'Vaby Rodríguez',
+    role: 'Reseña de Google',
+    company: 'Verificada',
   },
   {
-    text: 'Profesionales excepcionales. No solo nos digitalizaron, nos transformaron. El ROI ha sido inmediato.',
-    author: 'Ana Rodríguez',
-    role: 'Gerente TI',
-    company: 'InnovaGroup',
+    text: 'Captaron nuestras necesidades desde el primer momento y las llevaron a una web moderna y funcional. Profesionales, atentos y muy resolutivos en todo el proceso.',
+    author: 'Con Perros y a lo Loco',
+    role: 'Reseña de Google',
+    company: 'Verificada',
   },
 ]
 
@@ -768,8 +768,8 @@ export default function Home() {
               className="text-center mb-12 md:mb-20 px-4"
             >
               <h2 className="text-3xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[0.92]">
-                <span className="text-gradient-heading">Lo que dicen</span>{' '}
-                <span className="text-gradient-cyan">nuestros clientes</span>
+                <span className="text-gradient-heading">Reseñas reales en</span>{' '}
+                <span className="text-gradient-cyan">Google</span>
               </h2>
             </motion.div>
 
