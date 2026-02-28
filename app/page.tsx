@@ -189,29 +189,46 @@ const blogPosts = [
 
 const faqs = [
   {
-    question: '¿Qué modelos de Mac incluye el servicio?',
+    question: '¿Qué equipo puedo conseguir con el Kit Digital (Mac o PC)?',
+    highlight: 'equipo',
     answer:
-      'Dependiendo de tu segmento, incluimos desde MacBook Air M3 hasta MacBook Pro M3 Max, iMac 24", o Mac Studio. Todo hardware de grado empresarial con garantía Apple completa.',
+      'Depende de tu segmento y de la solución contratada (p. ej. Puesto de Trabajo Seguro). Tras verificar tu caso, te indicamos las opciones disponibles y la diferencia a pagar si el equipo supera el importe subvencionable.',
   },
   {
-    question: '¿Cómo funciona la financiación al 100%?',
+    question: '¿Cómo funciona la subvención y qué parte pagas tú?',
+    highlight: 'subvención',
     answer:
-      'El Bono Digital cubre la totalidad de los servicios digitales Y el equipamiento necesario para operarlos. No requiere inversión inicial. Gestionamos toda la burocracia por ti.',
+      'La ayuda cubre hasta el límite de tu bono según segmento. Si eliges una opción superior al importe subvencionable, solo pagarías la diferencia. Antes de avanzar te lo dejamos por escrito, con el desglose.',
   },
   {
-    question: '¿Cuánto tarda la concesión del bono?',
+    question: '¿Cuánto tarda el proceso y cuándo empiezo sin esperas?',
+    highlight: 'sin esperas',
     answer:
-      'El triage inicial es en menos de 1 minuto. La solicitud formal tarda 48-72h. Una vez aprobado (generalmente 2-3 semanas), iniciamos el despliegue inmediatamente.',
+      'La concesión depende de plazos administrativos. Lo que sí aceleramos nosotros: validación, preparación del expediente y documentación. Si eliges Proceso Automatizado, el flujo se dispara sin esperas: contratos, firmas y pasos siguientes van entrando de forma guiada.',
   },
   {
-    question: '¿El IVA también está cubierto?',
+    question: '¿El bono incluye IVA/IGIC? ¿Qué significa "sin IVA"?',
+    highlight: 'IVA/IGIC',
     answer:
-      'Sí, el bono cubre el 100% del importe incluyendo IVA. No hay costes ocultos ni sorpresas posteriores.',
+      'Depende de tu situación fiscal. Por eso lo tratamos como un caso individual: verificamos tu escenario y te decimos exactamente qué aplica (IVA/IGIC) y cómo queda el pago final, antes de firmar nada.',
   },
   {
-    question: '¿Qué pasa después de implementar?',
+    question: '¿Qué pasa después? Soporte, mantenimiento y siguientes pasos',
+    highlight: 'Soporte',
     answer:
-      'Ofrecemos soporte técnico continuado, actualizaciones de software, y un modelo de mantenimiento predictivo. Tu infraestructura siempre actualizada.',
+      'Tras la entrega/activación, tienes un periodo de soporte incluido según solución. Además, te dejamos el proceso documentado (entregables, accesos y checklist) para que todo quede trazable.',
+  },
+  {
+    question: '¿Sois Agente Digitalizador?',
+    highlight: 'Agente Digitalizador',
+    answer:
+      'Trabajamos mediante un partner Agente Digitalizador (acreditado) que es quien formaliza la tramitación. Nosotros operamos la parte técnica y el proceso automatizado para que tú no pierdas tiempo.',
+  },
+  {
+    question: '¿Tengo que hacer llamadas o trámites presenciales?',
+    highlight: 'sin llamadas',
+    answer:
+      'No. El proceso puede hacerse 100% online. Si eliges Proceso Automatizado, todo va por flujo guiado: notificaciones, documentos y firmas digitales sin esperas.',
   },
 ]
 
@@ -792,8 +809,8 @@ export default function Home() {
               className="text-center mb-20"
             >
               <h2 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[0.92]">
-                <span className="text-gradient-heading">Preguntas</span>{' '}
-                <span className="text-gradient-cyan">Frecuentes</span>
+                <span className="text-gradient-heading">Preguntas frecuentes sobre</span>{' '}
+                <span className="text-gradient-cyan">Kit Digital</span>
               </h2>
             </motion.div>
 
