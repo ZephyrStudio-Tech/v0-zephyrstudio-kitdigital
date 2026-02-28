@@ -12,12 +12,13 @@ const solucionesLinks = [
   { href: '/factura-electronica', label: 'Factura Electrónica', sub: 'Ley Crea y Crece' },
   { href: '/kit-digital-sin-iva', label: 'Sin IVA', sub: 'Deducción total' },
 ]
+
 const topLinks = [
   { href: '/blog', label: 'Blog' },
   { href: '/faq', label: 'FAQ' },
-  { href: '/proceso-automatizado', label: 'Proceso Automatizado' },
   { href: '/contacto', label: 'Contacto' },
 ]
+
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
@@ -31,6 +32,7 @@ export function Header() {
     >
       <div className="container mx-auto max-w-7xl">
         <div className="glass-premium rounded-2xl px-6 py-3.5 flex items-center justify-between transition-all duration-300">
+
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -143,15 +145,27 @@ export function Header() {
                     </Link>
                   ))}
                 </nav>
+
+                {/* FIX: Link correctly closed with content */}
                 <div className="mt-3 pt-3 border-t border-white/[0.06] flex flex-col gap-1">
                   <Link
                     href="/proceso-automatizado"
                     onClick={() => setMobileOpen(false)}
-                    className="flex items-center gap-2 text-sm font-semibold text-[#00e5ff] hover:bg-[#00e5ff]/10 transition-colors duration-200 px-4 py-3 rounded-xl"
+                    className="text-sm font-medium text-slate-300 hover:text-white hover:bg-white/[0.04] transition-colors duration-200 px-4 py-3 rounded-xl"
                   >
-                    <Zap className="w-4 h-4" />
                     Proceso Automatizado
                   </Link>
+
+                  {topLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="text-sm font-medium text-slate-300 hover:text-white hover:bg-white/[0.04] transition-colors duration-200 px-4 py-3 rounded-xl"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
                 </div>
               </div>
 
