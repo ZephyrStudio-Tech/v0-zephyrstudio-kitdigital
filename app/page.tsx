@@ -305,7 +305,7 @@ export default function Home() {
               >
                 Kit Digital para empresas y autónomos{' '}
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#00e5ff] to-blue-500">
-                  Tramitación automática y equipo
+                  tramitación automática y equipo
                 </span>
               </motion.h1>
 
@@ -444,16 +444,16 @@ export default function Home() {
             <div className="mb-12 md:text-center">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-mono text-xs uppercase tracking-widest mb-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
-                Catálogo 2024
+                Catálogo 2026
               </div>
               <h2 className="text-4xl md:text-5xl font-extrabold tracking-tighter text-white leading-tight">
                 Equipo de trabajo: hasta 1.000€ subvencionados
               </h2>
               <p className="text-slate-400 mt-4 max-w-2xl md:mx-auto">
-                Si el equipo cuesta más de 1.000€, pagas solo la diferencia. Si cuesta menos, no pagas nada.
+                Te aplicamos el bono al equipo: pagas solo la diferencia o 0€ si cubre el total (según tu caso).
               </p>
               <Link href="/kit-digital-sin-iva" className="inline-block mt-2 text-sm text-[#00e5ff] hover:text-white underline decoration-[#00e5ff]/30 underline-offset-4 transition-colors">
-                ¿Dudas con IVA/IGIC? Te lo explicamos aquí.
+                IVA/IGIC y “sin IVA”: te lo explicamos en 2 minutos.
               </Link>
             </div>
 
@@ -500,17 +500,13 @@ export default function Home() {
               >
                 <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-[0.92] mb-8">
                   <span className="text-gradient-heading">
-                    Agentes Digitalizadores
+                    Tramitación con Partner.
                   </span>
                   <br />
-                  <span className="text-[#00e5ff]">Adheridos</span>
+                  <span className="text-[#00e5ff]">100% automatizado</span>
                 </h2>
                 <p className="text-slate-400 leading-relaxed text-base md:text-lg font-light max-w-lg">
-                  No somos una agencia tradicional. Somos ingenieros de software
-                  especializados en arquitectura cloud y modernización
-                  empresarial. Diseñamos sistemas escalables, implementamos
-                  infraestructura crítica y te equipamos con las herramientas que
-                  Silicon Valley usa para liderar.
+                  Orquestamos el Kit Digital de principio a fin junto a nuestro partner Agente Digitalizador: validación, contratos, firma y presentación del expediente. Tú eliges la solución (web, factura electrónica o puesto de trabajo seguro) y el sistema lo mueve todo — sin llamadas y con seguimiento por escrito.
                 </p>
               </motion.div>
 
@@ -523,17 +519,17 @@ export default function Home() {
               >
                 <div className="absolute -top-3.5 left-8 bg-[#030305] px-5 py-1.5 rounded-full border border-[#00e5ff]/30 shadow-[0_0_20px_rgba(0,229,255,0.1)]">
                   <p className="text-xs font-semibold text-[#00e5ff] tracking-wide">
-                    Proceso 100% Digital
+                    Proceso 100% Automatizado
                   </p>
                 </div>
 
                 <div className="space-y-5 mt-4">
                   {[
-                    'Evaluación inicial en menos de 1 minuto',
-                    'Solicitud completamente automatizada',
-                    'Sin gestiones presenciales requeridas',
-                    'Concesión en 2-3 semanas',
-                    'Hardware empresarial incluido',
+                    'Verificación en 60s (viabilidad y segmento)',
+                    'Contratos y firma digital automáticos (sin llamadas)',
+                    'Presentación del expediente vía partner Agente Digitalizador',
+                    'Seguimiento del expediente y estado en todo momento',
+                    'Equipo de trabajo incluido',
                   ].map((item, idx) => (
                     <div key={idx} className="flex items-center gap-3">
                       <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#00e5ff]/10 flex-shrink-0">
