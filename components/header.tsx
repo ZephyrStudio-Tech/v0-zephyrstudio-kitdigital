@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap } from 'lucide-react'
 import Link from 'next/link'
 
 const solucionesLinks = [
@@ -77,6 +77,14 @@ export function Header() {
               </AnimatePresence>
             </div>
 
+            <Link
+              href="/proceso-automatizado"
+              className="flex items-center gap-1.5 text-sm font-semibold text-[#00e5ff] hover:text-white border border-[#00e5ff]/30 hover:border-[#00e5ff]/60 rounded-xl px-3 py-1.5 transition-all duration-200 hover:bg-[#00e5ff]/10"
+            >
+              <Zap className="w-3.5 h-3.5" />
+              Proceso Automatizado
+            </Link>
+
             {topLinks.map((link) => (
               <Link
                 key={link.href}
@@ -135,6 +143,14 @@ export function Header() {
                   ))}
                 </nav>
                 <div className="mt-3 pt-3 border-t border-white/[0.06] flex flex-col gap-1">
+                  <Link
+                    href="/proceso-automatizado"
+                    onClick={() => setMobileOpen(false)}
+                    className="flex items-center gap-2 text-sm font-semibold text-[#00e5ff] hover:bg-[#00e5ff]/10 transition-colors duration-200 px-4 py-3 rounded-xl"
+                  >
+                    <Zap className="w-4 h-4" />
+                    Proceso Automatizado
+                  </Link>
                   {topLinks.map((link) => (
                     <Link
                       key={link.href}
