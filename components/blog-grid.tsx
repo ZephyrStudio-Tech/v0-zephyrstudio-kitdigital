@@ -11,12 +11,12 @@ export function BlogGrid({ posts }: { posts: any[] }) {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 font-mono text-xs uppercase tracking-widest mb-4">
-              Novedades SEO
+              RECURSOS KIT DIGITAL
             </div>
             <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-              Actualidad y{' '}
+              Guías rápidas para{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-[#00e5ff]">
-                Recursos.
+                tramitar sin fricción.
               </span>
             </h2>
           </div>
@@ -24,7 +24,7 @@ export function BlogGrid({ posts }: { posts: any[] }) {
             href="/blog"
             className="text-sm font-medium text-slate-300 hover:text-white flex items-center gap-2 group transition-colors"
           >
-            Ver todos los artículos
+            Ver todas las guías
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
