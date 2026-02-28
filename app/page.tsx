@@ -757,8 +757,8 @@ export default function Home() {
             </motion.div>
 
             <div className="w-full">
-              {/* Mobile: vertical stack — Desktop: 3-col grid */}
-              <div className="flex flex-col gap-4 px-4 md:grid md:grid-cols-3 md:gap-5 md:px-8">
+              {/* Mobile: horizontal snap carousel — Desktop: 3-col grid */}
+              <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide px-4 pb-2 md:grid md:grid-cols-3 md:gap-5 md:px-8 md:overflow-visible md:pb-0">
                 {reviews.map((review, idx) => (
                   <motion.div
                     key={idx}
@@ -766,31 +766,40 @@ export default function Home() {
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.1 }}
                     variants={cardFade}
-                    className="glass-premium rounded-2xl p-6 md:rounded-3xl md:p-8 w-full transition-all duration-300"
+                    className="glass-premium rounded-2xl p-6 md:rounded-3xl md:p-8 min-w-[82vw] md:min-w-0 w-full flex-shrink-0 snap-center transition-all duration-300"
                   >
                     <div className="flex gap-1 mb-5">
                       {[...Array(5)].map((_, i) => (
-                        <span
-                          key={i}
-                          className="text-[#00e5ff] text-sm"
-                        >
-                          {'★'}
-                        </span>
+                        <span key={i} className="text-[#00e5ff] text-sm">{'★'}</span>
                       ))}
                     </div>
                     <p className="text-slate-300 mb-8 leading-relaxed text-sm md:text-base font-light">
                       &ldquo;{review.text}&rdquo;
                     </p>
                     <div>
-                      <p className="font-semibold text-white text-sm">
-                        {review.author}
-                      </p>
+                      <p className="font-semibold text-white text-sm">{review.author}</p>
                       <p className="text-xs text-slate-500 mt-0.5">
                         {review.role} &middot; {review.company}
                       </p>
                     </div>
                   </motion.div>
                 ))}
+              </div>
+
+              {/* Mobile scroll indicator — hidden on desktop */}
+              <div className="flex items-center justify-center gap-3 mt-5 md:hidden">
+                {reviews.map((_, idx) => (
+                  <span
+                    key={idx}
+                    className={`block rounded-full transition-all duration-300 ${idx === 0 ? 'w-5 h-1.5 bg-[#00e5ff]' : 'w-1.5 h-1.5 bg-white/20'}`}
+                  />
+                ))}
+                <span className="ml-2 text-xs text-slate-500 flex items-center gap-1">
+                  desliza
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-slate-500 animate-[pulse_1.5s_ease-in-out_infinite]">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
               </div>
             </div>
           </div>
