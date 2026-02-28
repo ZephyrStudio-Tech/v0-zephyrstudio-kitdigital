@@ -15,6 +15,7 @@ const solucionesLinks = [
 const topLinks = [
   { href: '/blog', label: 'Blog' },
   { href: '/faq', label: 'FAQ' },
+  { href: '/proceso-automatizado', label: 'Proceso Automatizado' },
   { href: '/contacto', label: 'Contacto' },
 ]
 export function Header() {
@@ -148,19 +149,6 @@ export function Header() {
                     onClick={() => setMobileOpen(false)}
                     className="flex items-center gap-2 text-sm font-semibold text-[#00e5ff] hover:bg-[#00e5ff]/10 transition-colors duration-200 px-4 py-3 rounded-xl"
                   >
-                    <Zap className="w-4 h-4" />
-                    Proceso Automatizado
-                  </Link>
-                  {topLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={() => setMobileOpen(false)}
-                      className="text-sm font-medium text-slate-300 hover:text-white hover:bg-white/[0.04] transition-colors duration-200 px-4 py-3 rounded-xl"
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
                 </div>
               </div>
 
