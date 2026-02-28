@@ -768,8 +768,8 @@ export default function Home() {
               className="text-center mb-12 md:mb-20 px-4"
             >
               <h2 className="text-3xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[0.92]">
-                <span className="text-gradient-heading">Lo que dicen</span>{' '}
-                <span className="text-gradient-cyan">nuestros clientes</span>
+                <span className="text-gradient-heading">Reseñas reales en</span>{' '}
+                <span className="text-gradient-cyan">Google</span>
               </h2>
             </motion.div>
 
