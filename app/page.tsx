@@ -756,7 +756,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ─── Reviews ──────────────────────────────────────────── */}
+        {/* ─── Reviews ───────��──────────────────────────────────── */}
         <section className="relative py-20 md:py-36 overflow-hidden">
           <div className="container mx-auto max-w-7xl">
             <motion.div
@@ -883,8 +883,8 @@ export default function Home() {
         <section className="relative px-4 py-20 md:px-8 md:py-36 overflow-hidden">
           <div className="mx-auto w-full max-w-[1200px]">
 
+            {/* grid-cols-1 on mobile, 2-col on md+ */}
             <div
-              {/* FIX 3: grid-cols-1 on mobile, 2-col on md+ */}
               className="relative w-full rounded-[1.5rem] sm:rounded-[2.5rem] p-5 sm:p-10 lg:p-[5rem_4rem] grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-8 sm:gap-10 lg:gap-16 items-center"
               style={{
                 background: 'rgba(255,255,255,0.02)',
