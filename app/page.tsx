@@ -245,7 +245,7 @@ export default function Home() {
     description: 'Agente Digitalizador Adherido especializado en la tramitación e implantación de soluciones tecnológicas B2B y Kit Digital para PYMEs.',
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+34-602-67-87-71',
+      telephone: '+34614286277',
       contactType: 'customer service',
       availableLanguage: 'Spanish',
     },
@@ -257,26 +257,58 @@ export default function Home() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: '¿Qué es el Kit Digital y quién puede solicitarlo?',
+        name: '¿Qué equipo puedo conseguir con el Kit Digital (Mac o PC)?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'El Kit Digital es una iniciativa del Gobierno de España subvencionada por fondos europeos (Next Generation EU) dirigida a pymes y autónomos (de 0 a 49 empleados) para implantar soluciones digitales.',
+          text: 'Depende de tu segmento y de la solución contratada (p. ej. Puesto de Trabajo Seguro). Tras verificar tu caso, te indicamos las opciones disponibles y la diferencia a pagar si el equipo supera el importe subvencionable.',
         },
       },
       {
         '@type': 'Question',
-        name: '¿Puedo conseguir un ordenador Mac o PC gratis con el Kit Digital?',
+        name: '¿Cómo funciona la subvención y qué parte pagas tú?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Sí, las empresas del Segmento III (0 a 2 empleados) pueden destinar hasta 1.000€ de su bono a la categoría de Puesto de Trabajo Seguro, obteniendo un ordenador portátil o de sobremesa con ciberseguridad avanzada.',
+          text: 'La ayuda cubre hasta el límite de tu bono según segmento. Si eliges una opción superior al importe subvencionable, solo pagarías la diferencia. Antes de avanzar te lo dejamos por escrito, con el desglose.',
         },
       },
       {
         '@type': 'Question',
-        name: '¿Tengo que pagar el IVA del Kit Digital?',
+        name: '¿Cuánto tarda el proceso y cuándo empiezo sin esperas?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Sí, las subvenciones europeas no cubren impuestos. El beneficiario debe abonar el IVA de la factura al Agente Digitalizador, aunque posteriormente podrá deduc��rselo en sus declaraciones trimestrales.',
+          text: 'La concesión depende de plazos administrativos. Lo que sí aceleramos nosotros: validación, preparación del expediente y documentación. Si eliges Proceso Automatizado, el flujo se dispara sin esperas: contratos, firmas y pasos siguientes van entrando de forma guiada.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '¿El bono incluye IVA/IGIC? ¿Qué significa "sin IVA"?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Depende de tu situación fiscal. Por eso lo tratamos como un caso individual: verificamos tu escenario y te decimos exactamente qué aplica (IVA/IGIC) y cómo queda el pago final, antes de firmar nada.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '¿Qué pasa después? Soporte, mantenimiento y siguientes pasos',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Tras la entrega/activación, tienes un periodo de soporte incluido según solución. Además, te dejamos el proceso documentado (entregables, accesos y checklist) para que todo quede trazable.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '¿Sois Agente Digitalizador?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Trabajamos mediante un partner Agente Digitalizador (acreditado) que es quien formaliza la tramitación. Nosotros operamos la parte técnica y el proceso automatizado para que tú no pierdas tiempo.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '¿Tengo que hacer llamadas o trámites presenciales?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'No. El proceso puede hacerse 100% online. Si eliges Proceso Automatizado, todo va por flujo guiado: notificaciones, documentos y firmas digitales sin esperas.',
         },
       },
     ],
