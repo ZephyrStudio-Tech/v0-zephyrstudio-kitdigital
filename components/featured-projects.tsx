@@ -60,6 +60,9 @@ export function FeaturedProjects() {
               Proceso automatizado.
             </span>
           </h2>
+          <p className="mt-4 text-slate-400 text-base md:text-lg font-light leading-relaxed max-w-xl">
+            Casos de éxito como Agente Digitalizador: web, eCommerce, SEO y automatización con Kit Digital.
+          </p>
         </div>
 
         {/* Flex Accordion Gallery */}
