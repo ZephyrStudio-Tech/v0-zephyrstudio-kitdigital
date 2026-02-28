@@ -502,6 +502,22 @@ export default function Home() {
                 )
               })}
             </div>
+
+            {/* Mobile swipe indicator — hidden on desktop */}
+            <div className="flex items-center justify-center gap-3 mt-4 md:hidden">
+              {hardwareCatalog.map((_, idx) => (
+                <span
+                  key={idx}
+                  className={`block rounded-full transition-all duration-300 ${idx === 0 ? 'w-5 h-1.5 bg-[#00e5ff]' : 'w-1.5 h-1.5 bg-white/20'}`}
+                />
+              ))}
+              <span className="ml-2 text-xs text-slate-500 flex items-center gap-1">
+                desliza
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-slate-500 animate-[pulse_1.5s_ease-in-out_infinite]">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </span>
+            </div>
           </div>
         </section>
 
