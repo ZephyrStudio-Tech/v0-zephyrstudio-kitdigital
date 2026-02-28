@@ -893,7 +893,7 @@ export default function Home() {
                     style={{ boxShadow: '0 0 10px #00e5ff', animation: 'pulse 2s infinite' }}
                   />
                   <span className="text-[#00e5ff] font-mono text-[10px] sm:text-xs font-bold uppercase tracking-widest">
-                    System Ready
+                    PROCESO AUTOMATIZADO
                   </span>
                 </div>
 
@@ -902,7 +902,7 @@ export default function Home() {
                   className="font-extrabold leading-[0.95] tracking-tighter mb-3 sm:mb-6"
                   style={{ fontSize: 'clamp(1.5rem, 5vw, 4.5rem)' }}
                 >
-                  <span className="text-white">Arquitectura Web.</span>
+                  <span className="text-white">Kit Digital, sin llamadas.</span>
                   <span
                     className="block mt-1 sm:mt-2 text-transparent"
                     style={{
@@ -915,9 +915,7 @@ export default function Home() {
 
                 {/* Description */}
                 <p className="text-xs sm:text-sm md:text-lg text-slate-400 leading-relaxed sm:leading-[1.7] mb-6 sm:mb-12 max-w-[500px]">
-                  Desplegamos tu infraestructura digital y te equipamos con
-                  hardware de grado empresarial (Apple Mac) financiado
-                  por los fondos europeos.
+                  Validamos tu segmento, activamos el flujo automatizado y te enviamos los contratos para firma digital. Nuestro partner Agente Digitalizador presenta la solicitud y nosotros ejecutamos la entrega (software/hardware) sin esperas.
                 </p>
 
                 {/* CTA Button */}
