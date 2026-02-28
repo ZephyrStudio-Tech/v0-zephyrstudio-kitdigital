@@ -8,8 +8,8 @@ const projects = [
     id: 1,
     title: 'Acuarela Andaluza',
     fullTitle: 'Acuarela Andaluza Internacional',
-    category: 'Plataforma & Ticketing',
-    description: 'Ecosistema digital custom sobre WordPress. Ticketing con QR encriptado, facturación automatizada PDF y pasarela multidivisa (Stripe/PayPal) blindada.',
+    category: 'Web + Automatización',
+    description: 'Nueva web y sistema de ticketing con QR + cobro online. Flujos y facturación automatizados, listo para operar sin fricción.',
     image: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/acuarelaandaluzainternacional.png',
     link: 'https://acuarelaandaluzainternacional.com/',
   },
@@ -17,8 +17,8 @@ const projects = [
     id: 2,
     title: 'Con Perros y a lo Loco',
     fullTitle: 'Con Perros y a lo Loco',
-    category: 'E-Commerce & SEO',
-    description: 'Tienda WooCommerce especializada para salón de belleza canino. Implementación de sistema de reservas de citas complejo y estrategia SEO local.',
+    category: 'E-Commerce & SEO Local',
+    description: 'Tienda online + reservas avanzadas. SEO local orientado a captar clientes en la zona y convertir visitas en citas.',
     image: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/conperrosyaloloco.png',
     link: 'https://conperrosyaloloco.com',
   },
@@ -26,8 +26,8 @@ const projects = [
     id: 3,
     title: 'Transportes Julio Aguila',
     fullTitle: 'Transportes Julio Aguila',
-    category: 'Web Corporativa',
-    description: 'Desarrollo web corporativo multidioma enfocado en la conversión para el exigente sector de la logística y el transporte internacional.',
+    category: 'Web B2B · Captación',
+    description: 'Web multidioma enfocada a leads B2B: estructura, mensajes y formularios pensados para convertir tráfico en solicitudes.',
     image: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/TransportesJulioAguila.png',
     link: 'https://julioaguila.es/',
   },
@@ -35,8 +35,8 @@ const projects = [
     id: 4,
     title: 'Dra. Celia Ruiz',
     fullTitle: 'Dra. Celia Ruiz Arranz',
-    category: 'Presencia Digital',
-    description: 'Portal médico de oftalmología. Diseño UI/UX minimalista y personalizado, estructurado para maximizar la confianza y las reservas.',
+    category: 'Presencia Digital · Reservas',
+    description: 'Web orientada a confianza + captación: estructura clara, mensajes médicos y reservas optimizadas para reducir fricción.',
     image: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/Dra.CeliaRuizArranz.png',
     link: 'https://celiaruizarranz.es/',
   },
@@ -52,14 +52,17 @@ export function FeaturedProjects() {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block px-5 py-2 rounded-full bg-[#00e5ff]/5 border border-[#00e5ff]/20 text-[#00e5ff] text-xs font-bold uppercase tracking-[0.15em] mb-6 backdrop-blur-sm">
-            Casos de Exito
+            CASOS DE ÉXITO · KIT DIGITAL
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white tracking-tight leading-none">
-            Impacto Digital<br />
+            Resultados reales.<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00e5ff] to-[#0018d8]">
-              Medible.
+              Proceso automatizado.
             </span>
           </h2>
+          <p className="mt-4 text-slate-400 text-base md:text-lg font-light leading-relaxed max-w-xl mx-auto">
+            Casos de éxito como Agente Digitalizador: web, eCommerce, SEO y automatización con Kit Digital.
+          </p>
         </div>
 
         {/* Flex Accordion Gallery */}
@@ -130,7 +133,7 @@ export function FeaturedProjects() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full font-bold text-sm hover:bg-[#00e5ff] hover:shadow-[0_0_20px_rgba(0,229,255,0.4)] transition-all"
                     >
-                      Ver Proyecto en Vivo <ArrowRight className="w-4 h-4" />
+                      Ver caso en Vivo <ArrowRight className="w-4 h-4" />
                     </a>
                   </div>
                 </div>
