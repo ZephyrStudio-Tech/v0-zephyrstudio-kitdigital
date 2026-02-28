@@ -741,23 +741,24 @@ export default function Home() {
         </section>
 
         {/* ─── Reviews ──────────────────────────────────────────── */}
-        <section className="relative py-20 md:py-36">
+        <section className="relative py-20 md:py-36 overflow-hidden">
           <div className="container mx-auto max-w-7xl">
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.1 }}
               variants={fadeUp}
-              className="text-center mb-20 px-4"
+              className="text-center mb-12 md:mb-20 px-4"
             >
-              <h2 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[0.92]">
+              <h2 className="text-3xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[0.92]">
                 <span className="text-gradient-heading">Lo que dicen</span>{' '}
                 <span className="text-gradient-cyan">nuestros clientes</span>
               </h2>
             </motion.div>
 
-            <div className="md:px-8">
-              <div className="flex md:grid md:grid-cols-3 gap-5 overflow-x-auto md:overflow-visible snap-x snap-mandatory scrollbar-hide pb-4 px-4 md:px-0">
+            <div className="w-full">
+              {/* Mobile: vertical stack — Desktop: 3-col grid */}
+              <div className="flex flex-col gap-4 px-4 md:grid md:grid-cols-3 md:gap-5 md:px-8">
                 {reviews.map((review, idx) => (
                   <motion.div
                     key={idx}
@@ -765,7 +766,7 @@ export default function Home() {
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.1 }}
                     variants={cardFade}
-                    className="glass-premium rounded-3xl p-8 min-w-[85vw] md:min-w-0 snap-center flex-shrink-0 transition-all duration-300"
+                    className="glass-premium rounded-2xl p-6 md:rounded-3xl md:p-8 w-full transition-all duration-300"
                   >
                     <div className="flex gap-1 mb-5">
                       {[...Array(5)].map((_, i) => (
