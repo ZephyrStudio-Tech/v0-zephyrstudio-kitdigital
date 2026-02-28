@@ -76,50 +76,50 @@ const cardFade = {
 
 const packages = [
   {
-    name: 'WEB',
+    name: 'Sitio Web y Presencia Digital',
     grantValue: 'Hasta 2.000€',
-    description: 'No hacemos webs corporativas tradicionales. Desarrollamos plataformas de ultra-alta velocidad (Core Web Vitals) orientadas a la conversión B2B/B2C.',
+    description: 'Tu web nueva en modo performance: rápida, indexable y preparada para captar leads desde el día 1.',
     iconUrl: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/icono%20web.png',
     features: [
-      { title: 'Arquitectura Headless', sub: 'Cargas inferiores a 1 segundo.' },
-      { title: 'Diseño UI/UX Custom', sub: 'Cero plantillas. Diseño a medida para tu marca.' },
-      { title: 'CMS Autogestionable', sub: 'Panel de control intuitivo para tu equipo.' }
+      { title: 'Core Web Vitals + SEO técnico', sub: 'Cargas inferiores a 1 segundo.' },
+      { title: 'Diseño orientado a conversión', sub: 'Cero plantillas. Diseño a medida para tu marca.' },
+      { title: 'CMS editable por tu equipo', sub: 'Panel de control intuitivo para tu equipo.' }
     ],
     techStack: ['Next.js', 'Vercel', 'TailwindCSS', 'React']
   },
   {
-    name: 'ECOMMERCE',
+    name: 'Comercio Electrónico',
     grantValue: 'Hasta 2.000€',
-    description: 'Sistemas transaccionales escalables. Desde la captación del usuario hasta el checkout encriptado y la sincronización de stock bidireccional.',
+    description: 'E-commerce listo para vender: catálogo, pagos y logística con checkout optimizado.',
     iconUrl: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/icono%20ecom.png',
     features: [
-      { title: 'Pasarelas de Pago Integradas', sub: 'Stripe, PayPal, Apple Pay y Redsys.' },
-      { title: 'Gestión Avanzada de Inventario', sub: 'Control de stock y sincronización con tu ERP.' },
-      { title: 'Funnels de Alta Conversión', sub: 'Checkout optimizado para evitar carritos abandonados.' }
+      { title: 'Pagos (Stripe/Redsys) + seguridad', sub: 'Stripe, PayPal, Apple Pay y Redsys.' },
+      { title: 'Stock + integraciones', sub: 'Control de stock y sincronización con tu ERP.' },
+      { title: 'Recuperación de carrito + analítica', sub: 'Checkout optimizado para evitar carritos abandonados.' }
     ],
     techStack: ['WooCommerce', 'Stripe', 'AWS Cloud']
   },
   {
-    name: 'SOCIAL',
+    name: 'Gestión de Redes Sociales',
     grantValue: 'Hasta 2.500€',
-    description: 'Construimos autoridad de marca. Estrategias algorítmicas diseñadas para capturar atención y derivar tráfico cualificado a tu embudo comercial.',
+    description: 'Contenido y reporting para tener presencia constante y generar demanda sin improvisar.',
     iconUrl: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/icono%20rrss.png',
     features: [
-      { title: 'Auditoría de Mercado', sub: 'Análisis de competidores y blueprint estratégico.' },
-      { title: 'Producción de Activos Visuales', sub: 'Creación de contenido estático y short-form video.' },
-      { title: 'Reporting de KPIs', sub: 'Métricas de conversión mensuales transparentes.' }
+      { title: 'Plan editorial + posicionamiento', sub: 'Análisis de competidores y blueprint estratégico.' },
+      { title: 'Creatividades + formatos cortos', sub: 'Creación de contenido estático y short-form video.' },
+      { title: 'KPIs claros (mes a mes)', sub: 'Métricas de conversión mensuales transparentes.' }
     ],
     techStack: ['Meta Suite', 'LinkedIn B2B', 'TikTok Ads']
   },
   {
-    name: 'SEO CORE',
+    name: 'Posicionamiento SEO',
     grantValue: 'Hasta 2.000€',
-    description: 'Posicionamiento orgánico científico. Dominamos las SERPs mediante auditorías técnicas exhaustivas, arquitectura de enlaces y contenido semántico.',
+    description: 'SEO para negocio: arquitectura, contenido y autoridad para captar búsquedas con intención.',
     iconUrl: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/1%20SEO.png',
     features: [
-      { title: 'Keyword Research Transaccional', sub: 'Atacamos palabras clave que generan ingresos reales.' },
-      { title: 'Auditoría de Indexación', sub: 'Corrección de crawl budget y errores técnicos WPO.' },
-      { title: 'Estrategia Off-Page', sub: 'Construcción de autoridad de dominio (Linkbuilding).' }
+      { title: 'Keywords con intención (money)', sub: 'Atacamos palabras clave que generan ingresos reales.' },
+      { title: 'Indexación + CWV + logs si aplica', sub: 'Corrección de crawl budget y errores técnicos WPO.' },
+      { title: 'Autoridad y enlaces seguros', sub: 'Construcción de autoridad de dominio (Linkbuilding).' }
     ],
     techStack: ['Ahrefs', 'Screaming Frog', 'Google Analytics 4']
   }
@@ -557,8 +557,8 @@ export default function Home() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter leading-[0.92] mb-4">
-                <span className="text-gradient-heading">Framework de</span>{' '}
-                <span className="text-[#00e5ff]">Soluciones</span>
+                <span className="text-gradient-heading">Soluciones Kit Digital</span>{' '}
+                <span className="text-[#00e5ff]">listas para activar</span>
               </h2>
             </motion.div>
 
