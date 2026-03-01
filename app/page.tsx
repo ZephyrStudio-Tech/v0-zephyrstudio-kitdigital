@@ -342,10 +342,10 @@ export default function Home() {
                 className="mb-10 inline-flex items-center gap-2.5 rounded-full glass-premium px-5 py-2.5 text-sm font-medium text-white"
               >
                 <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#00e5ff] opacity-75" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-[#00e5ff]" />
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[rgb(229,255,0)] opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-[rgb(229,255,0)]" />
                 </span>
-                Kit Digital — Tramitación automática disponible
+                Lista de espera disponible
               </motion.div>
 
               {/* H1 — single tag, CRO-first copy */}
