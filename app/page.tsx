@@ -353,9 +353,9 @@ export default function Home() {
                 variants={fadeUp}
                 className="mb-8 text-5xl md:text-7xl lg:text-[6rem] font-extrabold tracking-tighter leading-[0.9] text-white text-balance"
               >
-                Kit Digital para empresas y autónomos{' '}
+                Kit Digital para Pymes y autónomos,{' '}
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#00e5ff] to-blue-500">
-                  tramitación automática y equipo
+                  equipo incluido.
                 </span>
               </motion.h1>
 
