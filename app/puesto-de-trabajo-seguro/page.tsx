@@ -13,6 +13,8 @@ import {
   ArrowDown,
 } from 'lucide-react'
 import { AnimatedBackground } from '@/components/animated-background'
+import { ProcessSteps } from '@/components/process-steps'
+import { HardwareCarousel } from '@/components/hardware-carousel'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -198,82 +200,13 @@ export default function PuestoTrabajoPage() {
           </div>
         </section>
 
-        {/* ── 3. CATALOG ──────────────────────────────────────────── */}
-        <section id="catalogo" className="py-24 px-4">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight text-center mb-4">
-              Modelos disponibles
-            </h2>
-            <p className="text-slate-400 text-center mb-12 font-light">Hardware de referencia para el programa.</p>
+        {/* ── 3. HARDWARE CAROUSEL (same as landing) ───────────────── */}
+        <div id="catalogo">
+          <HardwareCarousel />
+        </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
-              {[
-                { name: 'MacBook Air M2', type: 'Apple Silicon · 8/16 GB · 256/512 GB', badge: 'Más solicitado' },
-                { name: 'MacBook Air M3', type: 'Apple Silicon · 8/16 GB · 256/512 GB', badge: null },
-                { name: 'Mac mini M2', type: 'Apple Silicon · 8 GB · 256 GB', badge: null },
-                { name: 'PC Portátil Windows', type: 'Core i5/i7 · 16 GB · 512 GB · Win 11 Pro', badge: null },
-                { name: 'PC Sobremesa Windows', type: 'Core i5/i7 · 16 GB · 512 GB · Win 11 Pro', badge: null },
-                { name: 'iMac 24"', type: 'Apple Silicon M3 · 8 GB · 256 GB', badge: 'Sujeto a segmento' },
-              ].map((model, idx) => (
-                <div
-                  key={idx}
-                  className="relative bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl p-6 flex flex-col gap-3 hover:border-[#00e5ff]/30 transition-all duration-300"
-                >
-                  {model.badge && (
-                    <span className="absolute -top-2.5 left-4 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#00e5ff]/10 border border-[#00e5ff]/30 text-[#00e5ff]">
-                      {model.badge}
-                    </span>
-                  )}
-                  <Laptop className="w-8 h-8 text-slate-600" />
-                  <h3 className="text-base font-bold text-white">{model.name}</h3>
-                  <p className="text-xs text-slate-500 font-light leading-relaxed">{model.type}</p>
-                </div>
-              ))}
-            </div>
-
-            <p className="text-xs text-slate-600 text-center mt-6 font-light">
-              Equipos sujetos a disponibilidad de stock, segmento de la empresa y criterios oficiales del programa Kit Digital.
-            </p>
-            <p className="text-sm text-slate-400 text-center mt-3 font-light">
-              Te decimos tu opcion exacta tras verificacion.
-            </p>
-          </div>
-        </section>
-
-        {/* ── 4. AUTOMATED PROCESS ────────────────────────────────── */}
-        <section className="py-24 px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight text-center mb-4">
-              Proceso 100% automatizado
-            </h2>
-            <p className="text-slate-400 text-center mb-14 font-light">Sin llamadas. Sin esperas. Sin burocracia manual.</p>
-
-            <div className="grid md:grid-cols-2 gap-5">
-              {[
-                { num: '01', title: 'Sin llamadas interminables', desc: 'Todo via formulario inteligente. Tu tiempo vale.' },
-                { num: '02', title: 'Firmas 100% digitales', desc: 'Firma el Acuerdo de Prestacion de Soluciones desde tu movil en segundos.' },
-                { num: '03', title: 'Expediente gestionado por API', desc: 'Conectamos directamente con los sistemas de Red.es para tramitar sin papel.' },
-                { num: '04', title: 'Activacion y entrega coordinada', desc: 'Recibiras el equipo configurado y listo para trabajar desde el primer dia.' },
-              ].map((step, idx) => (
-                <article
-                  key={idx}
-                  className="flex items-start gap-5 bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-[#0018d8]/40 transition-all duration-300"
-                >
-                  <div
-                    className="text-3xl font-black font-mono shrink-0 leading-none"
-                    style={{ WebkitTextStroke: '1px #0018d8', color: 'transparent' }}
-                  >
-                    {step.num}
-                  </div>
-                  <div>
-                    <h3 className="text-base font-bold text-white mb-1">{step.title}</h3>
-                    <p className="text-sm text-slate-400 font-light leading-relaxed">{step.desc}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* ── 4. PROCESS STEPS (same as landing) ──────────────────── */}
+        <ProcessSteps />
 
         {/* ── 5. TRANSPARENCY / TRUST BOX ─────────────────────────── */}
         <section className="py-24 px-4">
