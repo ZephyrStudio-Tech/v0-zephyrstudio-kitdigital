@@ -6,15 +6,15 @@ import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
 import './globals.css'
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   variable: '--font-inter',
   weight: ['300', '400', '500', '600', '700', '800', '900']
 });
 
 export const metadata: Metadata = {
-  title: 'ZephyrStudio | Agente Digitalizador Kit Digital 2026',
-  description: 'Consigue hasta 12.000€ a fondo perdido. Tramitamos tu Kit Digital, implantamos Factura Electrónica y proveemos tu Puesto de Trabajo Seguro (Mac/PC).',
+  title: 'Kit Digital 2026 con tramitación automática | ZephyrStudio',
+  description: 'Consigue hasta 12.000€ en ayudas. Verificamos tu caso en 60s y activamos un proceso automatizado (sin llamadas): solicitud, firmas y puesta en marcha de soluciones.',
   icons: {
     icon: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/favicon_zephyrstudio.png',
     apple: 'https://supabase.kitdigitalzephyrstudio.es/storage/v1/object/public/img_web/favicon_zephyrstudio.png',
