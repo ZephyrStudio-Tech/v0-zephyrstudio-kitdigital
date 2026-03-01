@@ -153,14 +153,6 @@ const hardwareCatalog = [
   }
 ]
 
-const projects = [
-  { name: 'Plataforma B2B SaaS', tag: 'Web Corporativa + API' },
-  { name: 'E-commerce Moda', tag: 'WooCommerce + Stripe' },
-  { name: 'Portal Inmobiliario', tag: 'Next.js + CMS' },
-  { name: 'App Gestión Recursos', tag: 'Odoo + Custom' },
-  { name: 'Marketplace Multi-vendor', tag: 'Ecommerce + API' },
-]
-
 const reviews = [
   {
     text: 'Nos gestionaron el Kit Digital de forma súper rápida y eficiente. De todas las opciones que valoré, fueron los más claros y ágiles. Repetiría.',
@@ -180,12 +172,6 @@ const reviews = [
     role: 'Reseña de Google',
     company: 'Verificada',
   },
-]
-
-const blogPosts = [
-  { tag: 'Hardware', title: 'Mac vs PC: Por qué empresas eligen Apple' },
-  { tag: 'Subvenciones', title: 'Guía completa Kit Digital 2026' },
-  { tag: 'Infraestructura', title: 'Cloud-first: Arquitectura moderna' },
 ]
 
 const faqs = [
