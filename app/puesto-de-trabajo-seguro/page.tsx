@@ -1,4 +1,8 @@
+'use client'
+
+import React from 'react'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import {
   ChevronRight,
   Shield,
@@ -15,13 +19,42 @@ import {
 import { AnimatedBackground } from '@/components/animated-background'
 import { ProcessSteps } from '@/components/process-steps'
 import { HardwareCarousel } from '@/components/hardware-carousel'
-import type { Metadata } from 'next'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
 
-export const metadata: Metadata = {
-  title: 'Puesto de Trabajo Seguro - Kit Digital 2026 | ZephyrStudio',
-  description:
-    'Consigue tu ordenador Mac o PC con ciberseguridad empresarial, 100% subvencionado con el Bono Kit Digital. Tramitación automática sin llamadas.',
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 }
+const cardFade = {
+  hidden: { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+}
+
+const reviews = [
+  {
+    text: 'Nos gestionaron el Kit Digital de forma súper rápida y eficiente. De todas las opciones que valoré, fueron los más claros y ágiles. Repetiría.',
+    author: 'Àlex Aubets Toneu',
+    role: 'Reseña de Google',
+    company: 'Verificada',
+  },
+  {
+    text: 'Nos hicieron todo el tramite del kit digital de forma gratuita, la web la teníamos funcional a las dos semanas de haber sido aprobado el bono y el ordenado llegó correctamente',
+    author: 'Vaby Rodríguez',
+    role: 'Reseña de Google',
+    company: 'Verificada',
+  },
+  {
+    text: 'Captaron nuestras necesidades desde el primer momento y las llevaron a una web moderna y funcional. Profesionales, atentos y muy resolutivos en todo el proceso.',
+    author: 'Con Perros y a lo Loco',
+    role: 'Reseña de Google',
+    company: 'Verificada',
+  },
+]
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -110,7 +143,7 @@ export default function PuestoTrabajoPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <div className="relative min-h-screen overflow-x-hidden">
+      <div className="relative min-h-screen">
         <AnimatedBackground />
 
         {/* ── 1. HERO ─────────────────────────────────────────────── */}
@@ -309,29 +342,106 @@ export default function PuestoTrabajoPage() {
           </div>
         </section>
 
-        {/* ── 8. FAQ ──────────────────────────────────────────────── */}
-        <section className="py-24 px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight text-center mb-12">
-              Preguntas frecuentes
-            </h2>
+        {/* ── 8. REVIEWS ──────────────────────────────────────────── */}
+        <section className="relative py-20 md:py-36 overflow-hidden">
+          <div className="container mx-auto max-w-7xl">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={fadeUp}
+              className="text-center mb-12 md:mb-20 px-4"
+            >
+              <h2 className="text-3xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[0.92]">
+                <span className="text-gradient-heading">Reseñas reales en</span>{' '}
+                <span className="text-gradient-cyan">Google</span>
+              </h2>
+            </motion.div>
 
-            <div className="space-y-3">
-              {faqSchema.mainEntity.map((faq, idx) => (
-                <details
-                  key={idx}
-                  className="group bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden"
-                >
-                  <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none text-white font-semibold text-sm hover:text-[#00e5ff] transition-colors">
-                    {faq.name}
-                    <ChevronRight className="w-4 h-4 shrink-0 text-slate-500 group-open:rotate-90 transition-transform duration-200" />
-                  </summary>
-                  <div className="px-6 pb-5 text-slate-400 text-sm font-light leading-relaxed border-t border-white/[0.05] pt-4">
-                    {faq.acceptedAnswer.text}
-                  </div>
-                </details>
-              ))}
+            <div className="w-full">
+              <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide px-4 pb-2 md:grid md:grid-cols-3 md:gap-5 md:px-8 md:overflow-visible md:pb-0">
+                {reviews.map((review, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.1 }}
+                    variants={cardFade}
+                    className="glass-premium rounded-2xl p-6 md:rounded-3xl md:p-8 min-w-[82vw] md:min-w-0 w-full flex-shrink-0 snap-center transition-all duration-300"
+                  >
+                    <div className="flex gap-1 mb-5">
+                      {[...Array(5)].map((_, i) => (
+                        <span key={i} className="text-[#00e5ff] text-sm">{'★'}</span>
+                      ))}
+                    </div>
+                    <p className="text-slate-300 mb-8 leading-relaxed text-sm md:text-base font-light">
+                      &ldquo;{review.text}&rdquo;
+                    </p>
+                    <div>
+                      <p className="font-semibold text-white text-sm">{review.author}</p>
+                      <p className="text-xs text-slate-500 mt-0.5">
+                        {review.role} &middot; {review.company}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+              <div className="flex items-center justify-center gap-3 mt-5 md:hidden">
+                {reviews.map((_, idx) => (
+                  <span
+                    key={idx}
+                    className={`block rounded-full transition-all duration-300 ${idx === 0 ? 'w-5 h-1.5 bg-[#00e5ff]' : 'w-1.5 h-1.5 bg-white/20'}`}
+                  />
+                ))}
+                <span className="ml-2 text-xs text-slate-500 flex items-center gap-1">
+                  desliza
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-slate-500 animate-[pulse_1.5s_ease-in-out_infinite]">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
+              </div>
             </div>
+          </div>
+        </section>
+
+        {/* ── 9. FAQ ──────────────────────────────────────────────── */}
+        <section className="relative px-4 py-20 md:px-8 md:py-36">
+          <div className="container mx-auto max-w-4xl">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={fadeUp}
+              className="text-center mb-20"
+            >
+              <h2 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[0.92]">
+                <span className="text-gradient-heading">Preguntas sobre</span>{' '}
+                <span className="text-gradient-cyan">Puesto de Trabajo</span>
+              </h2>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={fadeUp}
+            >
+              <Accordion type="single" collapsible className="space-y-3">
+                {faqSchema.mainEntity.map((faq, idx) => (
+                  <AccordionItem
+                    key={idx}
+                    value={`item-${idx}`}
+                    className="glass-premium rounded-2xl px-7 border-white/[0.08] transition-all duration-300"
+                  >
+                    <AccordionTrigger className="text-left text-white hover:text-[#00e5ff] transition-colors font-semibold py-6 text-base tracking-tight [&[data-state=open]]:text-[#00e5ff] [&>svg]:text-white">
+                      {faq.name}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-slate-400 leading-relaxed pb-6 text-sm font-light">
+                      {faq.acceptedAnswer.text}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </motion.div>
           </div>
         </section>
 
